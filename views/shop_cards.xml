@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+
+    <template
+        id="mulata_shop_product_card_commercial"
+        name="Mulata — Información comercial en tarjeta"
+        inherit_id="website_sale.products_item"
+        priority="50"
+    >
+
+        <xpath expr="//div[hasclass('o_wsale_product_btn')]" position="before">
+
+            <!-- =================================================
+                 PRECIO / DESCUENTO
+                 ================================================= -->
+
+            <t t-set="mulata_price_vals"
+               t-value="get_product_prices(product)"/>
+
+
+            <!-- =================================================
+                 STOCK REAL DEL DEPÓSITO DEL WEBSITE
+
+                 variant ya existe en website_sale.products_item.
+
+                 _get_product_available_qty() usa el warehouse
+                 configurado para este website.
+                 ================================================= -->
+
+            <t t-set="mulata_free_qty"
+               t-value="
+                    request.env['website']
+                    .get_current_website()
+                    ._get_product_available_qty(variant.sudo())
+                    if variant and variant.is_storable
+                    else 0
+               "/>
+
+
+            <div class="mulata-card-commercial">
+
+                <!-- =============================================
+                     DESCUENTO REAL
+                     ============================================= -->
+
+                <t t-if="
+                    mulata_price_vals
+                    and 'base_price' in mulata_price_vals
+                    and mulata_price_vals['base_price']
+                    and mulata_price_vals['price_reduce']
+                    and mulata_price_vals['base_price'] &gt; mulata_price_vals['price_reduce']
+                ">
+
+                    <span class="mulata-card-discount">
+                        <t t-out="
+                            '%.0f' % (
+                                (
+                                    1
+                                    - (
+                                        mulata_price_vals['price_reduce']
+                                        / mulata_price_vals['base_price']
+                                    )
+                                ) * 100
+                            )
+                        "/>% OFF
+                    </span>
+
+                </t>
+
+
+                <!-- =============================================
+                     CUOTAS
+                     ============================================= -->
+
+                <div class="mulata-card-installments">
+                    <i class="fa fa-credit-card me-1"/>
+                    <span>Hasta 12 cuotas</span>
+                </div>
+
+
+                <!-- =============================================
+                     STOCK
+                     Solo aplica a productos almacenables
+                     ============================================= -->
+
+                <t t-if="variant and variant.is_storable">
+
+                    <!-- Stock físico disponible -->
+
+                    <t t-if="mulata_free_qty &gt; 0">
+
+                        <div class="mulata-card-stock mulata-stock-ok">
+                            <span class="mulata-stock-dot"/>
+                            <span>Stock disponible</span>
+                        </div>
+
+                    </t>
+
+
+                    <!-- Sin stock pero se permite seguir vendiendo -->
+
+                    <t t-elif="variant.allow_out_of_stock_order">
+
+                        <div class="mulata-card-stock mulata-stock-order">
+                            <span class="mulata-stock-dot"/>
+                            <span>Disponible bajo pedido</span>
+                        </div>
+
+                    </t>
+
+
+                    <!-- Sin stock -->
+
+                    <t t-else="">
+
+                        <div class="mulata-card-stock mulata-stock-out">
+                            <span class="mulata-stock-dot"/>
+                            <span>Sin stock</span>
+                        </div>
+
+                    </t>
+
+                </t>
+
+
+                <!-- =============================================
+                     ENTREGA / LOGÍSTICA
+
+                     24–48 h únicamente cuando existe
+                     disponibilidad física.
+                     ============================================= -->
+
+                <t t-if="
+                    variant
+                    and variant.is_storable
+                    and mulata_free_qty &gt; 0
+                ">
+
+                    <div class="mulata-card-delivery">
+                        <i class="fa fa-truck me-1"/>
+                        <span>Montevideo 24–48 h</span>
+                    </div>
+
+                </t>
+
+
+                <!-- Cobertura general -->
+
+                <t t-if="variant and variant.is_storable">
+
+                    <div class="mulata-card-country">
+                        <i class="fa fa-map-marker me-1"/>
+                        <span>Envíos a todo el país</span>
+                    </div>
+
+                </t>
+
+            </div>
+
+        </xpath>
+
+    </template>
+
+
+<template id="mulata_shop_product_view_button"
+          inherit_id="website_sale.products_item"
+          name="Mulata - Ver producto"
+          priority="55">
+    <xpath expr="//div[hasclass('o_wsale_product_sub')]"
+           position="inside">
+        <a t-att-href="product.website_url"
+           class="mulata-card-view-product">
+            Ver producto
+        </a>
+    </xpath>
+</template>
+
+</odoo>

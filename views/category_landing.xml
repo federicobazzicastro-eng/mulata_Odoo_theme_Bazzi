@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="mulata_category_landing"
+              inherit_id="website_sale.products"
+              name="Mulata category landing">
+
+        <xpath expr="//div[@id='products_grid_before']" position="before">
+
+            <t t-if="category">
+
+                <t t-set="hero_product"
+                   t-value="request.env['product.template'].sudo().search([
+                        ('is_published', '=', True),
+                        ('sale_ok', '=', True),
+                        ('public_categ_ids', 'child_of', category.id)
+                   ], order='website_sequence asc, id desc', limit=1)"/>
+
+                <section class="mulata-category-landing">
+
+                    <div class="mulata-category-hero">
+
+                        <div class="mulata-category-hero-copy">
+
+                            <span class="mulata-category-kicker">
+                                Mulata · <t t-out="category.name"/>
+                            </span>
+
+                            <h1 class="mulata-category-hero-title">
+                                <t t-if="category.name == 'Muebles'">
+                                    Muebles para cada rincón de tu hogar
+                                </t>
+                                <t t-elif="category.name == 'Colchonería'">
+                                    Descanso y confort para dormir mejor
+                                </t>
+                                <t t-else="">
+                                    <t t-out="category.name"/> para tu hogar
+                                </t>
+                            </h1>
+
+                            <p class="mulata-category-hero-text">
+                                <t t-if="category.name == 'Muebles'">
+                                    Roperos, mesas de luz, racks y mucho más, con envío a todo Uruguay y hasta 12 cuotas.
+                                </t>
+                                <t t-elif="category.name == 'Colchonería'">
+                                    Colchones, sommiers, bases y baúles pensados para renovar tu dormitorio con la mejor relación calidad-precio.
+                                </t>
+                                <t t-else="">
+                                    Encontrá una selección de productos para equipar tu hogar con la estética y el servicio de Mulata.
+                                </t>
+                            </p>
+
+                            <div class="mulata-category-hero-actions">
+                                <a href="#o_wsale_products_grid"
+                                   class="mulata-category-btn mulata-category-btn-primary">
+                                    Ver productos
+                                </a>
+
+                                <a t-if="hero_product"
+                                   t-att-href="hero_product.website_url"
+                                   class="mulata-category-btn mulata-category-btn-secondary">
+                                    Ver destacado
+                                </a>
+                            </div>
+
+                            <div class="mulata-category-hero-benefits">
+                                <span>
+                                    <i class="fa fa-credit-card"/>
+                                    Hasta 12 cuotas
+                                </span>
+                                <span>
+                                    <i class="fa fa-truck"/>
+                                    Envíos a todo Uruguay
+                                </span>
+                                <span>
+                                    <i class="fa fa-shield"/>
+                                    Compra segura
+                                </span>
+                            </div>
+
+                        </div>
+
+                        <a t-if="hero_product"
+                           t-att-href="hero_product.website_url"
+                           class="mulata-category-hero-photo">
+
+                            <img t-att-src="'/web/image/product.template/%s/image_1024' % hero_product.id"
+                                 t-att-alt="hero_product.name"
+                                 loading="lazy"/>
+
+                        </a>
+
+                    </div>
+
+                    <div class="mulata-category-subcats" t-if="category.child_id">
+
+                        <t t-foreach="category.child_id" t-as="subcat">
+                            <t t-if="subcat.website_published">
+                                <a t-att-href="subcat.website_url"
+                                   class="mulata-category-subcat-card">
+
+                                    <span class="mulata-category-subcat-kicker">
+                                        Subcategoría
+                                    </span>
+
+                                    <strong class="mulata-category-subcat-title">
+                                        <t t-out="subcat.name"/>
+                                    </strong>
+
+                                    <span class="mulata-category-subcat-link">
+                                        Ver modelos
+                                    </span>
+
+                                </a>
+                            </t>
+                        </t>
+
+                    </div>
+
+                </section>
+
+            </t>
+
+        </xpath>
+
+    </template>
+
+</odoo>

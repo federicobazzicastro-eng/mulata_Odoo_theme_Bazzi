@@ -1,0 +1,41 @@
+// ======================================================
+// MULATA — RESPONSIVE MÓVIL
+// ======================================================
+
+@media (max-width: 767.98px) {
+    body {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+        line-height: 1.15;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .container,
+    .container-fluid {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        min-height: 50px;
+    }
+
+    .oe_product {
+        border-radius: 12px;
+    }
+
+    // Evita botones pequeños difíciles de tocar
+    button,
+    .btn,
+    input,
+    select {
+        touch-action: manipulation;
+    }
+}

@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <template
+        id="mulata_header_default"
+        name="Mulata — Header Desktop"
+        inherit_id="website.template_header_default"
+        priority="40"
+    >
+
+        <!-- =====================================================
+             BARRA COMERCIAL
+             ===================================================== -->
+        <xpath expr="//div[@id='o_main_nav']" position="before">
+
+            <div class="mulata-topbar d-none d-lg-block">
+                <div class="container">
+                    <div class="mulata-topbar-inner">
+
+                        <div class="mulata-topbar-item">
+                            <i class="fa fa-truck me-2"/>
+                            <span>Envíos a todo Uruguay</span>
+                        </div>
+
+                        <div class="mulata-topbar-item">
+                            <i class="fa fa-credit-card me-2"/>
+                            <span>Hasta 12 cuotas</span>
+                        </div>
+
+                        <div class="mulata-topbar-item">
+                            <i class="fa fa-shield me-2"/>
+                            <span>Compra segura</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </xpath>
+
+
+        <!-- =====================================================
+             HEADER DESKTOP MULATA
+             ===================================================== -->
+        <xpath expr="//div[@id='o_main_nav']" position="replace">
+
+            <div id="o_main_nav"
+                 t-attf-class="o_main_nav mulata-header #{header_content_width}">
+
+                <!-- FILA PRINCIPAL -->
+                <div class="mulata-header-primary">
+
+                    <!-- Marca -->
+                    <div class="mulata-brand">
+                        <t t-call="website.placeholder_header_brand">
+                            <t t-set="_link_class" t-value="'mulata-brand-link'"/>
+                        </t>
+                    </div>
+
+
+                    <!-- Buscador ecommerce real -->
+                    <div class="mulata-header-search">
+                        <t t-call="website.placeholder_header_search_box"
+                           _layout.f="default"
+                           _input_classes.f="border border-end-0 p-3"
+                           _submit_classes.f="border border-start-0 px-4"
+                           _button_classes.f="text-reset"/>
+                    </div>
+
+
+                    <!-- Acciones -->
+                    <ul class="mulata-header-actions navbar-nav flex-row align-items-center">
+
+                        <!-- Login -->
+                        <t t-call="portal.placeholder_user_sign_in">
+                            <t t-set="_link_class"
+                               t-value="'mulata-header-action nav-link'"/>
+                        </t>
+
+                        <!-- Usuario -->
+                        <t t-call="portal.user_dropdown">
+                            <t t-set="_user_name" t-value="False"/>
+                            <t t-set="_item_class" t-value="'dropdown'"/>
+                            <t t-set="_link_class"
+                               t-value="'mulata-header-action nav-link border-0'"/>
+                            <t t-set="_dropdown_menu_class"
+                               t-value="'dropdown-menu-end'"/>
+                        </t>
+
+                        <!-- Carrito -->
+                        <t t-call="website_sale.header_cart_link">
+                            <t t-set="_icon" t-value="True"/>
+                            <t t-set="_item_class"
+                               t-value="'mulata-cart-item'"/>
+                            <t t-set="_link_class"
+                               t-value="'mulata-header-action nav-link position-relative'"/>
+                            <t t-set="_badge_class"
+                               t-value="'position-absolute top-0 end-0 rounded-pill'"/>
+                        </t>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- FILA DE NAVEGACIÓN -->
+                <div class="mulata-header-nav">
+
+                    <t t-call="website.navbar_nav">
+                        <t t-set="_nav_class"
+                           t-value="'mulata-main-menu justify-content-center w-100'"/>
+
+                        <t t-foreach="website.menu_id.child_id"
+                           t-as="submenu">
+
+                            <t t-call="website.submenu">
+                                <t t-set="item_class"
+                                   t-value="'nav-item'"/>
+                                <t t-set="link_class"
+                                   t-value="'nav-link'"/>
+                            </t>
+
+                        </t>
+
+                    </t>
+
+                </div>
+
+            </div>
+
+        </xpath>
+
+    </template>
+
+
+    <!-- =====================================================
+         MULATA HEADER MOBILE
+         ===================================================== -->
+    <template
+        id="mulata_header_mobile"
+        name="Mulata — Header Mobile"
+        inherit_id="website.template_header_mobile"
+        priority="50"
+    >
+
+        <xpath expr="//div[contains(@class, 'o_main_nav')]" position="replace">
+
+            <div class="o_main_nav container-fluid mulata-mobile-header o_no_autohide_menu">
+
+                <!-- Fila superior -->
+                <div class="mulata-mobile-top">
+
+                    <button
+                        class="mulata-mobile-menu btn"
+                        type="button"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#top_menu_collapse_mobile"
+                        aria-controls="top_menu_collapse_mobile"
+                        aria-label="Abrir menú">
+                        <span class="navbar-toggler-icon"/>
+                    </button>
+
+                    <div class="mulata-mobile-brand">
+                        <t t-call="website.placeholder_header_brand">
+                            <t t-set="_link_class"
+                               t-value="'mulata-mobile-brand-link'"/>
+                        </t>
+                    </div>
+
+                    <ul class="mulata-mobile-actions navbar-nav flex-row align-items-center">
+
+                        <t t-call="portal.placeholder_user_sign_in">
+                            <t t-set="_link_class"
+                               t-value="'mulata-mobile-action nav-link'"/>
+                        </t>
+
+                        <t t-call="portal.user_dropdown">
+                            <t t-set="_icon" t-value="True"/>
+                            <t t-set="_user_name" t-value="False"/>
+                            <t t-set="_item_class" t-value="'dropdown'"/>
+                            <t t-set="_link_class"
+                               t-value="'mulata-mobile-action nav-link border-0'"/>
+                            <t t-set="_dropdown_menu_class"
+                               t-value="'dropdown-menu-end'"/>
+                        </t>
+
+                        <t t-call="website_sale.header_cart_link">
+                            <t t-set="_icon" t-value="True"/>
+                            <t t-set="_item_class"
+                               t-value="'mulata-mobile-cart'"/>
+                            <t t-set="_link_class"
+                               t-value="'mulata-mobile-action nav-link position-relative'"/>
+                            <t t-set="_badge_class"
+                               t-value="'position-absolute top-0 end-0 rounded-pill'"/>
+                        </t>
+
+                    </ul>
+
+                </div>
+
+                <!-- Buscador principal -->
+                <div class="mulata-mobile-search">
+                    <t t-call="website.placeholder_header_search_box"
+                       _layout.f="default"
+                       _input_classes.f="border-0 ps-3"
+                       _submit_classes.f="border-0 px-3"
+                       limit.f="5"/>
+                </div>
+
+                <!-- Categorías horizontales -->
+                <div class="mulata-mobile-categories">
+                    <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                        <a t-att-href="submenu.url"
+                           class="mulata-mobile-category">
+                            <t t-out="submenu.name"/>
+                        </a>
+                    </t>
+                </div>
+
+                <!-- Offcanvas -->
+                <div class="offcanvas offcanvas-start o_navbar_mobile"
+                     id="top_menu_collapse_mobile">
+
+                    <div class="offcanvas-header">
+                        <strong>Menú</strong>
+                        <button type="button"
+                                class="btn-close"
+                                data-bs-dismiss="offcanvas"
+                                aria-label="Cerrar"/>
+                    </div>
+
+                    <div class="offcanvas-body">
+
+                        <t t-call="website.navbar_nav"
+                           _no_autohide_menu_mobile.f="True">
+
+                            <t t-set="is_vertical_nav" t-valuef="True"/>
+
+                            <t t-foreach="website.menu_id.child_id"
+                               t-as="submenu">
+
+                                <t t-call="website.submenu"
+                                   item_class.f="nav-item border-bottom"
+                                   link_class.f="nav-link py-3 text-wrap"/>
+
+                            </t>
+
+                        </t>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </xpath>
+
+    </template>
+
+</odoo>

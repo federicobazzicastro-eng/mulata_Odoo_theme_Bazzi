@@ -1,0 +1,424 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+
+    <template id="mulata_homepage" name="Mulata - Home" inherit_id="website.homepage" priority="80">
+
+        <xpath expr="//div[@id='wrap']" position="replace">
+
+            <div id="wrap" class="oe_structure mulata-home">
+
+                <!-- ===================================================
+                     HERO
+                     =================================================== -->
+
+                <section class="mulata-home-hero">
+
+                    <div class="container">
+
+                        <div class="mulata-home-hero-grid">
+
+                            <div class="mulata-home-hero-copy">
+
+                                <span class="mulata-home-eyebrow">
+                                    Muebles &amp; más para tu hogar
+                                </span>
+
+                                <h1>
+                                    Tu hogar,
+                                    <span>nuestro lugar</span>
+                                </h1>
+
+                                <p>
+                                    Muebles, colchones, electrodomésticos y
+                                    mucho más para disfrutar mejor cada espacio.
+                                </p>
+
+                                <div class="mulata-home-hero-actions">
+
+                                    <a href="/shop" class="btn mulata-home-primary">
+                                        Ver productos
+                                        <i class="fa fa-arrow-right ms-2"/>
+                                    </a>
+
+                                    <a href="/shop" class="btn mulata-home-secondary">
+                                        Ver ofertas
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="mulata-home-hero-visual">
+
+                                <div class="mulata-home-visual-card">
+
+                                    <div class="mulata-home-visual-badge">
+                                        <i class="fa fa-truck"/>
+                                        <span>
+                                            <strong>Entrega rápida</strong>
+                                            24–48 h Montevideo
+                                        </span>
+                                    </div>
+
+                                    <div class="mulata-home-room">
+
+                                        <div class="mulata-home-room-bed"/>
+
+                                        <div class="mulata-home-room-table"/>
+
+                                        <div class="mulata-home-room-lamp"/>
+
+                                        <div class="mulata-home-room-plant">
+                                            <span>🌿</span>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ===================================================
+                     BENEFICIOS
+                     =================================================== -->
+
+                <section class="mulata-home-benefits">
+
+                    <div class="container">
+
+                        <div class="mulata-home-benefits-grid">
+
+                            <div class="mulata-home-benefit">
+                                <i class="fa fa-credit-card"/>
+                                <div>
+                                    <strong>Hasta 12 cuotas</strong>
+                                    <span>Opciones para pagar mejor</span>
+                                </div>
+                            </div>
+
+                            <div class="mulata-home-benefit">
+                                <i class="fa fa-truck"/>
+                                <div>
+                                    <strong>Entrega 24–48 h</strong>
+                                    <span>En Montevideo</span>
+                                </div>
+                            </div>
+
+                            <div class="mulata-home-benefit">
+                                <i class="fa fa-map-marker"/>
+                                <div>
+                                    <strong>Todo Uruguay</strong>
+                                    <span>Envíos al interior</span>
+                                </div>
+                            </div>
+
+                            <div class="mulata-home-benefit">
+                                <i class="fa fa-shield"/>
+                                <div>
+                                    <strong>Compra segura</strong>
+                                    <span>Tus datos protegidos</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ===================================================
+                     CATEGORÍAS PRINCIPALES
+                     =================================================== -->
+
+                <section class="mulata-home-categories">
+
+                    <div class="container">
+
+                        <div class="mulata-home-section-heading">
+
+                            <div>
+                                <span class="mulata-home-section-kicker">
+                                    Encontrá lo que necesitás
+                                </span>
+
+                                <h2>
+                                    Categorías principales
+                                </h2>
+                            </div>
+
+                            <a href="/shop">
+                                Ver todo
+                                <i class="fa fa-arrow-right ms-1"/>
+                            </a>
+
+                        </div>
+
+
+                        <div class="mulata-home-category-grid">
+
+
+                            <!-- MUEBLES -->
+
+                            <a href="/shop" class="mulata-home-category-card mulata-category-furniture">
+
+                                <div class="mulata-category-icon">
+                                    <i class="fa fa-home"/>
+                                </div>
+
+                                <div class="mulata-category-copy">
+                                    <strong>Muebles</strong>
+                                    <span>
+                                        Dormitorio, living, escritorios y más
+                                    </span>
+                                </div>
+
+                                <i class="fa fa-arrow-right mulata-category-arrow"/>
+
+                            </a>
+
+
+                            <!-- COLCHONERÍA -->
+
+                            <a href="/shop" class="mulata-home-category-card mulata-category-mattress">
+
+                                <div class="mulata-category-icon">
+                                    <i class="fa fa-bed"/>
+                                </div>
+
+                                <div class="mulata-category-copy">
+                                    <strong>Colchonería</strong>
+                                    <span>
+                                        Colchones, sommiers, bases y baúles
+                                    </span>
+                                </div>
+
+                                <i class="fa fa-arrow-right mulata-category-arrow"/>
+
+                            </a>
+
+
+                            <!-- ELECTRO -->
+
+                            <a href="/shop" class="mulata-home-category-card mulata-category-electro">
+
+                                <div class="mulata-category-icon">
+                                    <i class="fa fa-plug"/>
+                                </div>
+
+                                <div class="mulata-category-copy">
+                                    <strong>Electrodomésticos</strong>
+                                    <span>
+                                        Cocina y pequeños electro
+                                    </span>
+                                </div>
+
+                                <i class="fa fa-arrow-right mulata-category-arrow"/>
+
+                            </a>
+
+
+                            <!-- FERRETERÍA -->
+
+                            <a href="/shop" class="mulata-home-category-card mulata-category-tools">
+
+                                <div class="mulata-category-icon">
+                                    <i class="fa fa-wrench"/>
+                                </div>
+
+                                <div class="mulata-category-copy">
+                                    <strong>Ferretería</strong>
+                                    <span>
+                                        Herramientas, grifería y accesorios
+                                    </span>
+                                </div>
+
+                                <i class="fa fa-arrow-right mulata-category-arrow"/>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ===================================================
+                     PRODUCTOS DESTACADOS
+                     =================================================== -->
+
+                <section class="mulata-home-featured">
+
+                    <div class="container">
+
+                        <div class="mulata-home-section-heading">
+
+                            <div>
+                                <span class="mulata-home-section-kicker">
+                                    Productos destacados
+                                </span>
+
+                                <h2>
+                                    Lo más elegido para tu hogar
+                                </h2>
+                            </div>
+
+                            <a href="/shop">
+                                Ver todos
+                                <i class="fa fa-arrow-right ms-1"/>
+                            </a>
+
+                        </div>
+
+
+                        <t t-set="featured_products" t-value="request.env['product.template'].sudo().search([&#10;        ('is_published', '=', True),&#10;        ('sale_ok', '=', True),&#10;        ('is_home_featured', '=', True)&#10;    ], order='home_featured_sequence asc, website_sequence asc, id desc', limit=4)"/>
+
+
+                        <div class="mulata-home-featured-grid">
+
+                            <t t-foreach="featured_products" t-as="product">
+
+                                <t t-set="variant" t-value="product.product_variant_id"/>
+
+                                <t t-set="combination_info" t-value="product._get_combination_info(                                        only_template=True,                                        add_qty=1                                    )"/>
+
+
+                                <article class="mulata-home-product-card">
+
+                                    <a t-att-href="product.website_url" class="mulata-home-product-image">
+
+                                        <img t-att-src="'/web/image/product.template/%s/image_1024' % product.id" t-att-alt="product.name" loading="lazy"/>
+
+                                    </a>
+
+
+                                    <div class="mulata-home-product-body">
+
+                                        <a t-att-href="product.website_url" class="mulata-home-product-name">
+
+                                            <t t-out="product.name"/>
+
+                                        </a>
+
+
+                                        <div class="mulata-home-product-price">
+
+                                            <span t-out="combination_info.get('price', product.list_price)" t-options="{                                                       'widget': 'monetary',                                                       'display_currency': website.currency_id                                                   }"/>
+
+                                        </div>
+
+
+                                        <div class="mulata-home-product-installments">
+
+                                            <i class="fa fa-credit-card"/>
+
+                                            <span>
+                                                Hasta 12 cuotas
+                                            </span>
+
+                                        </div>
+
+
+                                        <a t-att-href="product.website_url" class="mulata-home-product-link">
+
+                                            Ver producto
+
+                                            <i class="fa fa-arrow-right ms-1"/>
+
+                                        </a>
+
+                                    </div>
+
+                                </article>
+
+                            </t>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- ===================================================
+                     BLOQUE COMERCIAL
+                     =================================================== -->
+
+                <section class="mulata-home-promo mulata-home-promo-v2">
+
+    <t t-set="colch_category" t-value="request.env['product.public.category'].sudo().search([            ('name', 'ilike', 'Colchonería')        ], limit=1)"/>
+
+    <t t-set="colch_product" t-value="request.env['product.template'].sudo().search([            ('is_published', '=', True),            ('sale_ok', '=', True),            ('public_categ_ids', 'child_of', colch_category.id)        ], order='website_sequence asc, id desc', limit=1) if colch_category else False"/>
+
+    <div class="container">
+
+        <div class="mulata-home-promo-card mulata-home-promo-card-v2">
+
+            <div class="mulata-home-promo-copy">
+
+                <span class="mulata-home-promo-kicker">
+                    Todo para descansar mejor
+                </span>
+
+                <h2>
+                    Colchones y Sommiers
+                </h2>
+
+                <p>
+                    Encontrá la medida y el confort ideal para tu dormitorio.
+                </p>
+
+                <div class="mulata-home-promo-benefits">
+                    <span>
+                        <i class="fa fa-credit-card"/>
+                        Hasta 12 cuotas
+                    </span>
+
+                    <span>
+                        <i class="fa fa-truck"/>
+                        Envíos a todo Uruguay
+                    </span>
+                </div>
+
+                <a t-att-href="'/shop/category/%s' % slug(colch_category) if colch_category else '/shop'" class="btn mulata-home-primary">
+                    Ver colchonería
+                    <i class="fa fa-arrow-right ms-2"/>
+                </a>
+
+            </div>
+
+            <div class="mulata-home-promo-media">
+
+                <t t-if="colch_product">
+                    <img t-att-src="'/web/image/product.template/%s/image_1024' % colch_product.id" t-att-alt="colch_product.name" loading="lazy"/>
+                </t>
+
+                <t t-else="">
+                    <div class="mulata-home-promo-fallback">
+                        <i class="fa fa-bed"/>
+                    </div>
+                </t>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section></div>
+
+        </xpath>
+
+    </template>
+
+</odoo>

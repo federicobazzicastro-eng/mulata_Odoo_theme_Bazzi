@@ -1,0 +1,3770 @@
+
+/* ==========================================================
+   MULATA HOME V1
+   ========================================================== */
+
+.mulata-home {
+    background: #f6f8f8;
+    color: #173d49;
+}
+
+
+/* ==========================================================
+   HERO
+   ========================================================== */
+
+.mulata-home-hero {
+    padding: 34px 0 28px;
+    background:
+        radial-gradient(circle at 78% 40%, rgba(255,182,0,.18), transparent 28%),
+        linear-gradient(135deg, #f5eee5 0%, #ffffff 52%, #edf6f6 100%);
+}
+
+.mulata-home-hero-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 42px;
+    min-height: 460px;
+}
+
+.mulata-home-hero-copy {
+    max-width: 540px;
+}
+
+.mulata-home-eyebrow {
+    display: inline-block;
+    margin-bottom: 12px;
+
+    font-size: 13px;
+    font-weight: 700;
+    color: #3b989b;
+
+    text-transform: uppercase;
+    letter-spacing: .04em;
+}
+
+.mulata-home-hero h1 {
+    margin: 0 0 18px;
+
+    font-size: clamp(42px, 5vw, 70px);
+    line-height: .98;
+    font-weight: 800;
+
+    color: #174a5b;
+}
+
+.mulata-home-hero h1 span {
+    display: block;
+    color: #3b989b;
+}
+
+.mulata-home-hero p {
+    max-width: 480px;
+
+    margin-bottom: 25px;
+
+    font-size: 18px;
+    line-height: 1.45;
+
+    color: #586d74;
+}
+
+.mulata-home-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.mulata-home-primary {
+    background: #ffb600 !important;
+    border: 1px solid #ffb600 !important;
+    color: #173d49 !important;
+
+    font-weight: 750 !important;
+
+    padding: 12px 20px !important;
+
+    border-radius: 10px !important;
+}
+
+.mulata-home-primary:hover {
+    background: #f4ac00 !important;
+    border-color: #f4ac00 !important;
+}
+
+.mulata-home-secondary {
+    background: #ffffff !important;
+    border: 1px solid #d5e0e2 !important;
+    color: #174a5b !important;
+
+    font-weight: 650 !important;
+
+    padding: 12px 20px !important;
+
+    border-radius: 10px !important;
+}
+
+
+/* ==========================================================
+   HERO VISUAL
+   ========================================================== */
+
+.mulata-home-hero-visual {
+    min-width: 0;
+}
+
+.mulata-home-visual-card {
+    position: relative;
+
+    min-height: 380px;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.75),
+            rgba(227,239,238,.9)
+        );
+
+    box-shadow: 0 20px 60px rgba(23,74,91,.12);
+}
+
+.mulata-home-visual-badge {
+    position: absolute;
+    z-index: 4;
+    top: 22px;
+    right: 22px;
+
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 10px 13px;
+
+    background: #174a5b;
+    color: white;
+
+    border-radius: 12px;
+}
+
+.mulata-home-visual-badge i {
+    font-size: 19px;
+}
+
+.mulata-home-visual-badge span {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 10px;
+}
+
+.mulata-home-visual-badge strong {
+    font-size: 12px;
+}
+
+
+/* room illustration */
+
+.mulata-home-room {
+    position: absolute;
+    inset: 0;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #f4eee8 0%,
+            #f8f4ef 64%,
+            #d6c8b9 64%,
+            #c7b39d 100%
+        );
+}
+
+.mulata-home-room-bed {
+    position: absolute;
+
+    left: 12%;
+    bottom: 14%;
+
+    width: 58%;
+    height: 34%;
+
+    border-radius: 14px 14px 5px 5px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #ffffff 0 22%,
+            #e6ded5 22% 55%,
+            #174a5b 55% 100%
+        );
+
+    box-shadow: 0 16px 35px rgba(0,0,0,.15);
+}
+
+.mulata-home-room-bed::before {
+    content: "";
+
+    position: absolute;
+
+    left: 6%;
+    top: -43%;
+
+    width: 88%;
+    height: 50%;
+
+    border-radius: 20px 20px 5px 5px;
+
+    background:
+        repeating-linear-gradient(
+            90deg,
+            #d7c7b7 0 32px,
+            #c7b4a3 32px 34px
+        );
+}
+
+.mulata-home-room-table {
+    position: absolute;
+
+    bottom: 13%;
+    right: 13%;
+
+    width: 19%;
+    height: 24%;
+
+    background: #c58f5d;
+
+    border-radius: 4px;
+
+    box-shadow: 0 12px 20px rgba(0,0,0,.12);
+}
+
+.mulata-home-room-lamp {
+    position: absolute;
+
+    right: 17%;
+    bottom: 37%;
+
+    width: 8%;
+    height: 23%;
+
+    border-left: 4px solid #62564f;
+}
+
+.mulata-home-room-lamp::before {
+    content: "";
+
+    position: absolute;
+
+    left: -23px;
+    top: -6px;
+
+    width: 46px;
+    height: 28px;
+
+    background: #f4d29c;
+
+    clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
+}
+
+.mulata-home-room-plant {
+    position: absolute;
+
+    right: 3%;
+    bottom: 13%;
+
+    font-size: 74px;
+}
+
+
+/* ==========================================================
+   BENEFITS
+   ========================================================== */
+
+.mulata-home-benefits {
+    padding: 0 0 28px;
+}
+
+.mulata-home-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    background: white;
+
+    border: 1px solid #e2e9ea;
+    border-radius: 14px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,.035);
+}
+
+.mulata-home-benefit {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    padding: 16px;
+
+    border-right: 1px solid #e6ebec;
+}
+
+.mulata-home-benefit:last-child {
+    border-right: 0;
+}
+
+.mulata-home-benefit > i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    flex: 0 0 38px;
+
+    border-radius: 10px;
+
+    background: #fff3cc;
+
+    color: #174a5b;
+}
+
+.mulata-home-benefit strong {
+    display: block;
+
+    font-size: 13px;
+    line-height: 1.15;
+
+    color: #173d49;
+}
+
+.mulata-home-benefit span {
+    display: block;
+
+    margin-top: 2px;
+
+    font-size: 11px;
+    color: #758489;
+}
+
+
+/* ==========================================================
+   CATEGORIES
+   ========================================================== */
+
+.mulata-home-categories {
+    padding: 22px 0 44px;
+}
+
+.mulata-home-section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 20px;
+}
+
+.mulata-home-section-kicker {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    color: #3b989b;
+
+    text-transform: uppercase;
+}
+
+.mulata-home-section-heading h2 {
+    margin: 0;
+
+    font-size: 30px;
+    font-weight: 750;
+
+    color: #173d49;
+}
+
+.mulata-home-section-heading > a {
+    color: #174a5b;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 650;
+}
+
+.mulata-home-category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 12px;
+}
+
+.mulata-home-category-card {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    min-height: 118px;
+
+    padding: 18px;
+
+    overflow: hidden;
+
+    background: white;
+
+    border: 1px solid #e0e8e9;
+    border-radius: 14px;
+
+    color: inherit;
+    text-decoration: none !important;
+
+    transition:
+        transform .18s ease,
+        box-shadow .18s ease,
+        border-color .18s ease;
+}
+
+.mulata-home-category-card:hover {
+    transform: translateY(-2px);
+
+    border-color: #c8d8da;
+
+    box-shadow: 0 8px 22px rgba(23,74,91,.08);
+}
+
+.mulata-category-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    flex: 0 0 48px;
+
+    border-radius: 14px;
+
+    background: #eff7f7;
+
+    color: #174a5b;
+
+    font-size: 20px;
+}
+
+.mulata-category-copy {
+    min-width: 0;
+}
+
+.mulata-category-copy strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    font-size: 16px;
+    font-weight: 750;
+
+    color: #173d49;
+}
+
+.mulata-category-copy span {
+    display: block;
+
+    font-size: 11.5px;
+    line-height: 1.3;
+
+    color: #758489;
+}
+
+.mulata-category-arrow {
+    position: absolute;
+
+    right: 14px;
+    top: 14px;
+
+    color: #ffb600;
+}
+
+
+/* ==========================================================
+   PROMO
+   ========================================================== */
+
+.mulata-home-promo {
+    padding: 0 0 48px;
+}
+
+.mulata-home-promo-card {
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 36px;
+
+    min-height: 220px;
+
+    border-radius: 18px;
+
+    background: #174a5b;
+
+    color: white;
+}
+
+.mulata-home-promo-card > div:first-child {
+    position: relative;
+    z-index: 2;
+
+    max-width: 470px;
+}
+
+.mulata-home-promo-card span {
+    display: inline-block;
+
+    margin-bottom: 6px;
+
+    color: #ffb600;
+
+    font-size: 12px;
+    font-weight: 750;
+
+    text-transform: uppercase;
+}
+
+.mulata-home-promo-card h2 {
+    margin: 0 0 10px;
+
+    font-size: 32px;
+    font-weight: 750;
+
+    color: white;
+}
+
+.mulata-home-promo-card p {
+    margin-bottom: 20px;
+
+    max-width: 390px;
+
+    color: rgba(255,255,255,.8);
+}
+
+.mulata-home-promo-shape {
+    position: absolute;
+
+    width: 430px;
+    height: 430px;
+
+    right: -80px;
+    top: -130px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            #ffb600 0 31%,
+            rgba(255,182,0,.28) 32% 48%,
+            transparent 49%
+        );
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 767.98px) {
+
+    .mulata-home-hero {
+        padding: 22px 0 18px;
+    }
+
+    .mulata-home-hero-grid {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+        min-height: 0;
+    }
+
+    .mulata-home-hero h1 {
+        font-size: 43px;
+    }
+
+    .mulata-home-hero p {
+        font-size: 15px;
+    }
+
+    .mulata-home-hero-actions {
+        width: 100%;
+    }
+
+    .mulata-home-hero-actions .btn {
+        flex: 1 1 auto;
+    }
+
+    .mulata-home-visual-card {
+        min-height: 270px;
+
+        border-radius: 16px;
+    }
+
+    .mulata-home-room-plant {
+        font-size: 50px;
+    }
+
+
+    /* benefits horizontal */
+
+    .mulata-home-benefits-grid {
+        display: flex;
+
+        overflow-x: auto;
+
+        border: 0;
+        border-radius: 0;
+
+        background: transparent;
+
+        box-shadow: none;
+
+        gap: 7px;
+
+        scrollbar-width: none;
+    }
+
+    .mulata-home-benefits-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .mulata-home-benefit {
+        flex: 0 0 175px;
+
+        min-height: 61px;
+
+        padding: 9px;
+
+        background: white;
+
+        border: 1px solid #e1e8e9 !important;
+        border-radius: 10px;
+    }
+
+    .mulata-home-benefit > i {
+        width: 32px;
+        height: 32px;
+
+        flex-basis: 32px;
+    }
+
+    .mulata-home-benefit strong {
+        font-size: 11px;
+    }
+
+    .mulata-home-benefit span {
+        font-size: 9.5px;
+    }
+
+
+    /* categories */
+
+    .mulata-home-categories {
+        padding-top: 15px;
+        padding-bottom: 30px;
+    }
+
+    .mulata-home-section-heading h2 {
+        font-size: 23px;
+    }
+
+    .mulata-home-category-grid {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 8px;
+    }
+
+    .mulata-home-category-card {
+        flex-direction: column;
+        align-items: flex-start;
+
+        min-height: 145px;
+
+        padding: 14px;
+    }
+
+    .mulata-category-icon {
+        width: 42px;
+        height: 42px;
+
+        flex-basis: 42px;
+    }
+
+    .mulata-category-copy strong {
+        font-size: 14px;
+    }
+
+    .mulata-category-copy span {
+        font-size: 10px;
+    }
+
+
+    /* promo */
+
+    .mulata-home-promo-card {
+        padding: 24px;
+
+        min-height: 235px;
+    }
+
+    .mulata-home-promo-card h2 {
+        font-size: 27px;
+    }
+
+}
+
+
+/* ==========================================================
+   MULATA HOME V2 — HERO CON FOTO REAL
+   ========================================================== */
+
+
+/* HERO: conservar la imagen de fondo cargada en Odoo */
+.mulata-home-hero {
+    position: relative !important;
+
+    min-height: 430px !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    padding: 42px 0 !important;
+
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+
+    overflow: hidden !important;
+}
+
+
+/* Degradado para poder leer bien el texto */
+.mulata-home-hero::before {
+    content: "" !important;
+
+    position: absolute !important;
+    inset: 0 !important;
+
+    z-index: 0 !important;
+
+    pointer-events: none !important;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.97) 0%,
+            rgba(255,255,255,.91) 25%,
+            rgba(255,255,255,.58) 43%,
+            rgba(255,255,255,.08) 65%,
+            rgba(255,255,255,0) 100%
+        ) !important;
+}
+
+
+.mulata-home-hero .container {
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+
+/* Ya no necesitamos dos columnas */
+.mulata-home-hero-grid {
+    display: block !important;
+
+    min-height: 0 !important;
+}
+
+
+/* ==========================================================
+   ELIMINAR EL MOCKUP CSS VIEJO
+   ========================================================== */
+
+.mulata-home-hero-visual,
+.mulata-home-visual-card,
+.mulata-home-room,
+.mulata-home-room-bed,
+.mulata-home-room-table,
+.mulata-home-room-lamp,
+.mulata-home-room-plant,
+.mulata-home-visual-badge {
+    display: none !important;
+}
+
+
+/* ==========================================================
+   TEXTO DEL HERO
+   ========================================================== */
+
+.mulata-home-hero-copy {
+    position: relative !important;
+
+    z-index: 3 !important;
+
+    width: 48% !important;
+    max-width: 520px !important;
+    max-width: 520px !important;
+
+    padding: 8px 0 !important;
+}
+
+
+.mulata-home-eyebrow {
+    margin-bottom: 10px !important;
+
+    font-size: 13px !important;
+    font-weight: 750 !important;
+
+    color: #3B989B !important;
+}
+
+
+.mulata-home-hero h1 {
+    margin: 0 0 16px !important;
+
+    font-size: clamp(48px, 5vw, 70px) !important;
+    line-height: .96 !important;
+    font-weight: 800 !important;
+
+    color: #174A5B !important;
+
+    text-shadow: none !important;
+}
+
+
+.mulata-home-hero h1 span {
+    color: #3B989B !important;
+}
+
+
+.mulata-home-hero p {
+    max-width: 460px !important;
+
+    margin-bottom: 23px !important;
+
+    font-size: 17px !important;
+    line-height: 1.45 !important;
+
+    color: #536A72 !important;
+}
+
+
+/* botones */
+.mulata-home-hero-actions {
+    display: flex !important;
+    gap: 10px !important;
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 767.98px) {
+
+    .mulata-home-hero {
+        min-height: 455px !important;
+
+        padding: 28px 0 30px !important;
+
+        align-items: flex-end !important;
+
+        background-position: 62% center !important;
+    }
+
+
+    .mulata-home-hero::before {
+        background:
+            linear-gradient(
+                0deg,
+                rgba(255,255,255,.98) 0%,
+                rgba(255,255,255,.95) 40%,
+                rgba(255,255,255,.50) 67%,
+                rgba(255,255,255,.02) 100%
+            ) !important;
+    }
+
+
+    .mulata-home-hero-copy {
+        width: 100% !important;
+        max-width: none !important;
+
+        padding: 0 !important;
+    }
+
+
+    .mulata-home-hero h1 {
+        font-size: 42px !important;
+        line-height: .98 !important;
+
+        margin-bottom: 12px !important;
+    }
+
+
+    .mulata-home-hero p {
+        max-width: 340px !important;
+
+        margin-bottom: 18px !important;
+
+        font-size: 14px !important;
+    }
+
+
+    .mulata-home-eyebrow {
+        font-size: 10px !important;
+    }
+
+
+    .mulata-home-hero-actions {
+        width: 100% !important;
+    }
+
+
+    .mulata-home-hero-actions .btn {
+        flex: 1 1 0 !important;
+    }
+}
+
+
+
+/* ==========================================================
+   MULATA HOME V3 — HERO MOBILE
+   Mejor encuadre + más fotografía + copy inferior
+   ========================================================== */
+
+@media (max-width: 767.98px) {
+
+    /* ------------------------------------------------------
+       HERO MÁS ALTO
+       ------------------------------------------------------ */
+
+    .mulata-home-hero {
+        min-height: 0 !important;
+        height: auto !important;
+
+        padding: 24px 0 !important;
+
+        display: block !important;
+        align-items: initial !important;
+
+        /* Prioriza cama y mesa de luz */
+        background-size: cover !important;
+        background-position: 67% center !important;
+        background-repeat: no-repeat !important;
+    }
+
+
+    /* ------------------------------------------------------
+       DEGRADADO:
+       arriba deja ver la foto;
+       abajo crea espacio limpio para el texto.
+       ------------------------------------------------------ */
+
+    .mulata-home-hero::before {
+        content: "" !important;
+
+        position: absolute !important;
+        inset: 0 !important;
+
+        pointer-events: none !important;
+
+        background:
+            linear-gradient(
+                0deg,
+                rgba(255,255,255,.99) 0%,
+                rgba(255,255,255,.98) 28%,
+                rgba(255,255,255,.91) 40%,
+                rgba(255,255,255,.48) 54%,
+                rgba(255,255,255,.08) 68%,
+                rgba(255,255,255,0) 78%
+            ) !important;
+    }
+
+
+    /* ------------------------------------------------------
+       CONTAINER
+       ------------------------------------------------------ */
+
+    .mulata-home-hero .container {
+        width: 100% !important;
+
+        padding-left: 14px !important;
+        padding-right: 14px !important;
+        padding-bottom: 22px !important;
+
+        margin: 0 auto !important;
+    }
+
+
+    .mulata-home-hero-grid {
+        display: block !important;
+
+        width: 100% !important;
+
+        margin: 0 !important;
+    }
+
+
+    /* ------------------------------------------------------
+       COPY
+       ------------------------------------------------------ */
+
+    .mulata-home-hero-copy {
+        width: 100% !important;
+        max-width: 335px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        position: relative !important;
+        z-index: 3 !important;
+    }
+
+
+    .mulata-home-eyebrow {
+        margin-bottom: 6px !important;
+
+        font-size: 9px !important;
+        line-height: 1.15 !important;
+        letter-spacing: .04em !important;
+    }
+
+
+    .mulata-home-hero h1 {
+        margin: 0 0 9px !important;
+
+        font-size: 36px !important;
+        line-height: .95 !important;
+        letter-spacing: -.025em !important;
+    }
+
+
+    .mulata-home-hero h1 span {
+        display: block !important;
+    }
+
+
+    .mulata-home-hero p {
+        max-width: 300px !important;
+
+        margin: 0 0 14px !important;
+
+        font-size: 12.5px !important;
+        line-height: 1.32 !important;
+    }
+
+
+    /* ------------------------------------------------------
+       BOTONES
+       ------------------------------------------------------ */
+
+    .mulata-home-hero-actions {
+        display: grid !important;
+        grid-template-columns: 1.15fr .85fr !important;
+
+        width: 100% !important;
+        max-width: 300px !important;
+
+        gap: 7px !important;
+
+        margin: 0 !important;
+    }
+
+
+    .mulata-home-hero-actions .btn {
+        width: 100% !important;
+
+        padding: 10px 8px !important;
+
+        font-size: 11px !important;
+
+        border-radius: 9px !important;
+    }
+
+
+    /* ------------------------------------------------------
+       DESACTIVAR DEFINITIVAMENTE EL MOCKUP CSS VIEJO
+       ------------------------------------------------------ */
+
+    .mulata-home-hero-visual,
+    .mulata-home-visual-card,
+    .mulata-home-room,
+    .mulata-home-room-bed,
+    .mulata-home-room-table,
+    .mulata-home-room-lamp,
+    .mulata-home-room-plant,
+    .mulata-home-visual-badge {
+        display: none !important;
+    }
+
+}
+
+
+/* ==========================================================
+   TELÉFONOS MUY ANGOSTOS
+   ========================================================== */
+
+@media (max-width: 390px) {
+
+    .mulata-home-hero {
+        min-height: 0 !important;
+
+        background-position: 66% center !important;
+    }
+
+    .mulata-home-hero h1 {
+        font-size: 34px !important;
+    }
+
+    .mulata-home-hero-copy {
+        max-width: 320px !important;
+    }
+
+}
+
+
+
+/* ==========================================================
+   MULATA HOME V4 — TABLET / NOTEBOOK ANGOSTO
+   768px a 1199px
+   ========================================================== */
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+
+    /* ------------------------------------------------------
+       HERO
+       ------------------------------------------------------ */
+
+    .mulata-home-hero {
+        min-height: 360px !important;
+        height: auto !important;
+
+        padding: 30px 0 !important;
+
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+
+        /*
+         * Movemos un poco la foto hacia la derecha
+         * para conservar la cama visible.
+         */
+        background-position: 64% center !important;
+    }
+
+
+    /* degradado adaptado a un ancho menor */
+    .mulata-home-hero::before {
+        background:
+            linear-gradient(
+                90deg,
+                rgba(255,255,255,.98) 0%,
+                rgba(255,255,255,.94) 28%,
+                rgba(255,255,255,.72) 42%,
+                rgba(255,255,255,.28) 58%,
+                rgba(255,255,255,.03) 76%,
+                rgba(255,255,255,0) 100%
+            ) !important;
+    }
+
+
+    .mulata-home-hero .container {
+        max-width: 100% !important;
+
+        padding-left: 28px !important;
+        padding-right: 28px !important;
+    }
+
+
+    .mulata-home-hero-copy {
+        width: 43% !important;
+        max-width: 420px !important;
+        min-width: 300px !important;
+    }
+
+
+    .mulata-home-eyebrow {
+        font-size: 10px !important;
+        margin-bottom: 7px !important;
+    }
+
+
+    .mulata-home-hero h1 {
+        font-size: 43px !important;
+        line-height: .97 !important;
+
+        margin-bottom: 11px !important;
+    }
+
+
+    .mulata-home-hero p {
+        max-width: 360px !important;
+
+        font-size: 13.5px !important;
+        line-height: 1.35 !important;
+
+        margin-bottom: 16px !important;
+    }
+
+
+    .mulata-home-hero-actions {
+        gap: 8px !important;
+    }
+
+
+    .mulata-home-hero-actions .btn {
+        padding: 10px 14px !important;
+
+        font-size: 12px !important;
+    }
+
+
+    /* ------------------------------------------------------
+       BENEFICIOS
+       ------------------------------------------------------ */
+
+    .mulata-home-benefits-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    }
+
+
+    .mulata-home-benefit {
+        padding: 11px 9px !important;
+
+        gap: 7px !important;
+    }
+
+
+    .mulata-home-benefit > i {
+        width: 32px !important;
+        height: 32px !important;
+
+        flex-basis: 32px !important;
+    }
+
+
+    .mulata-home-benefit strong {
+        font-size: 10.5px !important;
+    }
+
+
+    .mulata-home-benefit span {
+        font-size: 8.5px !important;
+    }
+
+
+    /* ------------------------------------------------------
+       CATEGORÍAS
+       ------------------------------------------------------ */
+
+    .mulata-home-category-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+
+        gap: 10px !important;
+    }
+
+
+    .mulata-home-category-card {
+        min-height: 100px !important;
+
+        padding: 14px !important;
+    }
+
+
+    .mulata-category-copy strong {
+        font-size: 14px !important;
+    }
+
+
+    .mulata-category-copy span {
+        font-size: 10.5px !important;
+    }
+
+}
+
+
+/* ==========================================================
+   NOTEBOOK MUY ANGOSTO
+   768px a 900px
+   ========================================================== */
+
+@media (min-width: 768px) and (max-width: 900px) {
+
+    .mulata-home-hero {
+        min-height: 345px !important;
+
+        background-position: 68% center !important;
+    }
+
+
+    .mulata-home-hero-copy {
+        width: 46% !important;
+        min-width: 275px !important;
+    }
+
+
+    .mulata-home-hero h1 {
+        font-size: 38px !important;
+    }
+
+
+    .mulata-home-hero p {
+        font-size: 12px !important;
+        max-width: 300px !important;
+    }
+
+
+    .mulata-home-hero-actions .btn {
+        padding: 9px 11px !important;
+        font-size: 11px !important;
+    }
+
+}
+
+
+
+/* ==========================================================
+   MULATA HOME V5 — PRODUCTOS DESTACADOS
+   ========================================================== */
+
+.mulata-home-featured {
+    padding: 8px 0 46px;
+}
+
+
+.mulata-home-featured-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 12px;
+}
+
+
+/* ----------------------------------------------------------
+   CARD
+   ---------------------------------------------------------- */
+
+.mulata-home-product-card {
+    min-width: 0;
+
+    overflow: hidden;
+
+    background: #fff;
+
+    border: 1px solid #E1E8E9;
+    border-radius: 14px;
+
+    box-shadow: 0 3px 12px rgba(23,74,91,.045);
+
+    transition:
+        transform .18s ease,
+        box-shadow .18s ease,
+        border-color .18s ease;
+}
+
+
+.mulata-home-product-card:hover {
+    transform: translateY(-2px);
+
+    border-color: #CADBDD;
+
+    box-shadow: 0 10px 25px rgba(23,74,91,.09);
+}
+
+
+/* ----------------------------------------------------------
+   IMAGEN
+   ---------------------------------------------------------- */
+
+.mulata-home-product-image {
+    display: block;
+
+    width: 100%;
+    height: 245px;
+
+    overflow: hidden;
+
+    background: #fff;
+}
+
+
+.mulata-home-product-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform .22s ease;
+}
+
+
+.mulata-home-product-card:hover
+.mulata-home-product-image img {
+    transform: scale(1.025);
+}
+
+
+/* ----------------------------------------------------------
+   INFORMACIÓN
+   ---------------------------------------------------------- */
+
+.mulata-home-product-body {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 170px;
+
+    padding: 13px 14px 15px;
+}
+
+
+.mulata-home-product-name {
+    display: -webkit-box;
+
+    min-height: 39px;
+
+    margin-bottom: 8px;
+
+    overflow: hidden;
+
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+    color: #223B44 !important;
+
+    font-size: 14px;
+    font-weight: 650;
+    line-height: 1.35;
+
+    text-decoration: none !important;
+}
+
+
+.mulata-home-product-price {
+    margin-bottom: 6px;
+
+    color: #174A5B;
+
+    font-size: 21px;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+
+.mulata-home-product-installments {
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+
+    margin-bottom: 12px;
+
+    color: #3B989B;
+
+    font-size: 11px;
+    font-weight: 650;
+}
+
+
+.mulata-home-product-link {
+    display: inline-flex;
+    align-items: center;
+
+    margin-top: auto;
+
+    color: #174A5B !important;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-decoration: none !important;
+}
+
+
+.mulata-home-product-link i {
+    color: #FFB600;
+}
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+
+    .mulata-home-featured-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .mulata-home-product-image {
+        height: 260px;
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 767.98px) {
+
+    .mulata-home-featured {
+        padding: 2px 0 30px;
+    }
+
+
+    .mulata-home-featured-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 7px;
+    }
+
+
+    .mulata-home-product-card {
+        border-radius: 10px;
+    }
+
+
+    .mulata-home-product-image {
+        height: 165px;
+    }
+
+
+    .mulata-home-product-body {
+        min-height: 150px;
+
+        padding: 8px 8px 10px;
+    }
+
+
+    .mulata-home-product-name {
+        min-height: 31px;
+
+        margin-bottom: 6px;
+
+        font-size: 11.5px;
+        line-height: 1.3;
+    }
+
+
+    .mulata-home-product-price {
+        margin-bottom: 5px;
+
+        font-size: 17px;
+    }
+
+
+    .mulata-home-product-installments {
+        margin-bottom: 8px;
+
+        font-size: 9.5px;
+    }
+
+
+    .mulata-home-product-link {
+        font-size: 9.5px;
+    }
+
+}
+
+
+
+/* ==========================================================
+   MULATA HOME V6 — BANNER COLCHONERÍA
+   ========================================================== */
+
+.mulata-home-sleep-banner {
+    padding: 4px 0 48px;
+}
+
+
+.mulata-home-sleep-card {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 46% 54%;
+
+    min-height: 360px;
+
+    overflow: hidden;
+
+    background: #174A5B;
+
+    border-radius: 18px;
+
+    box-shadow: 0 10px 30px rgba(23,74,91,.10);
+}
+
+
+/* ==========================================================
+   COPY
+   ========================================================== */
+
+.mulata-home-sleep-copy {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 42px 44px;
+
+    color: #fff;
+}
+
+
+.mulata-home-sleep-kicker {
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    color: #FFB600;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: .08em;
+
+    text-transform: uppercase;
+}
+
+
+.mulata-home-sleep-copy h2 {
+    margin: 0 0 13px;
+
+    color: #fff;
+
+    font-size: 39px;
+    font-weight: 800;
+    line-height: 1;
+
+    letter-spacing: -.03em;
+}
+
+
+.mulata-home-sleep-copy h2 span {
+    display: block;
+
+    color: #FFB600;
+}
+
+
+.mulata-home-sleep-copy p {
+    max-width: 390px;
+
+    margin: 0 0 20px;
+
+    color: rgba(255,255,255,.84);
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* ==========================================================
+   BENEFICIOS
+   ========================================================== */
+
+.mulata-home-sleep-features {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px 16px;
+
+    margin-bottom: 22px;
+}
+
+
+.mulata-home-sleep-features span {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 6px;
+
+    color: rgba(255,255,255,.90);
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+.mulata-home-sleep-features i {
+    color: #FFB600;
+}
+
+
+/* ==========================================================
+   CTA
+   ========================================================== */
+
+.mulata-home-sleep-btn {
+    align-self: flex-start;
+
+    padding: 11px 18px !important;
+
+    background: #FFB600 !important;
+
+    border: 0 !important;
+    border-radius: 9px !important;
+
+    color: #174A5B !important;
+
+    font-size: 12px !important;
+    font-weight: 800 !important;
+
+    box-shadow: none !important;
+}
+
+
+.mulata-home-sleep-btn:hover {
+    transform: translateY(-1px);
+
+    background: #FFC52D !important;
+
+    color: #174A5B !important;
+}
+
+
+/* ==========================================================
+   IMAGEN
+   ========================================================== */
+
+.mulata-home-sleep-visual {
+    position: relative;
+
+    min-height: 360px;
+
+    overflow: hidden;
+
+    background: #F4F6F4;
+}
+
+
+.mulata-home-sleep-visual::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0 auto 0 0;
+
+    z-index: 1;
+
+    width: 22%;
+
+    background: linear-gradient(
+        90deg,
+        #174A5B 0%,
+        rgba(23,74,91,.72) 34%,
+        rgba(23,74,91,0) 100%
+    );
+
+    pointer-events: none;
+}
+
+
+.mulata-home-sleep-visual img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    min-height: 360px;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform .35s ease;
+}
+
+
+.mulata-home-sleep-card:hover
+.mulata-home-sleep-visual img {
+    transform: scale(1.02);
+}
+
+
+/* ==========================================================
+   BADGE
+   ========================================================== */
+
+.mulata-home-sleep-badge {
+    position: absolute;
+
+    right: 20px;
+    bottom: 20px;
+
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 10px 13px;
+
+    background: rgba(255,255,255,.94);
+
+    border-radius: 10px;
+
+    box-shadow: 0 5px 18px rgba(0,0,0,.08);
+}
+
+
+.mulata-home-sleep-badge strong {
+    color: #174A5B;
+
+    font-size: 12px;
+    line-height: 1.1;
+}
+
+
+.mulata-home-sleep-badge span {
+    margin-top: 2px;
+
+    color: #66777C;
+
+    font-size: 9px;
+}
+
+
+/* ==========================================================
+   FALLBACK
+   ========================================================== */
+
+.mulata-home-sleep-placeholder {
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+    min-height: 360px;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #174A5B;
+
+    font-size: 80px;
+
+    opacity: .15;
+}
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+
+    .mulata-home-sleep-card {
+        grid-template-columns: 48% 52%;
+
+        min-height: 315px;
+    }
+
+
+    .mulata-home-sleep-copy {
+        padding: 30px;
+    }
+
+
+    .mulata-home-sleep-copy h2 {
+        font-size: 33px;
+    }
+
+
+    .mulata-home-sleep-visual,
+    .mulata-home-sleep-visual img {
+        min-height: 315px;
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 767.98px) {
+
+    .mulata-home-sleep-banner {
+        padding: 0 0 30px;
+    }
+
+
+    .mulata-home-sleep-card {
+        display: flex;
+        flex-direction: column;
+
+        min-height: 0;
+
+        border-radius: 13px;
+    }
+
+
+    .mulata-home-sleep-copy {
+        order: 2;
+
+        padding: 24px 18px 25px;
+    }
+
+
+    .mulata-home-sleep-copy h2 {
+        margin-bottom: 10px;
+
+        font-size: 31px;
+    }
+
+
+    .mulata-home-sleep-copy p {
+        margin-bottom: 15px;
+
+        font-size: 12px;
+    }
+
+
+    .mulata-home-sleep-features {
+        margin-bottom: 17px;
+
+        gap: 7px 12px;
+    }
+
+
+    .mulata-home-sleep-features span {
+        font-size: 10px;
+    }
+
+
+    .mulata-home-sleep-btn {
+        width: 100%;
+
+        justify-content: center;
+
+        padding: 11px 12px !important;
+    }
+
+
+    .mulata-home-sleep-visual {
+        order: 1;
+
+        min-height: 220px;
+        height: 220px;
+    }
+
+
+    .mulata-home-sleep-visual::before {
+        display: none;
+    }
+
+
+    .mulata-home-sleep-visual img {
+        min-height: 220px;
+        height: 220px;
+
+        object-position: center;
+    }
+
+
+    .mulata-home-sleep-placeholder {
+        min-height: 220px;
+    }
+
+
+    .mulata-home-sleep-badge {
+        right: 12px;
+        bottom: 12px;
+    }
+
+}
+
+
+
+/* ==========================================================
+   MULATA HOME V7
+   MOBILE MÁS COMPACTO / MÁS CONTENIDO ABOVE THE FOLD
+   ========================================================== */
+
+@media (max-width: 767.98px) {
+
+    /* ======================================================
+       HERO
+       ====================================================== */
+
+    .mulata-home-hero {
+        min-height: 455px !important;
+
+        background-position: 67% center !important;
+    }
+
+
+    .mulata-home-hero .container {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        padding-bottom: 15px !important;
+    }
+
+
+    .mulata-home-hero-copy {
+        max-width: 315px !important;
+    }
+
+
+    .mulata-home-eyebrow {
+        margin-bottom: 4px !important;
+
+        font-size: 8px !important;
+    }
+
+
+    .mulata-home-hero h1 {
+        margin-bottom: 7px !important;
+
+        font-size: 32px !important;
+        line-height: .96 !important;
+    }
+
+
+    .mulata-home-hero p {
+        max-width: 285px !important;
+
+        margin-bottom: 10px !important;
+
+        font-size: 11px !important;
+        line-height: 1.3 !important;
+    }
+
+
+    .mulata-home-hero-actions {
+        max-width: 285px !important;
+
+        gap: 6px !important;
+    }
+
+
+    .mulata-home-hero-actions .btn {
+        min-height: 38px !important;
+
+        padding: 8px 7px !important;
+
+        font-size: 10px !important;
+    }
+
+
+    /* ======================================================
+       BENEFICIOS
+       ====================================================== */
+
+    .mulata-home-benefits {
+        margin-top: 0 !important;
+    }
+
+
+    .mulata-home-benefits .container {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+
+    .mulata-home-benefits-grid {
+        gap: 5px !important;
+    }
+
+
+    .mulata-home-benefit {
+        min-height: 54px !important;
+
+        padding: 7px 6px !important;
+
+        gap: 5px !important;
+
+        border-radius: 8px !important;
+    }
+
+
+    .mulata-home-benefit > i {
+        width: 27px !important;
+        height: 27px !important;
+
+        min-width: 27px !important;
+
+        font-size: 11px !important;
+    }
+
+
+    .mulata-home-benefit strong {
+        font-size: 8.5px !important;
+        line-height: 1.1 !important;
+    }
+
+
+    .mulata-home-benefit span {
+        font-size: 7px !important;
+        line-height: 1.15 !important;
+    }
+
+
+    /* ======================================================
+       CATEGORÍAS PRINCIPALES
+       ====================================================== */
+
+    .mulata-home-categories {
+        padding-top: 20px !important;
+        padding-bottom: 22px !important;
+    }
+
+
+    .mulata-home-categories .container {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+
+    .mulata-home-section-heading {
+        margin-bottom: 10px !important;
+    }
+
+
+    .mulata-home-section-heading h2 {
+        margin-bottom: 0 !important;
+
+        font-size: 19px !important;
+        line-height: 1.08 !important;
+    }
+
+
+    .mulata-home-section-kicker {
+        margin-bottom: 3px !important;
+
+        font-size: 7.5px !important;
+    }
+
+
+    .mulata-home-section-heading > a {
+        font-size: 9px !important;
+    }
+
+
+    .mulata-home-category-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+
+        gap: 6px !important;
+    }
+
+
+    .mulata-home-category-card {
+        min-height: 72px !important;
+
+        padding: 9px !important;
+
+        border-radius: 9px !important;
+    }
+
+
+    .mulata-home-category-card i {
+        font-size: 13px !important;
+    }
+
+
+    .mulata-category-copy strong {
+        font-size: 10px !important;
+        line-height: 1.15 !important;
+    }
+
+
+    .mulata-category-copy span {
+        margin-top: 2px !important;
+
+        font-size: 7.5px !important;
+        line-height: 1.15 !important;
+    }
+
+
+    /* ======================================================
+       PRODUCTOS DESTACADOS
+       menos aire arriba
+       ====================================================== */
+
+    .mulata-home-featured {
+        padding-top: 0 !important;
+        padding-bottom: 25px !important;
+    }
+
+
+    .mulata-home-featured .mulata-home-section-heading {
+        margin-bottom: 9px !important;
+    }
+
+}
+
+
+/* ==========================================================
+   TELÉFONOS ANGOSTOS
+   ========================================================== */
+
+@media (max-width: 390px) {
+
+    .mulata-home-hero {
+        min-height: 440px !important;
+    }
+
+
+    .mulata-home-hero h1 {
+        font-size: 30px !important;
+    }
+
+
+    .mulata-home-category-card {
+        min-height: 68px !important;
+    }
+
+}
+
+
+
+/* ==========================================================
+   MULATA HOME V8 — MOBILE TYPOGRAPHY FIX
+   ========================================================== */
+
+@media (max-width: 767.98px) {
+
+    /* HERO */
+
+    .mulata-home-eyebrow {
+        font-size: 9.5px !important;
+    }
+
+    .mulata-home-hero h1 {
+        font-size: 34px !important;
+        line-height: .98 !important;
+    }
+
+    .mulata-home-hero p {
+        font-size: 12.5px !important;
+        line-height: 1.35 !important;
+    }
+
+    .mulata-home-hero-actions .btn {
+        font-size: 11.5px !important;
+        font-weight: 700 !important;
+    }
+
+
+    /* BENEFICIOS */
+
+    .mulata-home-benefit {
+        min-height: 60px !important;
+        padding: 8px 7px !important;
+    }
+
+    .mulata-home-benefit > i {
+        width: 30px !important;
+        height: 30px !important;
+        min-width: 30px !important;
+
+        font-size: 12px !important;
+    }
+
+    .mulata-home-benefit strong {
+        font-size: 10.5px !important;
+        line-height: 1.15 !important;
+    }
+
+    .mulata-home-benefit span {
+        font-size: 8.5px !important;
+        line-height: 1.2 !important;
+    }
+
+
+    /* ENCABEZADOS DE SECCIÓN */
+
+    .mulata-home-section-kicker {
+        font-size: 8.5px !important;
+        line-height: 1.2 !important;
+    }
+
+    .mulata-home-section-heading h2 {
+        font-size: 20px !important;
+        line-height: 1.1 !important;
+    }
+
+    .mulata-home-section-heading > a {
+        font-size: 10px !important;
+        font-weight: 700 !important;
+    }
+
+
+    /* CATEGORÍAS */
+
+    .mulata-home-category-card {
+        min-height: 82px !important;
+
+        padding: 10px 9px !important;
+    }
+
+    .mulata-home-category-card i {
+        font-size: 15px !important;
+    }
+
+    .mulata-category-copy strong {
+        font-size: 12px !important;
+        line-height: 1.15 !important;
+    }
+
+    .mulata-category-copy span {
+        font-size: 9px !important;
+        line-height: 1.25 !important;
+    }
+
+
+    /* PRODUCTOS DESTACADOS */
+
+    .mulata-home-product-name {
+        font-size: 12.5px !important;
+        line-height: 1.3 !important;
+    }
+
+    .mulata-home-product-price {
+        font-size: 18px !important;
+    }
+
+    .mulata-home-product-installments {
+        font-size: 10px !important;
+    }
+
+    .mulata-home-product-link {
+        font-size: 10.5px !important;
+    }
+
+}
+
+
+/* Muy angostos */
+
+@media (max-width: 390px) {
+
+    .mulata-home-hero h1 {
+        font-size: 32px !important;
+    }
+
+    .mulata-category-copy strong {
+        font-size: 11.5px !important;
+    }
+
+    .mulata-category-copy span {
+        font-size: 8.5px !important;
+    }
+
+}
+
+
+
+/* ==========================================================
+   MULATA HOME V9 — LEGIBILIDAD REAL EN TARJETAS MOBILE
+   ========================================================== */
+
+@media (max-width: 767.98px) {
+
+    /* ======================================================
+       CATEGORÍAS
+       ====================================================== */
+
+    .mulata-home-category-card {
+        min-height: 94px !important;
+
+        padding: 12px 11px !important;
+
+        gap: 9px !important;
+    }
+
+
+    .mulata-home-category-card i {
+        width: 34px !important;
+        height: 34px !important;
+
+        min-width: 34px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        font-size: 18px !important;
+    }
+
+
+    .mulata-category-copy strong {
+        display: block !important;
+
+        font-size: 14px !important;
+        font-weight: 750 !important;
+
+        line-height: 1.15 !important;
+
+        color: #174A5B !important;
+    }
+
+
+    .mulata-category-copy span {
+        display: block !important;
+
+        margin-top: 4px !important;
+
+        font-size: 11px !important;
+
+        line-height: 1.3 !important;
+
+        color: #61747A !important;
+    }
+
+
+    /* Flecha */
+
+    .mulata-home-category-card .fa-arrow-right,
+    .mulata-home-category-card .fa-chevron-right {
+        font-size: 11px !important;
+    }
+
+
+    /* ======================================================
+       BENEFICIOS
+       ====================================================== */
+
+    .mulata-home-benefit {
+        min-height: 64px !important;
+
+        padding: 9px 8px !important;
+    }
+
+
+    .mulata-home-benefit > i {
+        width: 31px !important;
+        height: 31px !important;
+
+        min-width: 31px !important;
+
+        font-size: 13px !important;
+    }
+
+
+    .mulata-home-benefit strong {
+        font-size: 11.5px !important;
+        font-weight: 750 !important;
+
+        line-height: 1.15 !important;
+    }
+
+
+    .mulata-home-benefit span {
+        margin-top: 2px !important;
+
+        font-size: 9px !important;
+
+        line-height: 1.2 !important;
+    }
+
+}
+
+
+/* ==========================================================
+   TELÉFONOS MUY ANGOSTOS
+   ========================================================== */
+
+@media (max-width: 390px) {
+
+    .mulata-category-copy strong {
+        font-size: 13.5px !important;
+    }
+
+
+    .mulata-category-copy span {
+        font-size: 10.5px !important;
+    }
+
+
+    .mulata-home-benefit strong {
+        font-size: 11px !important;
+    }
+
+}
+
+
+
+/* ==========================================================
+   MULATA HOME V10 — TARJETAS MOBILE MÁS PRESENTES
+   ========================================================== */
+
+@media (max-width: 767.98px) {
+
+    .mulata-home-category-card {
+        min-height: 104px !important;
+
+        padding: 13px 12px !important;
+
+        gap: 10px !important;
+    }
+
+
+    .mulata-home-category-card i {
+        width: 36px !important;
+        height: 36px !important;
+
+        min-width: 36px !important;
+
+        font-size: 19px !important;
+    }
+
+
+    .mulata-category-copy strong {
+        font-size: 15.5px !important;
+
+        font-weight: 750 !important;
+
+        line-height: 1.15 !important;
+
+        letter-spacing: -.01em !important;
+    }
+
+
+    .mulata-category-copy span {
+        margin-top: 4px !important;
+
+        font-size: 11.5px !important;
+
+        line-height: 1.3 !important;
+    }
+
+
+    /* BENEFICIOS */
+
+    .mulata-home-benefit strong {
+        font-size: 12px !important;
+    }
+
+
+    .mulata-home-benefit span {
+        font-size: 9.5px !important;
+    }
+
+}
+
+
+/* Muy angostos */
+
+@media (max-width: 390px) {
+
+    .mulata-category-copy strong {
+        font-size: 15px !important;
+    }
+
+
+    .mulata-category-copy span {
+        font-size: 11px !important;
+    }
+
+}
+
+
+
+/* ==========================================================
+   MULATA HOME V12 — TEXTO SECUNDARIO CATEGORÍAS
+   ========================================================== */
+
+@media (max-width: 767.98px) {
+
+    .mulata-category-copy span {
+        font-size: 13.5px !important;
+        line-height: 1.3 !important;
+    }
+
+}
+
+@media (max-width: 390px) {
+
+    .mulata-category-copy span {
+        font-size: 13px !important;
+    }
+
+}
+
+
+
+/* ==========================================================
+   MULATA HOME V13 — FEATURED PRODUCTS FINAL
+   ========================================================== */
+
+.mulata-home-featured {
+    padding: 20px 0 52px !important;
+}
+
+
+/* ----------------------------------------------------------
+   GRID
+   ---------------------------------------------------------- */
+
+.mulata-home-featured-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+
+    gap: 14px !important;
+}
+
+
+/* ----------------------------------------------------------
+   CARD
+   ---------------------------------------------------------- */
+
+.mulata-home-product-card {
+    position: relative !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    min-width: 0 !important;
+
+    overflow: hidden !important;
+
+    background: #fff !important;
+
+    border: 1px solid #E4EAEC !important;
+    border-radius: 14px !important;
+
+    box-shadow:
+        0 2px 7px rgba(23,74,91,.035) !important;
+
+    transition:
+        transform .18s ease,
+        box-shadow .18s ease,
+        border-color .18s ease !important;
+}
+
+
+.mulata-home-product-card:hover {
+    transform: translateY(-3px) !important;
+
+    border-color: #C9DADD !important;
+
+    box-shadow:
+        0 12px 28px rgba(23,74,91,.10) !important;
+}
+
+
+/* pequeña etiqueta visual */
+.mulata-home-product-card::before {
+    content: "Destacado";
+
+    position: absolute;
+
+    top: 10px;
+    left: 10px;
+
+    z-index: 4;
+
+    padding: 5px 8px;
+
+    background: #174A5B;
+
+    border-radius: 6px;
+
+    color: #fff;
+
+    font-size: 9px;
+    font-weight: 750;
+    line-height: 1;
+
+    letter-spacing: .02em;
+
+    pointer-events: none;
+}
+
+
+/* ----------------------------------------------------------
+   IMAGEN
+   ---------------------------------------------------------- */
+
+.mulata-home-product-image {
+    position: relative !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 100% !important;
+    height: 245px !important;
+
+    padding: 10px !important;
+
+    overflow: hidden !important;
+
+    background: #FAFBFB !important;
+
+    border-bottom: 1px solid #F0F3F4 !important;
+}
+
+
+.mulata-home-product-image img {
+    display: block !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    object-fit: contain !important;
+    object-position: center !important;
+
+    transform: none !important;
+
+    transition: transform .22s ease !important;
+}
+
+
+.mulata-home-product-card:hover
+.mulata-home-product-image img {
+    transform: scale(1.025) !important;
+}
+
+
+/* ----------------------------------------------------------
+   CONTENIDO
+   ---------------------------------------------------------- */
+
+.mulata-home-product-body {
+    display: flex !important;
+    flex-direction: column !important;
+
+    flex: 1 1 auto !important;
+
+    min-height: 182px !important;
+
+    padding: 14px 14px 15px !important;
+}
+
+
+/* nombre */
+
+.mulata-home-product-name {
+    display: -webkit-box !important;
+
+    min-height: 40px !important;
+
+    margin: 0 0 9px !important;
+
+    overflow: hidden !important;
+
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+
+    color: #263A42 !important;
+
+    font-size: 14px !important;
+    font-weight: 650 !important;
+
+    line-height: 1.35 !important;
+
+    text-decoration: none !important;
+}
+
+
+.mulata-home-product-name:hover {
+    color: #174A5B !important;
+}
+
+
+/* precio */
+
+.mulata-home-product-price {
+    margin: 1px 0 7px !important;
+
+    color: #172F38 !important;
+
+    font-size: 23px !important;
+    font-weight: 800 !important;
+
+    line-height: 1.05 !important;
+
+    letter-spacing: -.02em !important;
+}
+
+
+/* cuotas */
+
+.mulata-home-product-installments {
+    display: flex !important;
+
+    align-items: center !important;
+
+    gap: 6px !important;
+
+    margin: 0 0 14px !important;
+
+    color: #3B989B !important;
+
+    font-size: 11.5px !important;
+    font-weight: 650 !important;
+
+    line-height: 1.25 !important;
+}
+
+
+.mulata-home-product-installments i {
+    color: #3B989B !important;
+}
+
+
+/* CTA */
+
+.mulata-home-product-link {
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: space-between !important;
+
+    width: 100% !important;
+
+    margin-top: auto !important;
+
+    padding: 10px 11px !important;
+
+    background: #F5F8F8 !important;
+
+    border-radius: 8px !important;
+
+    color: #174A5B !important;
+
+    font-size: 11.5px !important;
+    font-weight: 750 !important;
+
+    text-decoration: none !important;
+
+    transition:
+        background-color .15s ease,
+        color .15s ease !important;
+}
+
+
+.mulata-home-product-link:hover {
+    background: #174A5B !important;
+
+    color: #fff !important;
+}
+
+
+.mulata-home-product-link i {
+    color: #FFB600 !important;
+}
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+
+    .mulata-home-featured-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+
+        gap: 12px !important;
+    }
+
+
+    .mulata-home-product-image {
+        height: 260px !important;
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 767.98px) {
+
+    .mulata-home-featured {
+        padding: 12px 0 32px !important;
+    }
+
+
+    .mulata-home-featured-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+
+        gap: 8px !important;
+    }
+
+
+    .mulata-home-product-card {
+        border-radius: 11px !important;
+    }
+
+
+    .mulata-home-product-card::before {
+        top: 7px;
+        left: 7px;
+
+        padding: 4px 6px;
+
+        font-size: 8.5px;
+    }
+
+
+    .mulata-home-product-image {
+        height: 180px !important;
+
+        padding: 6px !important;
+    }
+
+
+    .mulata-home-product-body {
+        min-height: 180px !important;
+
+        padding: 10px 10px 11px !important;
+    }
+
+
+    .mulata-home-product-name {
+        min-height: 38px !important;
+
+        margin-bottom: 8px !important;
+
+        font-size: 13.5px !important;
+        line-height: 1.35 !important;
+    }
+
+
+    .mulata-home-product-price {
+        margin-bottom: 6px !important;
+
+        font-size: 20px !important;
+    }
+
+
+    .mulata-home-product-installments {
+        margin-bottom: 10px !important;
+
+        font-size: 11px !important;
+    }
+
+
+    .mulata-home-product-link {
+        padding: 9px 9px !important;
+
+        font-size: 11px !important;
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE MUY ANGOSTO
+   ========================================================== */
+
+@media (max-width: 390px) {
+
+    .mulata-home-product-image {
+        height: 165px !important;
+    }
+
+
+    .mulata-home-product-name {
+        font-size: 13px !important;
+    }
+
+
+    .mulata-home-product-price {
+        font-size: 19px !important;
+    }
+
+}
+
+
+/* =========================================================
+   HOME — PRODUCTOS DESTACADOS CON IMAGEN FULL BLEED
+   ========================================================= */
+
+.mulata-home-featured .mulata-home-product-card {
+    overflow: hidden;
+    border-radius: 16px;
+    background: #fff;
+    border: 1px solid #e8ecef;
+}
+
+/* área de imagen */
+.mulata-home-featured .mulata-home-product-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: #f7f8f9;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+}
+
+/* la imagen debe cubrir toda el área */
+.mulata-home-featured .mulata-home-product-image img,
+.mulata-home-featured .mulata-home-product-card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+}
+
+/* contenido textual debajo de la imagen */
+.mulata-home-featured .mulata-home-product-info,
+.mulata-home-featured .mulata-home-product-body,
+.mulata-home-featured .mulata-home-product-content {
+    padding: 14px 14px 16px !important;
+}
+
+/* nombre */
+.mulata-home-featured .mulata-home-product-card h3,
+.mulata-home-featured .mulata-home-product-card h4,
+.mulata-home-featured .mulata-home-product-card h5,
+.mulata-home-featured .mulata-home-product-card h6 {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+/* mobile */
+@media (max-width: 767.98px) {
+    .mulata-home-featured .mulata-home-product-image {
+        aspect-ratio: 1 / 1;
+    }
+}
+
+
+/* =========================================================
+   HOME DESTACADOS — IMAGEN REALMENTE FULL BLEED
+   ========================================================= */
+
+.mulata-home-featured .mulata-home-product-image {
+    position: relative !important;
+    width: 100% !important;
+    height: 245px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    overflow: hidden !important;
+
+    background: #fff !important;
+}
+
+
+/*
+ * Muchas fotos de catálogo traen margen blanco dentro
+ * del propio JPG/PNG. Hacemos un pequeño zoom para
+ * eliminar visualmente ese aire.
+ */
+.mulata-home-featured .mulata-home-product-image img {
+    position: absolute !important;
+
+    top: 50% !important;
+    left: 50% !important;
+
+    width: 114% !important;
+    height: 114% !important;
+
+    max-width: none !important;
+
+    object-fit: cover !important;
+    object-position: center !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    transform: translate(-50%, -50%) !important;
+}
+
+
+/* hover muy sutil */
+.mulata-home-featured .mulata-home-product-card:hover
+.mulata-home-product-image img {
+    transform: translate(-50%, -50%) scale(1.025) !important;
+}
+
+
+/* MOBILE */
+@media (max-width: 767.98px) {
+
+    .mulata-home-featured .mulata-home-product-image {
+        height: 185px !important;
+    }
+
+    .mulata-home-featured .mulata-home-product-image img {
+        width: 118% !important;
+        height: 118% !important;
+    }
+
+}
+
+
+/* =========================================================
+   HOME DESTACADOS — PROPORCIÓN FINAL DE CARDS
+   ========================================================= */
+
+/* CARD */
+.mulata-home-featured .mulata-home-product-card {
+    height: auto !important;
+    min-height: 0 !important;
+}
+
+/* IMAGEN: proporcional al ancho de la tarjeta */
+.mulata-home-featured .mulata-home-product-image {
+    position: relative !important;
+
+    display: block !important;
+
+    width: 100% !important;
+    height: auto !important;
+
+    aspect-ratio: 1 / 1 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    overflow: hidden !important;
+
+    background: #f7f8f8 !important;
+}
+
+/* Sin zoom artificial */
+.mulata-home-featured .mulata-home-product-image img {
+    position: static !important;
+
+    display: block !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    max-width: none !important;
+
+    object-fit: cover !important;
+    object-position: center !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    transform: none !important;
+}
+
+/* Hover sutil */
+.mulata-home-featured .mulata-home-product-card:hover
+.mulata-home-product-image img {
+    transform: scale(1.02) !important;
+}
+
+/* CUERPO */
+.mulata-home-featured .mulata-home-product-body {
+    min-height: 0 !important;
+
+    padding: 12px 12px 13px !important;
+}
+
+/* MOBILE */
+@media (max-width: 767.98px) {
+
+    .mulata-home-featured .mulata-home-product-image {
+        width: 100% !important;
+        height: auto !important;
+
+        aspect-ratio: 1 / 1 !important;
+    }
+
+    .mulata-home-featured .mulata-home-product-body {
+        padding: 10px !important;
+    }
+
+}
+
+
+
+/* ==========================================================
+   MULATA HOME — PROMO COLCHONERÍA V2
+   ========================================================== */
+
+.mulata-home-promo-v2 {
+    padding: 8px 0 48px;
+}
+
+.mulata-home-promo-card-v2 {
+    display: grid;
+    grid-template-columns: 45% 55%;
+
+    min-height: 340px;
+
+    overflow: hidden;
+
+    background: #174A5B;
+
+    border-radius: 18px;
+}
+
+.mulata-home-promo-copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 42px;
+
+    color: #fff;
+}
+
+.mulata-home-promo-kicker {
+    margin-bottom: 8px;
+
+    color: #FFB600;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+    letter-spacing: .08em;
+}
+
+.mulata-home-promo-copy h2 {
+    margin: 0 0 12px;
+
+    color: #fff;
+
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 1.05;
+}
+
+.mulata-home-promo-copy p {
+    max-width: 360px;
+
+    margin: 0 0 18px;
+
+    color: rgba(255,255,255,.80);
+
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+.mulata-home-promo-benefits {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px 16px;
+
+    margin-bottom: 20px;
+}
+
+.mulata-home-promo-benefits span {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 6px;
+
+    color: rgba(255,255,255,.88);
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.mulata-home-promo-benefits i {
+    color: #FFB600;
+}
+
+.mulata-home-promo-media {
+    position: relative;
+
+    overflow: hidden;
+
+    background: #f5f7f7;
+}
+
+.mulata-home-promo-media img {
+    width: 100%;
+    height: 100%;
+
+    min-height: 340px;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+.mulata-home-promo-fallback {
+    min-height: 340px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 72px;
+
+    color: #174A5B;
+
+    opacity: .15;
+}
+
+
+/* TABLET */
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+
+    .mulata-home-promo-card-v2 {
+        grid-template-columns: 48% 52%;
+        min-height: 300px;
+    }
+
+    .mulata-home-promo-copy {
+        padding: 30px;
+    }
+
+    .mulata-home-promo-copy h2 {
+        font-size: 30px;
+    }
+
+    .mulata-home-promo-media img,
+    .mulata-home-promo-fallback {
+        min-height: 300px;
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 767.98px) {
+
+    .mulata-home-promo-v2 {
+        padding: 8px 0 30px;
+    }
+
+    .mulata-home-promo-card-v2 {
+        display: flex;
+        flex-direction: column;
+
+        min-height: 0;
+
+        border-radius: 14px;
+    }
+
+    .mulata-home-promo-media {
+        order: 1;
+
+        height: 230px;
+    }
+
+    .mulata-home-promo-media img {
+        min-height: 230px;
+        height: 230px;
+
+        object-fit: cover;
+    }
+
+    .mulata-home-promo-copy {
+        order: 2;
+
+        padding: 24px 20px 26px;
+    }
+
+    .mulata-home-promo-copy h2 {
+        font-size: 28px;
+    }
+
+    .mulata-home-promo-copy p {
+        font-size: 13px;
+    }
+
+    .mulata-home-promo-benefits {
+        margin-bottom: 17px;
+    }
+
+    .mulata-home-promo-benefits span {
+        font-size: 11px;
+    }
+
+    .mulata-home-promo-copy .btn {
+        width: 100%;
+
+        min-height: 44px;
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+
+
+/* =========================================================
+   MULATA - BLOQUE COLCHONES Y SOMMIERS
+   ========================================================= */
+
+.mulata-home-promo {
+    padding: 42px 0 48px;
+    background: #f5f6f6;
+
+    .container {
+        max-width: 1320px;
+    }
+}
+
+.mulata-home-promo-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: 42% 58%;
+    min-height: 390px;
+    overflow: hidden;
+    border-radius: 14px;
+    background: #174A5B;
+    box-shadow: 0 10px 30px rgba(23, 74, 91, 0.10);
+}
+
+.mulata-home-promo-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 52px 48px 48px 54px;
+    color: #fff;
+    position: relative;
+    z-index: 2;
+
+    h2 {
+        margin: 0 0 18px;
+        font-size: clamp(36px, 3vw, 48px);
+        line-height: 1.02;
+        font-weight: 800;
+        letter-spacing: -1.5px;
+        color: #fff;
+
+        span {
+            display: block;
+            color: #fff;
+        }
+    }
+
+    p {
+        max-width: 410px;
+        margin: 0 0 24px;
+        font-size: 17px;
+        line-height: 1.5;
+        color: rgba(255, 255, 255, 0.86);
+    }
+}
+
+.mulata-home-promo-benefits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 22px;
+    margin-bottom: 28px;
+
+    span {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        font-weight: 700;
+        color: #fff;
+        white-space: nowrap;
+    }
+
+    i {
+        color: #FFB600;
+        font-size: 14px;
+    }
+}
+
+.mulata-home-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    width: fit-content;
+    min-width: 245px;
+
+    padding: 15px 22px;
+
+    border: 0;
+    border-radius: 8px;
+
+    background: #FFB600;
+    color: #173f4c !important;
+
+    font-size: 15px;
+    font-weight: 800;
+    text-decoration: none !important;
+
+    transition:
+        transform .18s ease,
+        box-shadow .18s ease,
+        background .18s ease;
+
+    &:hover {
+        background: #ffc32f;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 22px rgba(0, 0, 0, .16);
+    }
+
+    i {
+        font-size: 13px;
+        transition: transform .18s ease;
+    }
+
+    &:hover i {
+        transform: translateX(3px);
+    }
+}
+
+.mulata-home-promo-media {
+    position: relative;
+    min-height: 390px;
+    overflow: hidden;
+    background: #eee;
+
+    img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        inset: 0;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0 auto 0 0;
+        width: 90px;
+        pointer-events: none;
+        background: linear-gradient(
+            90deg,
+            rgba(23, 74, 91, .24) 0%,
+            rgba(23, 74, 91, 0) 100%
+        );
+    }
+}
+
+.mulata-home-promo-placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 390px;
+    background:
+        linear-gradient(
+            135deg,
+            #e8e2d9,
+            #d6cec3
+        );
+}
+
+
+/* TABLET */
+
+@media (max-width: 991.98px) {
+
+    .mulata-home-promo-card {
+        grid-template-columns: 46% 54%;
+        min-height: 350px;
+    }
+
+    .mulata-home-promo-content {
+        padding: 38px 32px;
+
+        h2 {
+            font-size: 34px;
+        }
+    }
+
+    .mulata-home-promo-media {
+        min-height: 350px;
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 767.98px) {
+
+    .mulata-home-promo {
+        padding: 24px 0 32px;
+    }
+
+    .mulata-home-promo-card {
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+        border-radius: 14px;
+    }
+
+    .mulata-home-promo-media {
+        order: 1;
+        min-height: 260px;
+        height: 260px;
+
+        &::after {
+            display: none;
+        }
+
+        img {
+            position: absolute;
+            object-position: center;
+        }
+    }
+
+    .mulata-home-promo-content {
+        order: 2;
+        padding: 30px 24px 26px;
+
+        h2 {
+            margin-bottom: 14px;
+            font-size: 32px;
+            letter-spacing: -1px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 15px;
+        }
+    }
+
+    .mulata-home-promo-benefits {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 9px;
+        margin-bottom: 22px;
+    }
+
+    .mulata-home-primary {
+        width: 100%;
+        min-width: 0;
+    }
+
+}
+
+
+
+/* MULATA ODOO 20 — HERO IMAGE RESTORED */
+
+.mulata-home-hero {
+    position: relative !important;
+    overflow: hidden !important;
+
+    background-image: url('/theme_mulata/static/src/img/mulata-home-hero.webp') !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+}
+
+@media (max-width: 767.98px) {
+    .mulata-home-hero {
+        min-height: 525px !important;
+        height: auto !important;
+        padding: 0 !important;
+
+        display: flex !important;
+        align-items: flex-end !important;
+
+        background-position: 67% center !important;
+    }
+}
+
+@media (max-width: 390px) {
+    .mulata-home-hero {
+        min-height: 505px !important;
+        background-position: 66% center !important;
+    }
+}
+
+
+/* MULATA ODOO20 - DESTACADOS V2 */
+
+.mulata-home-featured .mulata-home-product-card {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    background: #fff !important;
+    border: 1px solid #e5eaec !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    box-shadow: 0 2px 8px rgba(23,74,91,.06) !important;
+}
+
+.mulata-home-featured .mulata-home-product-body {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 1 auto !important;
+}
+
+.mulata-home-featured .mulata-home-product-name {
+    display: -webkit-box !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-line-clamp: 3 !important;
+    overflow: hidden !important;
+    color: #174A5B !important;
+    font-weight: 700 !important;
+    line-height: 1.35 !important;
+}
+
+.mulata-home-featured .mulata-home-product-price {
+    color: #174A5B !important;
+    font-weight: 800 !important;
+}
+
+.mulata-home-featured .mulata-home-product-link {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    min-height: 39px !important;
+    margin-top: auto !important;
+    padding: 9px 10px !important;
+    border-radius: 8px !important;
+    background: #FFB600 !important;
+    border: 1px solid #FFB600 !important;
+    color: #174A5B !important;
+    font-weight: 750 !important;
+    text-decoration: none !important;
+}
+
+.mulata-home-featured .mulata-home-product-link:hover {
+    background: #EFAA00 !important;
+    border-color: #EFAA00 !important;
+    color: #174A5B !important;
+}
+
+@media (max-width: 767.98px) {
+    .mulata-home-featured .mulata-home-product-name {
+        font-size: 13px !important;
+        min-height: 52px !important;
+    }
+
+    .mulata-home-featured .mulata-home-product-price {
+        font-size: 19px !important;
+    }
+
+    .mulata-home-featured .mulata-home-product-link {
+        font-size: 12px !important;
+        min-height: 36px !important;
+    }
+}

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <template
+        id="mulata_shop_commercial_benefits"
+        name="Mulata - Beneficios comerciales del catálogo"
+        inherit_id="website_sale.products"
+        priority="60"
+    >
+
+        <xpath
+            expr="//header[@id='o_wsale_products_header']/div[contains(concat(' ', normalize-space(@class), ' '), ' products_header ')]"
+            position="before"
+        >
+
+            <section
+                class="mulata-shop-benefits"
+                aria-label="Beneficios de compra"
+            >
+
+                <div class="mulata-shop-benefit">
+
+                    <span class="mulata-benefit-icon">
+                        <i class="fa fa-credit-card"/>
+                    </span>
+
+                    <div>
+                        <strong>Hasta 12 cuotas</strong>
+                        <span>Opciones para pagar mejor</span>
+                    </div>
+
+                </div>
+
+
+                <div class="mulata-shop-benefit">
+
+                    <span class="mulata-benefit-icon">
+                        <i class="fa fa-truck"/>
+                    </span>
+
+                    <div>
+                        <strong>Entrega rápida</strong>
+                        <span>24–48 h en Montevideo</span>
+                    </div>
+
+                </div>
+
+
+                <div class="mulata-shop-benefit">
+
+                    <span class="mulata-benefit-icon">
+                        <i class="fa fa-map-marker"/>
+                    </span>
+
+                    <div>
+                        <strong>Todo Uruguay</strong>
+                        <span>Envíos al interior</span>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </xpath>
+
+    </template>
+
+</odoo>

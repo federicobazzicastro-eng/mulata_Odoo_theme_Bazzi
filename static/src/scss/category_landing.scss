@@ -1,0 +1,275 @@
+/* ==========================================================
+   MULATA - CATEGORY LANDING
+   ========================================================== */
+
+.mulata-category-landing {
+    margin: 10px 0 26px !important;
+}
+
+.mulata-category-hero {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.12fr) minmax(280px, .88fr) !important;
+    align-items: center !important;
+    gap: 24px !important;
+
+    padding: 30px !important;
+
+    border: 1px solid #E4EBED !important;
+    border-radius: 20px !important;
+
+    background:
+        linear-gradient(135deg, #F8FBFB 0%, #EAF5F5 52%, #FFF4CF 100%) !important;
+
+    overflow: hidden !important;
+}
+
+.mulata-category-hero-copy {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+}
+
+.mulata-category-kicker {
+    display: inline-flex !important;
+    align-items: center !important;
+    width: fit-content !important;
+
+    padding: 7px 12px !important;
+
+    border-radius: 999px !important;
+
+    background: rgba(23, 74, 91, .08) !important;
+    color: #174A5B !important;
+
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    letter-spacing: .02em !important;
+    text-transform: uppercase !important;
+}
+
+.mulata-category-hero-title {
+    margin: 0 !important;
+    color: #174A5B !important;
+    font-size: 42px !important;
+    font-weight: 800 !important;
+    line-height: 1.05 !important;
+}
+
+.mulata-category-hero-text {
+    max-width: 620px !important;
+    margin: 0 !important;
+
+    color: #35515A !important;
+    font-size: 16px !important;
+    line-height: 1.55 !important;
+}
+
+.mulata-category-hero-actions {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+}
+
+.mulata-category-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    min-height: 44px !important;
+    padding: 11px 18px !important;
+
+    border-radius: 10px !important;
+
+    text-decoration: none !important;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+}
+
+.mulata-category-btn-primary {
+    background: #FFB600 !important;
+    border: 1px solid #FFB600 !important;
+    color: #174A5B !important;
+}
+
+.mulata-category-btn-primary:hover {
+    background: #EFAA00 !important;
+    border-color: #EFAA00 !important;
+    color: #174A5B !important;
+}
+
+.mulata-category-btn-secondary {
+    background: #FFFFFF !important;
+    border: 1px solid #D8E1E4 !important;
+    color: #174A5B !important;
+}
+
+.mulata-category-btn-secondary:hover {
+    background: #F7FAFA !important;
+    color: #174A5B !important;
+}
+
+.mulata-category-hero-benefits {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+    margin-top: 4px !important;
+}
+
+.mulata-category-hero-benefits span {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 7px !important;
+
+    padding: 8px 12px !important;
+
+    border-radius: 999px !important;
+
+    background: rgba(255, 255, 255, .72) !important;
+    color: #35515A !important;
+
+    font-size: 13px !important;
+    font-weight: 600 !important;
+}
+
+.mulata-category-hero-photo {
+    display: block !important;
+    width: 100% !important;
+
+    padding: 18px !important;
+
+    border-radius: 18px !important;
+
+    background: rgba(255, 255, 255, .82) !important;
+    box-shadow: 0 12px 30px rgba(23, 74, 91, .10) !important;
+    text-decoration: none !important;
+}
+
+.mulata-category-hero-photo img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 4 / 3 !important;
+    object-fit: contain !important;
+    object-position: center !important;
+}
+
+.mulata-category-subcats {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 14px !important;
+    margin-top: 16px !important;
+}
+
+.mulata-category-subcat-card {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 7px !important;
+
+    min-height: 132px !important;
+    padding: 18px !important;
+
+    border: 1px solid #E5EAEC !important;
+    border-radius: 16px !important;
+
+    background: #FFFFFF !important;
+    box-shadow: 0 2px 8px rgba(23, 74, 91, .05) !important;
+
+    text-decoration: none !important;
+}
+
+.mulata-category-subcat-kicker {
+    color: #3B989B !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: .03em !important;
+}
+
+.mulata-category-subcat-title {
+    color: #174A5B !important;
+    font-size: 18px !important;
+    font-weight: 800 !important;
+    line-height: 1.2 !important;
+}
+
+.mulata-category-subcat-link {
+    margin-top: auto !important;
+    color: #174A5B !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+}
+
+.mulata-category-subcat-card:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 8px 18px rgba(23, 74, 91, .08) !important;
+}
+
+@media (max-width: 991.98px) {
+    .mulata-category-hero {
+        grid-template-columns: 1fr !important;
+        padding: 22px !important;
+    }
+
+    .mulata-category-hero-title {
+        font-size: 34px !important;
+    }
+
+    .mulata-category-subcats {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .mulata-category-landing {
+        margin: 8px 0 18px !important;
+    }
+
+    .mulata-category-hero {
+        gap: 18px !important;
+        padding: 18px !important;
+        border-radius: 16px !important;
+    }
+
+    .mulata-category-kicker {
+        font-size: 11px !important;
+    }
+
+    .mulata-category-hero-title {
+        font-size: 28px !important;
+        line-height: 1.08 !important;
+    }
+
+    .mulata-category-hero-text {
+        font-size: 14px !important;
+        line-height: 1.45 !important;
+    }
+
+    .mulata-category-hero-benefits {
+        gap: 8px !important;
+    }
+
+    .mulata-category-hero-benefits span {
+        font-size: 12px !important;
+        padding: 7px 10px !important;
+    }
+
+    .mulata-category-subcats {
+        display: grid !important;
+        grid-auto-flow: column !important;
+        grid-auto-columns: 82% !important;
+        grid-template-columns: none !important;
+
+        overflow-x: auto !important;
+        gap: 12px !important;
+        padding-bottom: 4px !important;
+    }
+
+    .mulata-category-subcat-card {
+        min-height: 118px !important;
+        padding: 15px !important;
+    }
+
+    .mulata-category-subcat-title {
+        font-size: 16px !important;
+    }
+}

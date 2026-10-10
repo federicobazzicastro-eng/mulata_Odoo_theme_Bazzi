@@ -1,0 +1,14 @@
+/* PRUEBA TEMPORAL - ODOO 20 */
+
+@media (min-width: 992px) {
+    header#top {
+        position: static !important;
+        top: auto !important;
+        transform: none !important;
+    }
+
+    #wrapwrap,
+    #wrapwrap main {
+        margin-top: 0 !important;
+    }
+}

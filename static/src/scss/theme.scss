@@ -1,0 +1,1245 @@
+// ======================================================
+// MULATA — ESTILO GENERAL
+// ======================================================
+
+body {
+    background-color: $mulata-background;
+    color: $mulata-text;
+    font-family: "Montserrat", "Inter", Arial, sans-serif;
+}
+
+// Enlaces
+a {
+    color: $mulata-primary;
+
+    &:hover {
+        color: $mulata-primary-dark;
+    }
+}
+
+// Botón principal
+.btn-primary {
+    background-color: $mulata-accent;
+    border-color: $mulata-accent;
+    color: $mulata-text;
+    border-radius: $mulata-radius-sm;
+    font-weight: 700;
+    min-height: 46px;
+    padding: 0.7rem 1.4rem;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: $mulata-accent-hover !important;
+        border-color: $mulata-accent-hover !important;
+        color: $mulata-text !important;
+        transform: translateY(-1px);
+        box-shadow: $mulata-shadow-sm;
+    }
+}
+
+// Botón secundario
+.btn-secondary {
+    background-color: $mulata-primary;
+    border-color: $mulata-primary;
+    color: #fff;
+    border-radius: $mulata-radius-sm;
+    font-weight: 700;
+
+    &:hover,
+    &:focus {
+        background-color: $mulata-primary-dark;
+        border-color: $mulata-primary-dark;
+        color: #fff;
+    }
+}
+
+// Encabezado
+header#top {
+    background-color: $mulata-surface;
+    border-bottom: 1px solid $mulata-border;
+    box-shadow: 0 2px 12px rgba(23, 74, 91, 0.04);
+}
+
+// Tarjetas de producto del ecommerce
+.oe_product {
+    background-color: $mulata-surface;
+    border: 1px solid $mulata-border !important;
+    border-radius: $mulata-radius-md;
+    overflow: hidden;
+    box-shadow: none;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: $mulata-shadow-md;
+    }
+}
+
+// Formularios
+.form-control,
+.form-select {
+    border-color: $mulata-border;
+    border-radius: $mulata-radius-sm;
+    min-height: 44px;
+
+    &:focus {
+        border-color: $mulata-primary;
+        box-shadow: 0 0 0 0.2rem rgba(23, 74, 91, 0.12);
+    }
+}
+
+// Migas de navegación
+.breadcrumb {
+    font-size: 0.875rem;
+
+    a {
+        color: $mulata-muted;
+    }
+}
+
+// Precio
+.oe_price,
+.product_price {
+    color: $mulata-text;
+    font-weight: 800;
+}
+
+// Contenedores visuales
+.mulata-card {
+    background-color: $mulata-surface;
+    border: 1px solid $mulata-border;
+    border-radius: $mulata-radius-md;
+    box-shadow: $mulata-shadow-sm;
+}
+
+/* ==========================================================
+   MULATA SHOP — TARJETAS DE PRODUCTO MOBILE
+   ========================================================== */
+
+@media (max-width: 991.98px) {
+
+    /* Más aire general */
+    .oe_website_sale .o_wsale_products_grid_table_wrapper,
+    .oe_website_sale .o_wsale_products_grid_table {
+        background: #F6F7F8 !important;
+    }
+
+    /* Tarjeta */
+    .oe_website_sale .oe_product {
+        background: #fff !important;
+        border: 1px solid #E8ECEE !important;
+        border-radius: 12px !important;
+        overflow: hidden !important;
+
+        box-shadow: 0 1px 4px rgba(0,0,0,.05) !important;
+
+        margin-bottom: 10px !important;
+    }
+
+    /* Imagen */
+    .oe_website_sale .oe_product .oe_product_image,
+    .oe_website_sale .oe_product .o_wsale_product_image {
+        background: #fff !important;
+        border-radius: 0 !important;
+        overflow: hidden !important;
+    }
+
+    .oe_website_sale .oe_product img {
+        object-fit: contain !important;
+    }
+
+    /* Contenido */
+    .oe_website_sale .oe_product .oe_product_cart {
+        padding: 10px 10px 12px !important;
+        background: #fff !important;
+    }
+
+    /* Nombre producto */
+    .oe_website_sale .oe_product h6,
+    .oe_website_sale .oe_product .o_wsale_products_item_title,
+    .oe_website_sale .oe_product .oe_product_name {
+        font-size: 13px !important;
+        line-height: 1.25 !important;
+        font-weight: 600 !important;
+
+        color: #223238 !important;
+
+        margin-bottom: 6px !important;
+
+        display: -webkit-box !important;
+        -webkit-line-clamp: 2 !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
+
+        min-height: 32px !important;
+    }
+
+    /* Precio principal */
+    .oe_website_sale .oe_product .oe_price,
+    .oe_website_sale .oe_product .product_price,
+    .oe_website_sale .oe_product .o_wsale_product_price {
+        color: #172B33 !important;
+        font-size: 18px !important;
+        font-weight: 700 !important;
+        line-height: 1.1 !important;
+    }
+
+    /* Precio tachado */
+    .oe_website_sale .oe_product del,
+    .oe_website_sale .oe_product .text-muted {
+        font-size: 12px !important;
+    }
+
+    /* Cuotas */
+    .oe_website_sale .oe_product .o_wsale_product_subtitle,
+    .oe_website_sale .oe_product .o_wsale_product_information {
+        font-size: 11px !important;
+        line-height: 1.25 !important;
+    }
+
+    /* Links dentro de tarjeta */
+    .oe_website_sale .oe_product a {
+        text-decoration: none !important;
+    }
+
+    /* Hover más limpio */
+    .oe_website_sale .oe_product:hover {
+        box-shadow: 0 3px 10px rgba(0,0,0,.08) !important;
+        transform: translateY(-1px);
+        transition:
+            box-shadow .15s ease,
+            transform .15s ease;
+    }
+
+    /* Separación de grilla */
+    .oe_website_sale .o_wsale_products_grid_table .row {
+        --bs-gutter-x: 10px !important;
+        --bs-gutter-y: 10px !important;
+    }
+
+    /* Toolbar de tienda */
+    .oe_website_sale .o_wsale_products_main_row {
+        background: #F6F7F8 !important;
+    }
+
+    .oe_website_sale .o_wsale_products_header {
+        background: #fff !important;
+        border-bottom: 1px solid #E7EBED !important;
+    }
+
+}
+
+/* ==========================================================
+   MULATA MOBILE — PLACEHOLDER Y CART COMPACTO
+   ========================================================== */
+
+@media (max-width: 991.98px) {
+
+    header#top.mulata-header-compact
+        .mulata-mobile-cart .mulata-mobile-action {
+        font-size: 20px !important;
+    }
+
+    header#top.mulata-header-compact
+        .mulata-mobile-menu {
+        font-size: 19px !important;
+    }
+
+    header#top.mulata-header-compact
+        .mulata-mobile-search input.form-control::placeholder {
+        color: #748287 !important;
+        opacity: 1 !important;
+    }
+
+}
+
+
+/* ==========================================================
+   MULATA SHOP MOBILE V2
+   Tarjetas comerciales tipo marketplace
+   ========================================================== */
+
+@media (max-width: 767.98px) {
+
+    /* Fondo de tienda */
+    .oe_website_sale {
+        background: #f5f6f7 !important;
+    }
+
+    /* Contenedor principal */
+    .oe_website_sale #products_grid,
+    .oe_website_sale .o_wsale_products_grid_table_wrapper {
+        padding-left: 6px !important;
+        padding-right: 6px !important;
+    }
+
+    /* Grilla: dos productos por fila */
+    .oe_website_sale .o_wsale_products_grid_table .row {
+        --bs-gutter-x: 8px !important;
+        --bs-gutter-y: 10px !important;
+    }
+
+    /* Tarjeta */
+    .oe_website_sale .oe_product {
+        background: #fff !important;
+        border: 1px solid #e7ebed !important;
+        border-radius: 12px !important;
+        overflow: hidden !important;
+        box-shadow: 0 1px 3px rgba(0,0,0,.05) !important;
+
+        height: 100% !important;
+        margin-bottom: 0 !important;
+    }
+
+    /*
+     * FOTO
+     * Queremos que sea protagonista.
+     */
+    .oe_website_sale .oe_product .oe_product_image,
+    .oe_website_sale .oe_product .o_wsale_product_image {
+        width: 100% !important;
+
+        min-height: 155px !important;
+        height: 155px !important;
+
+        padding: 6px !important;
+
+        background: #fff !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .oe_website_sale .oe_product .oe_product_image img,
+    .oe_website_sale .oe_product .o_wsale_product_image img,
+    .oe_website_sale .oe_product img {
+        width: 100% !important;
+        height: 100% !important;
+
+        max-width: 100% !important;
+        max-height: 100% !important;
+
+        object-fit: contain !important;
+    }
+
+    /*
+     * CONTENIDO
+     */
+    .oe_website_sale .oe_product .oe_product_cart {
+        padding: 9px 9px 11px !important;
+        background: #fff !important;
+    }
+
+    /*
+     * NOMBRE
+     */
+    .oe_website_sale .oe_product h6,
+    .oe_website_sale .oe_product .o_wsale_products_item_title,
+    .oe_website_sale .oe_product .oe_product_name {
+        margin: 0 0 7px 0 !important;
+
+        color: #25383f !important;
+
+        font-size: 13px !important;
+        font-weight: 600 !important;
+        line-height: 1.28 !important;
+
+        min-height: 33px !important;
+
+        display: -webkit-box !important;
+        -webkit-line-clamp: 2 !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
+    }
+
+    /*
+     * Evitar descripciones largas dentro de las cards.
+     * En mobile convierten muy poco y ensucian la grilla.
+     */
+    .oe_website_sale .oe_product .oe_subdescription,
+    .oe_website_sale .oe_product .o_wsale_product_description,
+    .oe_website_sale .oe_product .text-muted:not(del):not(.oe_price) {
+        display: none !important;
+    }
+
+    /*
+     * PRECIO
+     */
+    .oe_website_sale .oe_product .oe_price,
+    .oe_website_sale .oe_product .product_price,
+    .oe_website_sale .oe_product .o_wsale_product_price {
+        margin-top: 3px !important;
+
+        color: #182d35 !important;
+
+        font-size: 19px !important;
+        font-weight: 750 !important;
+        line-height: 1.1 !important;
+    }
+
+    /*
+     * Precio anterior
+     */
+    .oe_website_sale .oe_product del {
+        display: block !important;
+
+        margin-bottom: 2px !important;
+
+        color: #7c878b !important;
+
+        font-size: 11px !important;
+        font-weight: 400 !important;
+    }
+
+    /*
+     * Descuento si Odoo ya lo renderiza
+     */
+    .oe_website_sale .oe_product .badge,
+    .oe_website_sale .oe_product .o_wsale_product_discount {
+        border-radius: 5px !important;
+        font-size: 11px !important;
+        font-weight: 700 !important;
+    }
+
+    /*
+     * Colores / variantes:
+     * un poco más compactos
+     */
+    .oe_website_sale .oe_product .o_wsale_product_colors,
+    .oe_website_sale .oe_product .o_wsale_product_attribute {
+        margin-bottom: 5px !important;
+    }
+
+    /*
+     * Links
+     */
+    .oe_website_sale .oe_product a {
+        color: inherit !important;
+        text-decoration: none !important;
+    }
+
+    /*
+     * Toolbar
+     */
+    .oe_website_sale .o_wsale_products_header {
+        margin-bottom: 8px !important;
+        padding-top: 5px !important;
+        padding-bottom: 7px !important;
+
+        background: #fff !important;
+
+        border-bottom: 1px solid #e7ebed !important;
+    }
+
+    /*
+     * Título "Todos los productos"
+     */
+    .oe_website_sale h1,
+    .oe_website_sale h2 {
+        color: #22363d !important;
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE MUY ANGOSTO
+   ========================================================== */
+
+@media (max-width: 390px) {
+
+    .oe_website_sale .oe_product .oe_product_image,
+    .oe_website_sale .oe_product .o_wsale_product_image {
+        height: 145px !important;
+        min-height: 145px !important;
+    }
+
+    .oe_website_sale .oe_product h6,
+    .oe_website_sale .oe_product .o_wsale_products_item_title,
+    .oe_website_sale .oe_product .oe_product_name {
+        font-size: 12.5px !important;
+    }
+
+    .oe_website_sale .oe_product .oe_price,
+    .oe_website_sale .oe_product .product_price,
+    .oe_website_sale .oe_product .o_wsale_product_price {
+        font-size: 18px !important;
+    }
+
+}
+
+
+
+/* ==========================================================
+   MULATA SHOP — INFORMACIÓN COMERCIAL DE LA TARJETA
+   ========================================================== */
+
+@media (max-width: 767.98px) {
+
+    .oe_website_sale .mulata-card-commercial {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 5px;
+
+        margin-top: 6px;
+    }
+
+    /*
+     * Descuento.
+     * Verde porque comunica ahorro sin competir
+     * con el amarillo reservado para acciones Mulata.
+     */
+    .oe_website_sale .mulata-card-discount {
+        display: inline-flex;
+        align-items: center;
+
+        padding: 3px 6px;
+
+        border-radius: 5px;
+
+        background: #E8F7EF;
+        color: #168B52;
+
+        font-size: 11px;
+        line-height: 1;
+        font-weight: 750;
+    }
+
+    /*
+     * Cuotas.
+     */
+    .oe_website_sale .mulata-card-installments {
+        display: flex;
+        align-items: center;
+
+        color: #174A5B;
+
+        font-size: 11px;
+        line-height: 1.25;
+        font-weight: 600;
+    }
+
+    .oe_website_sale .mulata-card-installments .fa {
+        color: #3B989B;
+        font-size: 11px;
+    }
+
+}
+
+
+/* Desktop/tablet también, pero más discreto */
+@media (min-width: 768px) {
+
+    .oe_website_sale .mulata-card-commercial {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        gap: 7px;
+
+        margin-top: 7px;
+    }
+
+    .oe_website_sale .mulata-card-discount {
+        padding: 3px 7px;
+
+        border-radius: 5px;
+
+        background: #E8F7EF;
+        color: #168B52;
+
+        font-size: 12px;
+        font-weight: 700;
+    }
+
+    .oe_website_sale .mulata-card-installments {
+        color: #174A5B;
+
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .oe_website_sale .mulata-card-installments .fa {
+        color: #3B989B;
+    }
+
+}
+
+
+
+/* ==========================================================
+   MULATA — FIX HEADER EN /SHOP MOBILE
+   La tienda no debe invadir ni modificar el espacio del header
+   ========================================================== */
+
+@media (max-width: 991.98px) {
+
+    /*
+     * El header queda como una pieza independiente.
+     */
+    body:has(.oe_website_sale) header#top {
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 1100 !important;
+
+        width: 100% !important;
+
+        margin: 0 !important;
+
+        transform: none !important;
+        translate: none !important;
+
+        background: #fff !important;
+    }
+
+    /*
+     * Nada dentro de website_sale puede quedar por encima.
+     */
+    body:has(.oe_website_sale) .oe_website_sale,
+    body:has(.oe_website_sale) #wrap,
+    body:has(.oe_website_sale) main {
+        position: relative !important;
+        z-index: 1 !important;
+    }
+
+    /*
+     * Evitar paddings superiores calculados por Odoo
+     * únicamente mientras nuestro header está en flujo sticky.
+     */
+    body:has(.oe_website_sale) main {
+        padding-top: 0 !important;
+    }
+
+    /*
+     * Toolbar/filtros de tienda pueden ser sticky,
+     * pero siempre DEBAJO del header Mulata.
+     */
+    body:has(.oe_website_sale)
+        .o_wsale_products_header,
+    body:has(.oe_website_sale)
+        .o_wsale_filmstip_wrapper,
+    body:has(.oe_website_sale)
+        .o_wsale_products_grid_before_rail {
+        z-index: 20 !important;
+    }
+
+    /*
+     * No permitir transforms heredados sobre el navbar mobile.
+     */
+    body:has(.oe_website_sale)
+        header#top .o_header_mobile,
+    body:has(.oe_website_sale)
+        header#top .mulata-mobile-header {
+        transform: none !important;
+        translate: none !important;
+    }
+
+}
+
+
+/* ==========================================================
+   SHOP — SEPARACIÓN LIMPIA DEL CONTENIDO
+   ========================================================== */
+
+@media (max-width: 767.98px) {
+
+    body:has(.oe_website_sale)
+        .oe_website_sale {
+        margin-top: 0 !important;
+    }
+
+    body:has(.oe_website_sale)
+        #products_grid {
+        position: relative !important;
+        z-index: 1 !important;
+    }
+
+}
+
+
+
+/* ==========================================================
+   MULATA FOOTER V1
+   ========================================================== */
+
+.mulata-footer {
+    margin-top: 0;
+
+    background: #174A5B;
+
+    color: #fff;
+}
+
+
+.mulata-footer-main {
+    padding: 48px 0 42px;
+}
+
+
+/* ==========================================================
+   DESKTOP
+   ========================================================== */
+
+.mulata-footer-desktop {
+    display: grid;
+
+    grid-template-columns:
+        minmax(250px, 1.45fr)
+        minmax(150px, .8fr)
+        minmax(150px, .8fr)
+        minmax(220px, 1.1fr);
+
+    gap: 42px;
+}
+
+
+/* MARCA */
+
+.mulata-footer-brand {
+    max-width: 315px;
+}
+
+
+.mulata-footer-brand .navbar-brand,
+.mulata-footer-logo-native {
+    display: inline-flex !important;
+
+    align-items: center;
+
+    margin: 0 0 16px !important;
+    padding: 0 !important;
+}
+
+
+.mulata-footer-brand img,
+.mulata-footer-mobile-brand img,
+.mulata-footer .o_header_logo {
+    display: block;
+
+    width: auto !important;
+
+    max-width: 155px !important;
+    max-height: 43px !important;
+
+    object-fit: contain;
+}
+
+
+.mulata-footer-brand p {
+    max-width: 295px;
+
+    margin: 0 0 20px;
+
+    color: rgba(255,255,255,.72);
+
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+
+.mulata-footer-badges {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.mulata-footer-badges span {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: rgba(255,255,255,.88);
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+.mulata-footer-badges i {
+    width: 24px;
+
+    color: #FFB600;
+
+    text-align: center;
+}
+
+
+/* COLUMNAS */
+
+.mulata-footer-column {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 10px;
+}
+
+
+.mulata-footer-column h4 {
+    margin: 4px 0 9px;
+
+    color: #fff;
+
+    font-size: 14px;
+    font-weight: 750;
+}
+
+
+.mulata-footer-column > a {
+    color: rgba(255,255,255,.70) !important;
+
+    font-size: 12px;
+
+    text-decoration: none !important;
+
+    transition:
+        color .15s ease,
+        transform .15s ease;
+}
+
+
+.mulata-footer-column > a:hover {
+    color: #FFB600 !important;
+
+    transform: translateX(2px);
+}
+
+
+/* CONTACTO */
+
+.mulata-footer-contact-row {
+    display: flex;
+
+    gap: 10px;
+
+    width: 100%;
+}
+
+
+.mulata-footer-contact-row > i {
+    width: 22px;
+
+    padding-top: 3px;
+
+    color: #FFB600;
+
+    text-align: center;
+}
+
+
+.mulata-footer-contact-row span {
+    display: flex;
+    flex-direction: column;
+
+    color: rgba(255,255,255,.68);
+
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+
+.mulata-footer-contact-row strong {
+    color: rgba(255,255,255,.94);
+
+    font-size: 12px;
+}
+
+
+.mulata-footer-contact-button {
+    display: inline-flex !important;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 6px;
+
+    padding: 9px 13px;
+
+    background: #FFB600;
+
+    border-radius: 8px;
+
+    color: #174A5B !important;
+
+    font-size: 11px !important;
+    font-weight: 750;
+
+    text-decoration: none !important;
+}
+
+
+/* ==========================================================
+   FRANJA INFERIOR
+   ========================================================== */
+
+.mulata-footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.11);
+
+    background: rgba(0,0,0,.08);
+}
+
+
+.mulata-footer-bottom-inner {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 55px;
+
+    gap: 20px;
+
+    color: rgba(255,255,255,.55);
+
+    font-size: 10.5px;
+}
+
+
+.mulata-footer-bottom-links {
+    display: flex;
+
+    gap: 18px;
+}
+
+
+.mulata-footer-bottom-links a {
+    color: rgba(255,255,255,.58) !important;
+
+    text-decoration: none !important;
+}
+
+
+.mulata-footer-bottom-links a:hover {
+    color: #fff !important;
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 767.98px) {
+
+    .mulata-footer-main {
+        padding: 30px 0 22px;
+    }
+
+
+    .mulata-footer-mobile-brand {
+        padding-bottom: 18px;
+    }
+
+
+    .mulata-footer-mobile-brand .navbar-brand,
+    .mulata-footer-mobile-brand .mulata-footer-logo-native {
+        display: inline-flex !important;
+
+        margin: 0 0 10px !important;
+        padding: 0 !important;
+    }
+
+
+    .mulata-footer-mobile-brand img,
+    .mulata-footer-mobile-brand .o_header_logo {
+        max-width: 135px !important;
+        max-height: 38px !important;
+    }
+
+
+    .mulata-footer-mobile-brand p {
+        margin: 0;
+
+        color: rgba(255,255,255,.72);
+
+        font-size: 13px;
+    }
+
+
+    /* ACORDEÓN */
+
+    .mulata-footer-accordion {
+        border-top: 1px solid rgba(255,255,255,.13);
+    }
+
+
+    .mulata-footer-accordion:last-of-type {
+        border-bottom: 1px solid rgba(255,255,255,.13);
+    }
+
+
+    .mulata-footer-accordion summary {
+        display: flex;
+
+        align-items: center;
+        justify-content: space-between;
+
+        min-height: 52px;
+
+        cursor: pointer;
+
+        list-style: none;
+
+        color: #fff;
+
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+
+    .mulata-footer-accordion summary::-webkit-details-marker {
+        display: none;
+    }
+
+
+    .mulata-footer-accordion summary i {
+        color: #FFB600;
+
+        font-size: 11px;
+
+        transition: transform .18s ease;
+    }
+
+
+    .mulata-footer-accordion[open] summary i {
+        transform: rotate(180deg);
+    }
+
+
+    .mulata-footer-accordion-body {
+        display: flex;
+        flex-direction: column;
+
+        gap: 11px;
+
+        padding: 0 0 17px;
+    }
+
+
+    .mulata-footer-accordion-body a,
+    .mulata-footer-accordion-body span {
+        color: rgba(255,255,255,.72) !important;
+
+        font-size: 13px;
+        line-height: 1.35;
+
+        text-decoration: none !important;
+    }
+
+
+    .mulata-footer-accordion-body a:hover {
+        color: #FFB600 !important;
+    }
+
+
+    /* BENEFICIOS */
+
+    .mulata-footer-mobile-benefits {
+        display: grid;
+
+        grid-template-columns: repeat(3, minmax(0,1fr));
+
+        gap: 6px;
+
+        margin-top: 20px;
+    }
+
+
+    .mulata-footer-mobile-benefits span {
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        min-height: 68px;
+
+        padding: 7px 5px;
+
+        gap: 5px;
+
+        border: 1px solid rgba(255,255,255,.11);
+        border-radius: 9px;
+
+        color: rgba(255,255,255,.78);
+
+        font-size: 10px;
+        font-weight: 600;
+
+        text-align: center;
+    }
+
+
+    .mulata-footer-mobile-benefits i {
+        color: #FFB600;
+
+        font-size: 15px;
+    }
+
+
+    /* BOTTOM */
+
+    .mulata-footer-bottom-inner {
+        flex-direction: column;
+
+        align-items: flex-start;
+        justify-content: center;
+
+        min-height: 78px;
+
+        gap: 7px;
+
+        font-size: 11px;
+    }
+
+}
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+
+    .mulata-footer-desktop {
+        grid-template-columns:
+            1.25fr
+            .8fr
+            .8fr
+            1fr;
+
+        gap: 24px;
+    }
+
+}
+
+
+
+/* MULATA ODOO20 - CATALOGO V2 */
+
+/* Apariencia general */
+.oe_website_sale .oe_product {
+    border-radius: 12px !important;
+    border: 1px solid #e5eaec !important;
+    background: #fff !important;
+    overflow: hidden !important;
+    box-shadow: 0 2px 8px rgba(23,74,91,.06) !important;
+}
+
+/* Títulos: mejor legibilidad */
+.oe_website_sale .oe_product h6,
+.oe_website_sale .oe_product .o_wsale_products_item_title,
+.oe_website_sale .oe_product .oe_product_name {
+    color: #174A5B !important;
+    font-weight: 700 !important;
+    line-height: 1.35 !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+}
+
+/* Precios */
+.oe_website_sale .oe_product .oe_price,
+.oe_website_sale .oe_product .product_price,
+.oe_website_sale .oe_product .o_wsale_product_price {
+    color: #174A5B !important;
+    font-weight: 800 !important;
+}
+
+/* Fotografías sin deformación */
+.oe_website_sale .oe_product .oe_product_image img,
+.oe_website_sale .oe_product .o_wsale_product_image img {
+    object-fit: contain !important;
+}
+
+/* Celulares */
+@media (max-width: 767.98px) {
+
+    .oe_website_sale .oe_product .oe_product_image,
+    .oe_website_sale .oe_product .o_wsale_product_image {
+        height: 175px !important;
+        min-height: 175px !important;
+        padding: 5px !important;
+    }
+
+    .oe_website_sale .oe_product h6,
+    .oe_website_sale .oe_product .o_wsale_products_item_title,
+    .oe_website_sale .oe_product .oe_product_name {
+        font-size: 13px !important;
+        min-height: 52px !important;
+        -webkit-line-clamp: 3 !important;
+    }
+
+    .oe_website_sale .oe_product .oe_price,
+    .oe_website_sale .oe_product .product_price,
+    .oe_website_sale .oe_product .o_wsale_product_price {
+        font-size: 19px !important;
+    }
+
+    .oe_website_sale .oe_product .oe_product_cart {
+        padding: 10px !important;
+    }
+}
+
+/* Teléfonos muy angostos */
+@media (max-width: 390px) {
+
+    .oe_website_sale .oe_product .oe_product_image,
+    .oe_website_sale .oe_product .o_wsale_product_image {
+        height: 165px !important;
+        min-height: 165px !important;
+    }
+
+    .oe_website_sale .oe_product h6,
+    .oe_website_sale .oe_product .o_wsale_products_item_title,
+    .oe_website_sale .oe_product .oe_product_name {
+        font-size: 13px !important;
+    }
+}
+
+/* MULATA ODOO20 - BOTON VER PRODUCTO */
+
+.oe_website_sale .mulata-card-view-product {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: calc(100% - 20px) !important;
+    min-height: 39px !important;
+    margin: 10px auto !important;
+    padding: 9px 12px !important;
+    background: #FFB600 !important;
+    border: 1px solid #FFB600 !important;
+    border-radius: 8px !important;
+    color: #174A5B !important;
+    font-size: 13px !important;
+    font-weight: 750 !important;
+    text-decoration: none !important;
+}
+
+.oe_website_sale .mulata-card-view-product:hover {
+    background: #EFAA00 !important;
+    border-color: #EFAA00 !important;
+    color: #174A5B !important;
+}
+
+@media (max-width: 390px) {
+    .oe_website_sale .mulata-card-view-product {
+        font-size: 12px !important;
+        padding: 8px 6px !important;
+    }
+}

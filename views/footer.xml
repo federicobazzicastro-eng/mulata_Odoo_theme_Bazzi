@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template
+        id="mulata_footer"
+        name="Mulata — Footer"
+        inherit_id="website.layout"
+        priority="60"
+    >
+
+        <xpath expr="//footer[@id='bottom']" position="replace">
+
+            <footer id="bottom"
+                    class="mulata-footer">
+
+                <!-- ===================================================
+                     DATOS DINÁMICOS
+                     =================================================== -->
+
+                <t t-set="cat_muebles"
+                   t-value="request.env['product.public.category'].sudo().search([
+                       ('name', '=', 'Muebles')
+                   ], limit=1)"/>
+
+                <t t-set="cat_colchoneria"
+                   t-value="request.env['product.public.category'].sudo().search([
+                       ('name', '=', 'Colchonería')
+                   ], limit=1)"/>
+
+                <t t-set="cat_electro"
+                   t-value="request.env['product.public.category'].sudo().search([
+                       ('name', '=', 'Electrodomésticos')
+                   ], limit=1)"/>
+
+                <t t-set="cat_ferreteria"
+                   t-value="request.env['product.public.category'].sudo().search([
+                       ('name', '=', 'Ferretería')
+                   ], limit=1)"/>
+
+
+                <!-- ===================================================
+                     FOOTER PRINCIPAL
+                     =================================================== -->
+
+                <div class="mulata-footer-main">
+
+                    <div class="container">
+
+                        <!-- =================================================
+                             DESKTOP / TABLET
+                             ================================================= -->
+
+                        <div class="mulata-footer-desktop d-none d-md-grid">
+
+                            <!-- MARCA -->
+                            <div class="mulata-footer-brand">
+
+                                <a href="/"
+                                   class="mulata-footer-logo-link"
+                                   aria-label="Mulata - Inicio">
+
+                                    <t t-call="website.placeholder_header_brand">
+                                        <t t-set="_link_class"
+                                           t-value="'mulata-footer-logo-native'"/>
+                                    </t>
+
+                                </a>
+
+                                <p>
+                                    Muebles, colchones, electrodomésticos
+                                    y mucho más para tu hogar.
+                                </p>
+
+                                <div class="mulata-footer-badges">
+
+                                    <span>
+                                        <i class="fa fa-truck"/>
+                                        Envíos a todo Uruguay
+                                    </span>
+
+                                    <span>
+                                        <i class="fa fa-credit-card"/>
+                                        Hasta 12 cuotas
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- COMPRAR -->
+                            <div class="mulata-footer-column">
+
+                                <h4>Comprar</h4>
+
+                                <a t-att-href="'/shop/category/%s' % slug(cat_muebles) if cat_muebles else '/shop'">
+                                    Muebles
+                                </a>
+
+                                <a t-att-href="'/shop/category/%s' % slug(cat_colchoneria) if cat_colchoneria else '/shop'">
+                                    Colchonería
+                                </a>
+
+                                <a t-att-href="'/shop/category/%s' % slug(cat_electro) if cat_electro else '/shop'">
+                                    Electrodomésticos
+                                </a>
+
+                                <a t-att-href="'/shop/category/%s' % slug(cat_ferreteria) if cat_ferreteria else '/shop'">
+                                    Ferretería
+                                </a>
+
+                                <a href="/shop">
+                                    Ver todos los productos
+                                </a>
+
+                            </div>
+
+
+                            <!-- AYUDA -->
+                            <div class="mulata-footer-column">
+
+                                <h4>Ayuda</h4>
+
+                                <a href="/contactus">
+                                    Contacto
+                                </a>
+
+                                <a href="/shop">
+                                    Envíos
+                                </a>
+
+                                <a href="/shop">
+                                    Cambios y devoluciones
+                                </a>
+
+                                <a href="/shop">
+                                    Preguntas frecuentes
+                                </a>
+
+                            </div>
+
+
+                            <!-- CONTACTO -->
+                            <div class="mulata-footer-column mulata-footer-contact">
+
+                                <h4>Estamos para ayudarte</h4>
+
+                                <div class="mulata-footer-contact-row">
+                                    <i class="fa fa-clock-o"/>
+
+                                    <span>
+                                        <strong>Lunes a viernes</strong>
+                                        9:00 a 18:00
+                                    </span>
+                                </div>
+
+                                <div class="mulata-footer-contact-row">
+                                    <i class="fa fa-clock-o"/>
+
+                                    <span>
+                                        <strong>Sábados</strong>
+                                        9:00 a 14:00
+                                    </span>
+                                </div>
+
+                                <div class="mulata-footer-contact-row">
+                                    <i class="fa fa-map-marker"/>
+
+                                    <span>
+                                        <strong>Montevideo</strong>
+                                        Envíos a todo Uruguay
+                                    </span>
+                                </div>
+
+                                <a href="/contactus"
+                                   class="mulata-footer-contact-button">
+
+                                    Contactanos
+
+                                    <i class="fa fa-arrow-right"/>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- =================================================
+                             MOBILE
+                             ================================================= -->
+
+                        <div class="mulata-footer-mobile d-md-none">
+
+                            <div class="mulata-footer-mobile-brand">
+
+                                <t t-call="website.placeholder_header_brand">
+                                    <t t-set="_link_class"
+                                       t-value="'mulata-footer-logo-native'"/>
+                                </t>
+
+                                <p>
+                                    Todo para disfrutar mejor tu hogar.
+                                </p>
+
+                            </div>
+
+
+                            <details class="mulata-footer-accordion">
+
+                                <summary>
+                                    Comprar
+                                    <i class="fa fa-chevron-down"/>
+                                </summary>
+
+                                <div class="mulata-footer-accordion-body">
+
+                                    <a t-att-href="'/shop/category/%s' % slug(cat_muebles) if cat_muebles else '/shop'">
+                                        Muebles
+                                    </a>
+
+                                    <a t-att-href="'/shop/category/%s' % slug(cat_colchoneria) if cat_colchoneria else '/shop'">
+                                        Colchonería
+                                    </a>
+
+                                    <a t-att-href="'/shop/category/%s' % slug(cat_electro) if cat_electro else '/shop'">
+                                        Electrodomésticos
+                                    </a>
+
+                                    <a t-att-href="'/shop/category/%s' % slug(cat_ferreteria) if cat_ferreteria else '/shop'">
+                                        Ferretería
+                                    </a>
+
+                                    <a href="/shop">
+                                        Todos los productos
+                                    </a>
+
+                                </div>
+
+                            </details>
+
+
+                            <details class="mulata-footer-accordion">
+
+                                <summary>
+                                    Ayuda
+                                    <i class="fa fa-chevron-down"/>
+                                </summary>
+
+                                <div class="mulata-footer-accordion-body">
+
+                                    <a href="/contactus">
+                                        Contacto
+                                    </a>
+
+                                    <a href="/shop">
+                                        Envíos
+                                    </a>
+
+                                    <a href="/shop">
+                                        Cambios y devoluciones
+                                    </a>
+
+                                    <a href="/shop">
+                                        Preguntas frecuentes
+                                    </a>
+
+                                </div>
+
+                            </details>
+
+
+                            <details class="mulata-footer-accordion">
+
+                                <summary>
+                                    Horarios y atención
+                                    <i class="fa fa-chevron-down"/>
+                                </summary>
+
+                                <div class="mulata-footer-accordion-body">
+
+                                    <span>
+                                        Lunes a viernes · 9:00 a 18:00
+                                    </span>
+
+                                    <span>
+                                        Sábados · 9:00 a 14:00
+                                    </span>
+
+                                    <span>
+                                        Montevideo · Envíos a todo Uruguay
+                                    </span>
+
+                                    <a href="/contactus">
+                                        Contactanos
+                                    </a>
+
+                                </div>
+
+                            </details>
+
+
+                            <div class="mulata-footer-mobile-benefits">
+
+                                <span>
+                                    <i class="fa fa-truck"/>
+                                    Todo Uruguay
+                                </span>
+
+                                <span>
+                                    <i class="fa fa-credit-card"/>
+                                    Hasta 12 cuotas
+                                </span>
+
+                                <span>
+                                    <i class="fa fa-shield"/>
+                                    Compra segura
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ===================================================
+                     FRANJA INFERIOR
+                     =================================================== -->
+
+                <div class="mulata-footer-bottom">
+
+                    <div class="container">
+
+                        <div class="mulata-footer-bottom-inner">
+
+                            <span>
+                                © Mulata Muebles &amp; Más
+                            </span>
+
+                            <div class="mulata-footer-bottom-links">
+
+                                <a href="/contactus">
+                                    Contacto
+                                </a>
+
+                                <a href="/shop">
+                                    Tienda
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </footer>
+
+        </xpath>
+
+    </template>
+
+</odoo>

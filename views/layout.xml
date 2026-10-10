@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template
+        id="mulata_layout"
+        name="Mulata — Layout base"
+        inherit_id="website.layout"
+    >
+        <xpath expr="//header" position="attributes">
+            <attribute name="class" add="o_no_autohide_menu" separator=" "/>
+        </xpath>
+
+        <xpath expr="//body" position="attributes">
+            <attribute name="class" add="mulata-theme" separator=" "/>
+        </xpath>
+    </template>
+</odoo>

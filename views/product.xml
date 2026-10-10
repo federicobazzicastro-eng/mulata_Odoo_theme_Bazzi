@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <template
+        id="mulata_product_page"
+        name="Mulata Product V1"
+        inherit_id="website_sale.product"
+    >
+
+        <!-- ==================================================
+             ESTRUCTURA VISUAL
+             ================================================== -->
+
+        <xpath expr="//section[@id='product_detail']" position="attributes">
+            <attribute name="class" add="mulata-product-page" separator=" "/>
+        </xpath>
+
+        <xpath expr="//div[@id='product_details']" position="attributes">
+            <attribute name="class" add="mulata-product-info" separator=" "/>
+        </xpath>
+
+        <!-- Información comercial debajo del precio -->
+        <xpath expr="//div[contains(@class, 'o_wsale_product_details_content_section_price')]" position="after">
+
+            <div class="mulata-commerce-extras">
+
+                <div class="mulata-installments">
+                    <i class="fa fa-credit-card"/>
+                    <span>
+                        Hasta <strong>12 cuotas</strong>
+                    </span>
+                </div>
+
+                <div class="mulata-transfer">
+                    <i class="fa fa-money"/>
+                    <div>
+                        <small>Precio especial</small>
+                        <strong>Consultá descuento por transferencia</strong>
+                    </div>
+                </div>
+
+                <div class="mulata-logistics">
+
+                    <div class="mulata-logistics-item">
+                        <i class="fa fa-truck"/>
+                        <span>
+                            <strong>24–48 hs Mdeo.</strong>
+                            <small>Entrega rápida</small>
+                        </span>
+                    </div>
+
+                    <div class="mulata-logistics-item">
+                        <i class="fa fa-cube"/>
+                        <span>
+                            <strong>Todo el país</strong>
+                            <small>Envíos con DAC</small>
+                        </span>
+                    </div>
+
+                    <div class="mulata-logistics-item">
+                        <i class="fa fa-shield"/>
+                        <span>
+                            <strong>Envío Protegido</strong>
+                            <small>Compra segura</small>
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="mulata-stock">
+                    <span class="mulata-stock-dot"/>
+                    <span>Stock disponible</span>
+                </div>
+
+            </div>
+
+        </xpath>
+
+
+        <!-- Beneficios secundarios -->
+        <xpath expr="//div[@id='o_wsale_product_details_content']" position="inside">
+
+            <div class="mulata-benefits">
+
+                <div>
+                    <i class="fa fa-check-circle"/>
+                    <span>
+                        <strong>Compra segura</strong>
+                        <small>Protegemos tu compra durante todo el proceso</small>
+                    </span>
+                </div>
+
+                <div>
+                    <i class="fa fa-map-marker"/>
+                    <span>
+                        <strong>Retiro o envío</strong>
+                        <small>Elegí la opción que más te convenga</small>
+                    </span>
+                </div>
+
+                <div>
+                    <i class="fa fa-whatsapp"/>
+                    <span>
+                        <strong>¿Tenés dudas?</strong>
+                        <small>Te ayudamos por WhatsApp</small>
+                    </span>
+                </div>
+
+            </div>
+
+        </xpath>
+
+
+
+        <!-- Barra de compra móvil -->
+        <xpath expr="//section[@id='product_detail']" position="after">
+
+            <div class="mulata-mobile-buybar">
+
+                <div class="mulata-mobile-price">
+                    <small>Precio</small>
+                    <strong>
+                        <t t-call="website_sale.product_price"/>
+                    </strong>
+                </div>
+
+                <button
+                    type="button"
+                    class="mulata-mobile-add"
+                    onclick="var b=document.querySelector('#product_detail #add_to_cart'); if(b){b.click();}">
+
+                    <i class="fa fa-shopping-cart me-2"/>
+                    Agregar al carrito
+
+                </button>
+
+            </div>
+
+        </xpath>
+
+    </template>
+
+
+
+
+
+<!-- =========================================================
+     MULATA — GALERÍA PRODUCTO
+     Carrusel manual, sin autoplay
+     ========================================================= -->
+
+<template
+    id="mulata_product_carousel_manual"
+    name="Mulata — Product Carousel Manual"
+    inherit_id="website_sale.shop_product_carousel"
+    priority="40"
+>
+    <xpath expr="//div[@id='o-carousel-product']" position="attributes">
+        <attribute name="data-bs-ride">carousel</attribute>
+        <attribute name="data-bs-interval">false</attribute>
+        <attribute name="data-bs-pause">hover</attribute>
+        <attribute name="data-bs-wrap">true</attribute>
+        <attribute name="data-bs-touch">true</attribute>
+    </xpath>
+</template>
+
+
+</odoo>

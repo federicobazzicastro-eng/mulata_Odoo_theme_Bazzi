@@ -1,0 +1,1428 @@
+
+/* =====================================================
+   MULATA PRODUCT V1
+   ===================================================== */
+
+.mulata-product-page {
+    padding-top: 20px;
+    padding-bottom: 70px;
+}
+
+.mulata-product-page #product_detail_main {
+    --bs-gutter-x: 42px;
+}
+
+.mulata-product-page .o_wsale_product_images {
+    flex: 0 0 55%;
+    max-width: 55%;
+}
+
+.mulata-product-page #product_details {
+    flex: 0 0 45%;
+    max-width: 45%;
+}
+
+.mulata-product-info #o_wsale_product_details_content {
+    background: #fff;
+    border: 1px solid #E3E6E7;
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: 0 6px 24px rgba(23, 74, 91, .07);
+}
+
+.mulata-product-page h1 {
+    color: #172126;
+    font-size: 1.95rem;
+    line-height: 1.15;
+    font-weight: 800;
+    letter-spacing: -.02em;
+}
+
+.mulata-product-page .oe_price {
+    color: #172126 !important;
+    font-size: 2.35rem !important;
+    font-weight: 800 !important;
+}
+
+.mulata-commerce-extras {
+    margin-top: -8px;
+    margin-bottom: 18px;
+}
+
+.mulata-installments {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #174A5B;
+    margin-bottom: 12px;
+}
+
+.mulata-installments strong {
+    font-weight: 800;
+}
+
+.mulata-transfer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 14px;
+    margin-bottom: 12px;
+    background: #EDF8F2;
+    border: 1px solid #CFE8D8;
+    border-radius: 11px;
+}
+
+.mulata-transfer i {
+    color: #238557;
+    font-size: 1.15rem;
+}
+
+.mulata-transfer small {
+    display: block;
+    color: #68747A;
+    font-size: .72rem;
+}
+
+.mulata-transfer strong {
+    display: block;
+    color: #172126;
+    font-size: .9rem;
+}
+
+.mulata-logistics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.mulata-logistics-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 60px;
+    padding: 10px;
+    background: #EAF4F6;
+    border-radius: 10px;
+    color: #174A5B;
+}
+
+.mulata-logistics-item i {
+    flex-shrink: 0;
+}
+
+.mulata-logistics-item span {
+    display: flex;
+    flex-direction: column;
+}
+
+.mulata-logistics-item strong {
+    font-size: .72rem;
+    line-height: 1.1;
+}
+
+.mulata-logistics-item small {
+    margin-top: 2px;
+    color: #68747A;
+    font-size: .63rem;
+}
+
+.mulata-stock {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 12px;
+    color: #238557;
+    font-size: .84rem;
+    font-weight: 700;
+}
+
+.mulata-stock-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #238557;
+}
+
+.mulata-product-page #add_to_cart {
+    min-height: 52px;
+    background: #FFB600 !important;
+    border-color: #FFB600 !important;
+    color: #172126 !important;
+    border-radius: 10px;
+    font-weight: 800;
+}
+
+.mulata-product-page #add_to_cart:hover {
+    background: #EAA600 !important;
+    border-color: #EAA600 !important;
+}
+
+.mulata-benefits {
+    margin-top: 18px;
+    padding-top: 16px;
+    border-top: 1px solid #E3E6E7;
+}
+
+.mulata-benefits > div {
+    display: flex;
+    gap: 10px;
+    padding: 7px 0;
+}
+
+.mulata-benefits i {
+    width: 18px;
+    color: #174A5B;
+    margin-top: 2px;
+}
+
+.mulata-benefits span {
+    display: flex;
+    flex-direction: column;
+}
+
+.mulata-benefits strong {
+    color: #172126;
+    font-size: .82rem;
+}
+
+.mulata-benefits small {
+    color: #68747A;
+    font-size: .7rem;
+}
+
+/* MOBILE */
+
+@media (max-width: 767.98px) {
+
+    .mulata-product-page {
+        padding-top: 6px;
+        padding-bottom: 100px;
+    }
+
+    .mulata-product-page .o_wsale_product_images,
+    .mulata-product-page #product_details {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .mulata-product-info #o_wsale_product_details_content {
+        padding: 14px 0;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+        background: transparent;
+    }
+
+    .mulata-product-page h1 {
+        font-size: 1.45rem;
+    }
+
+    .mulata-product-page .oe_price {
+        font-size: 2rem !important;
+    }
+
+    .mulata-logistics {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .mulata-logistics-item:nth-child(3) {
+        display: none;
+    }
+
+    /* CTA móvil fijo */
+
+    .mulata-product-page #o_wsale_cta_wrapper {
+        position: fixed !important;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2000;
+
+        margin: 0 !important;
+        padding: 10px 12px calc(10px + env(safe-area-inset-bottom)) !important;
+
+        background: #fff;
+        border-top: 1px solid #E3E6E7;
+        box-shadow: 0 -8px 28px rgba(23, 74, 91, .14);
+    }
+
+    .mulata-product-page #add_to_cart_wrap {
+        width: 100%;
+    }
+
+    .mulata-product-page #add_to_cart {
+        width: 100%;
+        min-height: 54px;
+    }
+
+    body {
+        padding-bottom: 80px;
+    }
+}
+
+
+
+/* =====================================================
+   MULATA PRODUCT V1 — BUY BAR MOBILE
+   ===================================================== */
+
+.mulata-mobile-buybar {
+    display: none;
+}
+
+@media (max-width: 767.98px) {
+
+    /*
+     * Ocultamos la compra original solamente como bloque visual.
+     * Sigue existiendo y JS la utiliza internamente.
+     */
+    .mulata-product-page #o_wsale_cta_wrapper {
+        position: static !important;
+        box-shadow: none !important;
+        border: 0 !important;
+        padding: 0 !important;
+    }
+
+    .mulata-mobile-buybar {
+        position: fixed;
+
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        z-index: 5000;
+
+        display: flex;
+        align-items: center;
+        gap: 9px;
+
+        padding:
+            10px
+            12px
+            calc(10px + env(safe-area-inset-bottom));
+
+        background: rgba(255, 255, 255, .97);
+        border-top: 1px solid #E3E6E7;
+
+        box-shadow:
+            0 -8px 30px rgba(23, 74, 91, .15);
+
+        backdrop-filter: blur(10px);
+    }
+
+    .mulata-mobile-qty {
+        flex: 0 0 104px;
+
+        height: 54px;
+
+        display: grid;
+        grid-template-columns: 34px 1fr 34px;
+        align-items: center;
+
+        border: 1px solid #DDE2E4;
+        border-radius: 11px;
+
+        background: #fff;
+        overflow: hidden;
+    }
+
+    .mulata-mobile-qty-btn {
+        height: 100%;
+
+        border: 0;
+        background: transparent;
+
+        color: #174A5B;
+
+        font-size: 1.25rem;
+        font-weight: 700;
+    }
+
+    .mulata-mobile-qty-value {
+        text-align: center;
+
+        color: #172126;
+
+        font-weight: 700;
+    }
+
+    .mulata-mobile-cart-btn {
+        flex: 1;
+
+        height: 54px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+
+        border: 0;
+        border-radius: 11px;
+
+        background: #FFB600;
+
+        color: #172126;
+
+        font-size: .95rem;
+        font-weight: 800;
+
+        box-shadow:
+            0 5px 18px rgba(255, 182, 0, .22);
+    }
+
+    .mulata-mobile-cart-btn:active {
+        transform: translateY(1px);
+    }
+
+    body.mulata-theme {
+        padding-bottom: 90px !important;
+    }
+}
+
+
+/* =====================================================
+   MOBILE BUY BAR - MULATA
+   ===================================================== */
+
+.mulata-mobile-buybar {
+    display: none;
+}
+
+@media (max-width: 767.98px) {
+
+    .mulata-mobile-buybar {
+        position: fixed !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+
+        z-index: 99999 !important;
+
+        display: flex !important;
+        align-items: center;
+        gap: 10px;
+
+        padding: 10px 12px;
+
+        background: #fff;
+        border-top: 1px solid #E3E6E7;
+
+        box-shadow:
+            0 -8px 28px rgba(23, 74, 91, .18);
+    }
+
+    .mulata-mobile-quantity {
+        width: 105px;
+        height: 54px;
+
+        display: grid;
+        grid-template-columns: 34px 1fr 34px;
+        align-items: center;
+
+        background: #fff;
+
+        border: 1px solid #DDE2E4;
+        border-radius: 11px;
+
+        overflow: hidden;
+    }
+
+    .mulata-mobile-quantity button {
+        height: 100%;
+
+        border: 0;
+        background: transparent;
+
+        color: #174A5B;
+
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .mulata-mobile-number {
+        text-align: center;
+
+        color: #172126;
+
+        font-weight: 700;
+    }
+
+    .mulata-mobile-add {
+        flex: 1;
+
+        height: 54px;
+
+        border: 0;
+        border-radius: 11px;
+
+        background: #FFB600;
+
+        color: #172126;
+
+        font-weight: 800;
+        font-size: 15px;
+    }
+
+    .mulata-mobile-add i {
+        margin-right: 7px;
+    }
+
+    body {
+        padding-bottom: 85px !important;
+    }
+}
+
+
+/* =====================================================
+   MULATA MOBILE BUY BAR
+   ===================================================== */
+
+.mulata-mobile-buybar {
+    display: none;
+}
+
+@media (max-width: 767.98px) {
+
+    .mulata-mobile-buybar {
+
+        position: fixed !important;
+
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+
+        z-index: 999999 !important;
+
+        display: flex !important;
+        align-items: center;
+
+        gap: 9px;
+
+        padding:
+            10px
+            12px
+            calc(
+                10px +
+                env(safe-area-inset-bottom)
+            );
+
+        background: #ffffff;
+
+        border-top:
+            1px solid #E3E6E7;
+
+        box-shadow:
+            0 -7px 30px
+            rgba(23, 74, 91, .18);
+    }
+
+
+    .mulata-mobile-quantity {
+
+        flex: 0 0 102px;
+
+        height: 54px;
+
+        display: grid;
+
+        grid-template-columns:
+            34px
+            1fr
+            34px;
+
+        align-items: center;
+
+        border:
+            1px solid #DDE2E4;
+
+        border-radius: 11px;
+
+        background: #ffffff;
+
+        overflow: hidden;
+    }
+
+
+    .mulata-mobile-quantity button {
+
+        height: 100%;
+
+        border: 0;
+
+        background: transparent;
+
+        color: #174A5B;
+
+        font-size: 20px;
+
+        font-weight: 700;
+    }
+
+
+    .mulata-mobile-number {
+
+        text-align: center;
+
+        color: #172126;
+
+        font-weight: 700;
+    }
+
+
+    .mulata-mobile-add {
+
+        flex: 1;
+
+        height: 54px;
+
+        border: 0;
+
+        border-radius: 11px;
+
+        background: #FFB600;
+
+        color: #172126;
+
+        font-weight: 800;
+
+        font-size: 15px;
+    }
+
+
+    .mulata-mobile-add i {
+        margin-right: 6px;
+    }
+
+
+    body.mulata-theme {
+        padding-bottom: 90px !important;
+    }
+
+}
+
+/* ======================================================
+   MULATA — MOBILE BUY BAR ESTABLE
+   ====================================================== */
+
+.mulata-mobile-buybar {
+    display: none;
+}
+
+@media (max-width: 767.98px) {
+
+    .mulata-mobile-buybar {
+        position: fixed !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        z-index: 99999 !important;
+
+        display: grid !important;
+        grid-template-columns: 110px 1fr;
+        gap: 10px;
+
+        padding: 10px 12px;
+
+        background: #fff;
+        border-top: 1px solid #E3E6E7;
+
+        box-shadow: 0 -8px 28px rgba(23, 74, 91, .17);
+    }
+
+    .mulata-mobile-price {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .mulata-mobile-price small {
+        color: #68747A;
+        font-size: 11px;
+        line-height: 1;
+    }
+
+    .mulata-mobile-price strong {
+        color: #172126;
+        font-size: 17px;
+        font-weight: 800;
+        white-space: nowrap;
+    }
+
+    .mulata-mobile-price .product_price,
+    .mulata-mobile-price .oe_price {
+        margin: 0 !important;
+        font-size: 17px !important;
+        line-height: 1.1 !important;
+    }
+
+    .mulata-mobile-add {
+        min-height: 54px;
+
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+
+        background: #FFB600 !important;
+        border: 0 !important;
+        border-radius: 11px;
+
+        color: #172126 !important;
+        text-decoration: none !important;
+
+        font-size: 14px;
+        font-weight: 800;
+    }
+
+    body.mulata-theme {
+        padding-bottom: 90px !important;
+    }
+}
+
+/* ======================================================
+   MULATA PRODUCT V1 — DESKTOP LAYOUT
+   ====================================================== */
+
+@media (min-width: 992px) {
+
+    .mulata-product-page #product_detail_main {
+        display: grid !important;
+        grid-template-columns: minmax(0, 55%) minmax(360px, 45%);
+        gap: 38px;
+        align-items: start;
+    }
+
+    .mulata-product-page .o_wsale_product_images {
+        width: 100% !important;
+        max-width: none !important;
+        flex: none !important;
+        padding-right: 0 !important;
+    }
+
+    .mulata-product-page #product_details {
+        width: 100% !important;
+        max-width: none !important;
+        flex: none !important;
+        padding-left: 0 !important;
+    }
+
+    .mulata-product-info #o_wsale_product_details_content {
+        position: sticky;
+        top: 24px;
+
+        background: #fff;
+        border: 1px solid #E3E6E7;
+        border-radius: 18px;
+        padding: 28px 30px !important;
+
+        box-shadow:
+            0 10px 32px rgba(23, 74, 91, .08);
+    }
+
+    .mulata-product-page h1 {
+        font-size: 2rem;
+        line-height: 1.12;
+        margin-bottom: 12px;
+    }
+
+    .mulata-product-page .oe_price,
+    .mulata-product-page .product_price {
+        font-size: 2.4rem !important;
+        line-height: 1 !important;
+        margin-bottom: 6px !important;
+    }
+
+    .mulata-commerce-extras {
+        margin-top: 12px;
+    }
+
+    .mulata-transfer {
+        padding: 14px 16px;
+    }
+
+    .mulata-logistics {
+        gap: 9px;
+    }
+
+    .mulata-logistics-item {
+        min-height: 64px;
+        padding: 11px 10px;
+    }
+
+    .mulata-product-page #add_to_cart {
+        min-height: 54px;
+        font-size: 15px;
+    }
+
+    .mulata-benefits {
+        margin-top: 20px;
+        padding-top: 18px;
+    }
+
+    /* Galería */
+    .mulata-product-page .o_wsale_product_images {
+        background: #fff;
+        border-radius: 18px;
+    }
+
+    .mulata-product-page .o_wsale_product_images img {
+        border-radius: 14px;
+    }
+
+    /* Thumbnails */
+    .mulata-product-page .o_carousel_product_indicators {
+        gap: 8px;
+        margin-top: 12px;
+    }
+
+    .mulata-product-page .o_carousel_product_indicators img {
+        border: 1px solid #E3E6E7;
+        border-radius: 10px;
+        background: #fff;
+        padding: 3px;
+    }
+
+    .mulata-product-page .o_carousel_product_indicators .active img {
+        border-color: #174A5B;
+        box-shadow: 0 0 0 1px #174A5B;
+    }
+}
+
+
+/* ======================================================
+   MOBILE — OCULTAR CTA ORIGINAL Y DEJAR SOLO STICKY
+   ====================================================== */
+
+@media (max-width: 767.98px) {
+
+    .mulata-product-page #o_wsale_cta_wrapper,
+    .mulata-product-page #add_to_cart_wrap {
+        display: none !important;
+    }
+
+}
+
+/* ======================================================
+   MOBILE — OCULTAR COMPRA ORIGINAL COMPLETA
+   ====================================================== */
+
+@media (max-width: 767.98px) {
+
+    /* Oculta cantidad + botón original + wishlist de la ficha */
+    .mulata-product-page .css_quantity,
+    .mulata-product-page #add_to_cart,
+    .mulata-product-page .o_add_wishlist,
+    .mulata-product-page [data-action="o_wsale_add_to_cart"],
+    .mulata-product-page .o_wsale_product_btn,
+    .mulata-product-page .o_wsale_product_actions,
+    .mulata-product-page .o_wsale_product_details_content_section_cta {
+        display: none !important;
+    }
+
+}
+
+/* ======================================================
+   MOBILE — ELIMINAR BLOQUE DE COMPRA ORIGINAL
+   ====================================================== */
+
+@media (max-width: 767.98px) {
+
+    /* Contenedor que incluye cantidad + carrito + wishlist */
+    .mulata-product-page .d-flex:has(#add_to_cart) {
+        display: none !important;
+    }
+
+    /* Fallbacks */
+    .mulata-product-page #add_to_cart {
+        display: none !important;
+    }
+
+    .mulata-product-page .css_quantity {
+        display: none !important;
+    }
+
+    .mulata-product-page .o_add_wishlist {
+        display: none !important;
+    }
+
+}
+
+/* ======================================================
+   FIX DEFINITIVO MOBILE
+   Ocultar CTA original de Odoo y conservar sticky Mulata
+   ====================================================== */
+
+@media (max-width: 767.98px) {
+
+    /* Cantidad original */
+    .oe_website_sale .css_quantity {
+        display: none !important;
+    }
+
+    /* Botón Agregar al carrito original */
+    .oe_website_sale #add_to_cart {
+        display: none !important;
+    }
+
+    /* Wrapper original del CTA */
+    .oe_website_sale #add_to_cart_wrap,
+    .oe_website_sale #o_wsale_cta_wrapper {
+        display: none !important;
+    }
+
+    /* Wishlist original debajo del botón */
+    .oe_website_sale .o_add_wishlist {
+        display: none !important;
+    }
+
+    /* Contenedores CTA utilizados por Odoo 19 */
+    .oe_website_sale .o_wsale_product_details_content_section_cta {
+        display: none !important;
+    }
+
+    /* Nuestro sticky siempre visible */
+    .mulata-mobile-sticky-cart {
+        display: flex !important;
+    }
+}
+
+
+/* =========================================================
+   MULATA MOBILE — VARIANTES SOBRE IMAGEN
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+
+    .mulata-product-page #o-carousel-product {
+        position: relative !important;
+    }
+
+    .mulata-product-page .mulata-mobile-variant-overlay {
+        position: absolute;
+        left: 10px;
+        right: 10px;
+        bottom: 16px;
+        z-index: 20;
+
+        display: flex;
+        justify-content: center;
+
+        pointer-events: none;
+    }
+
+    .mulata-product-page
+    .mulata-mobile-variant-overlay
+    .o_wsale_product_page_variants {
+        pointer-events: auto;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        width: auto !important;
+        max-width: calc(100% - 8px);
+
+        margin: 0 !important;
+        padding: 7px 8px !important;
+
+        gap: 4px !important;
+
+        background: rgba(255,255,255,.94);
+        backdrop-filter: blur(7px);
+        -webkit-backdrop-filter: blur(7px);
+
+        border: 1px solid rgba(23,74,91,.12);
+        border-radius: 12px;
+
+        box-shadow: 0 5px 18px rgba(0,0,0,.10);
+    }
+
+    .mulata-product-page
+    .mulata-mobile-variant-overlay
+    .variant_attribute {
+        margin: 0 !important;
+    }
+
+    .mulata-product-page
+    .mulata-mobile-variant-overlay
+    .variant_attribute > span,
+    .mulata-product-page
+    .mulata-mobile-variant-overlay
+    .variant_attribute > strong {
+        display: none !important;
+    }
+
+    .mulata-product-page
+    .mulata-mobile-variant-overlay
+    .o_variant_pills {
+        font-size: 12px !important;
+        padding: 5px 9px !important;
+    }
+}
+
+
+/* =========================================================
+   MULATA MOBILE — MEDIDAS SOBRE FOTO, ESTILO CARD
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+
+    #o-carousel-product {
+        position: relative !important;
+    }
+
+    #o-carousel-product .mulata-mobile-variant-overlay {
+        position: absolute !important;
+        left: 10px !important;
+        right: auto !important;
+        bottom: 10px !important;
+        top: auto !important;
+
+        width: auto !important;
+        max-width: calc(100% - 20px) !important;
+
+        z-index: 30 !important;
+
+        display: block !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        background: transparent !important;
+        border: 0 !important;
+        box-shadow: none !important;
+
+        pointer-events: none;
+    }
+
+    #o-carousel-product
+    .mulata-mobile-variant-overlay
+    .o_wsale_product_page_variants {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+
+        gap: 5px !important;
+
+        width: auto !important;
+        max-width: 100% !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        background: transparent !important;
+        border: 0 !important;
+        box-shadow: none !important;
+
+        pointer-events: auto;
+    }
+
+    /* Quitar el texto "Medida" */
+    #o-carousel-product
+    .mulata-mobile-variant-overlay
+    .variant_attribute > div:first-child,
+    #o-carousel-product
+    .mulata-mobile-variant-overlay
+    .variant_attribute > span:first-child {
+        display: none !important;
+    }
+
+    #o-carousel-product
+    .mulata-mobile-variant-overlay
+    .variant_attribute {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Chips */
+    #o-carousel-product
+    .mulata-mobile-variant-overlay
+    .o_variant_pills {
+        min-height: 28px !important;
+
+        padding: 5px 9px !important;
+        margin: 0 !important;
+
+        font-size: 11px !important;
+        line-height: 1 !important;
+
+        border-radius: 6px !important;
+        border: 1px solid rgba(23, 74, 91, .22) !important;
+
+        background: rgba(255,255,255,.94) !important;
+        color: #174A5B !important;
+
+        box-shadow: 0 2px 7px rgba(0,0,0,.10) !important;
+
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+    }
+
+    /* Seleccionada */
+    #o-carousel-product
+    .mulata-mobile-variant-overlay
+    .o_variant_pills.active {
+        border-color: #174A5B !important;
+        background: #ffffff !important;
+        color: #174A5B !important;
+        box-shadow: 0 0 0 1px #174A5B !important;
+    }
+}
+
+
+/* =========================================================
+   MULATA MOBILE — SELECTOR DE MEDIDAS SOBRE FOTO V2
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+
+    /* El selector real queda en DOM para que Odoo funcione,
+       pero no ocupa espacio visual. */
+    #product_detail
+    .o_wsale_product_page_variants.mulata-original-mobile-variants {
+        position: absolute !important;
+        left: -10000px !important;
+        top: auto !important;
+
+        width: 1px !important;
+        height: 1px !important;
+
+        overflow: hidden !important;
+        opacity: 0 !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    #o-carousel-product {
+        position: relative !important;
+    }
+
+    #o-carousel-product .mulata-mobile-variant-overlay {
+        position: absolute !important;
+
+        left: 12px !important;
+        right: 12px !important;
+        bottom: 15px !important;
+
+        z-index: 35 !important;
+
+        display: flex !important;
+        justify-content: center !important;
+
+        width: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+
+        background: transparent !important;
+        border: 0 !important;
+        box-shadow: none !important;
+
+        pointer-events: none;
+    }
+
+    #o-carousel-product .mulata-mobile-variant-chips {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+
+        padding: 5px;
+
+        background: rgba(255, 255, 255, .90);
+        border: 1px solid rgba(23, 74, 91, .10);
+        border-radius: 10px;
+
+        box-shadow: 0 3px 12px rgba(0, 0, 0, .10);
+
+        backdrop-filter: blur(7px);
+        -webkit-backdrop-filter: blur(7px);
+
+        pointer-events: auto;
+    }
+
+    #o-carousel-product .mulata-mobile-variant-chip {
+        appearance: none;
+
+        min-height: 29px;
+
+        padding: 5px 10px;
+
+        border: 1px solid #d9e0e2;
+        border-radius: 7px;
+
+        background: rgba(255,255,255,.98);
+        color: #174A5B;
+
+        font-size: 11px;
+        font-weight: 600;
+        line-height: 1;
+
+        white-space: nowrap;
+
+        box-shadow: none;
+
+        transition:
+            border-color .15s ease,
+            background-color .15s ease,
+            box-shadow .15s ease;
+    }
+
+    #o-carousel-product .mulata-mobile-variant-chip.active {
+        border-color: #174A5B;
+
+        background: #174A5B;
+        color: #fff;
+
+        box-shadow: 0 2px 6px rgba(23, 74, 91, .22);
+    }
+}
+
+
+/* =========================================================
+   MULATA MOBILE — CARRUSEL HORIZONTAL DE VARIANTES
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+
+    #o-carousel-product .mulata-mobile-variant-overlay {
+        left: 10px !important;
+        right: 10px !important;
+        bottom: 14px !important;
+
+        display: block !important;
+        width: auto !important;
+        max-width: none !important;
+    }
+
+    #o-carousel-product .mulata-mobile-variant-chips {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        justify-content: flex-start !important;
+
+        gap: 6px !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        padding: 5px !important;
+
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+
+        scroll-behavior: smooth;
+        scroll-snap-type: x proximity;
+
+        -webkit-overflow-scrolling: touch;
+
+        scrollbar-width: none;
+
+        background: rgba(255,255,255,.90);
+        border: 1px solid rgba(23,74,91,.10);
+        border-radius: 11px;
+
+        box-shadow: 0 3px 12px rgba(0,0,0,.10);
+
+        backdrop-filter: blur(7px);
+        -webkit-backdrop-filter: blur(7px);
+    }
+
+    #o-carousel-product .mulata-mobile-variant-chips::-webkit-scrollbar {
+        display: none;
+    }
+
+    #o-carousel-product .mulata-mobile-variant-chip {
+        flex: 0 0 auto !important;
+
+        scroll-snap-align: start;
+
+        min-height: 29px;
+
+        padding: 5px 10px !important;
+
+        border: 1px solid #d9e0e2 !important;
+        border-radius: 7px !important;
+
+        background: rgba(255,255,255,.98) !important;
+        color: #174A5B !important;
+
+        font-size: 11px !important;
+        font-weight: 600 !important;
+        line-height: 1 !important;
+
+        white-space: nowrap !important;
+    }
+
+    #o-carousel-product .mulata-mobile-variant-chip.active {
+        border-color: #174A5B !important;
+        background: #174A5B !important;
+        color: #fff !important;
+
+        box-shadow: 0 2px 6px rgba(23,74,91,.22) !important;
+    }
+}
+
+
+/* =========================================================
+   MULATA MOBILE — VARIANTES CENTRADAS / CARRUSEL SI HAY OVERFLOW
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+
+    #o-carousel-product .mulata-mobile-variant-overlay {
+        position: absolute !important;
+        left: 10px !important;
+        right: 10px !important;
+        bottom: 14px !important;
+        z-index: 35 !important;
+
+        display: flex !important;
+        justify-content: center !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        background: transparent !important;
+        border: 0 !important;
+        box-shadow: none !important;
+        pointer-events: none;
+    }
+
+    /* Estado normal: todo entra -> centrado, sin fondo blanco */
+    #o-carousel-product .mulata-mobile-variant-chips {
+        display: inline-flex !important;
+        flex-wrap: nowrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 6px !important;
+
+        width: auto !important;
+        max-width: 100% !important;
+
+        padding: 0 !important;
+        margin: 0 auto !important;
+
+        overflow: visible !important;
+
+        background: transparent !important;
+        border: 0 !important;
+        box-shadow: none !important;
+
+        pointer-events: auto;
+    }
+
+    /* Si hay más medidas de las que entran -> modo carrusel */
+    #o-carousel-product .mulata-mobile-variant-overlay.has-overflow .mulata-mobile-variant-chips {
+        display: flex !important;
+        width: 100% !important;
+        max-width: 100% !important;
+
+        justify-content: flex-start !important;
+        flex-wrap: nowrap !important;
+
+        padding: 5px !important;
+
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+
+        scroll-behavior: smooth;
+        scroll-snap-type: x proximity;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+
+        background: rgba(255,255,255,.90) !important;
+        border: 1px solid rgba(23,74,91,.10) !important;
+        border-radius: 11px !important;
+        box-shadow: 0 3px 12px rgba(0,0,0,.10) !important;
+
+        backdrop-filter: blur(7px);
+        -webkit-backdrop-filter: blur(7px);
+    }
+
+    #o-carousel-product .mulata-mobile-variant-overlay.has-overflow .mulata-mobile-variant-chips::-webkit-scrollbar {
+        display: none;
+    }
+
+    #o-carousel-product .mulata-mobile-variant-chip {
+        flex: 0 0 auto !important;
+        min-height: 29px !important;
+        padding: 5px 10px !important;
+
+        border: 1px solid #d9e0e2 !important;
+        border-radius: 7px !important;
+
+        background: rgba(255,255,255,.98) !important;
+        color: #174A5B !important;
+
+        font-size: 11px !important;
+        font-weight: 600 !important;
+        line-height: 1 !important;
+
+        white-space: nowrap !important;
+    }
+
+    #o-carousel-product .mulata-mobile-variant-chip.active {
+        border-color: #174A5B !important;
+        background: #174A5B !important;
+        color: #fff !important;
+        box-shadow: 0 2px 6px rgba(23,74,91,.22) !important;
+    }
+}
+
+
+/* =========================================================
+   MULATA — COLOR DE VARIANTE "MEDIDA" EN FICHA DE PRODUCTO
+   ========================================================= */
+
+.mulata-product-page .variant_attribute .fw-bold,
+.mulata-product-page .variant_attribute strong,
+.mulata-product-page .variant_attribute label.form-label,
+.mulata-product-page .variant_attribute span:first-child {
+    color: #174A5B !important;
+}
+
+/* Pills / botones de variante */
+.mulata-product-page .o_variant_pills,
+.mulata-product-page .css_attribute_color,
+.mulata-product-page .btn.css_not_available_msg {
+    border-color: rgba(23, 74, 91, .22) !important;
+}
+
+/* Botón variante normal */
+.mulata-product-page .o_variant_pills.btn {
+    background: #fff !important;
+    color: #174A5B !important;
+    border: 1px solid rgba(23, 74, 91, .22) !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+}
+
+/* Hover */
+.mulata-product-page .o_variant_pills.btn:hover {
+    border-color: #174A5B !important;
+    background: rgba(23, 74, 91, .06) !important;
+    color: #174A5B !important;
+}
+
+/* Activa / seleccionada */
+.mulata-product-page .o_variant_pills.active,
+.mulata-product-page .o_variant_pills.btn.active,
+.mulata-product-page input.js_variant_change:checked + label.o_variant_pills,
+.mulata-product-page input.js_variant_change:checked + .o_variant_pills {
+    background: #174A5B !important;
+    color: #fff !important;
+    border-color: #174A5B !important;
+    box-shadow: 0 0 0 1px #174A5B !important;
+}
+
+/* Si Odoo usa radio oculto + label */
+.mulata-product-page .css_attribute_size .btn,
+.mulata-product-page .variant_attribute .btn {
+    color: #174A5B !important;
+}
+
+.mulata-product-page .css_attribute_size input:checked + label.btn,
+.mulata-product-page .variant_attribute input:checked + label.btn {
+    background: #174A5B !important;
+    color: #fff !important;
+    border-color: #174A5B !important;
+}
+

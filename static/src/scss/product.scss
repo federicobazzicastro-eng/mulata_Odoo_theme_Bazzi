@@ -618,7 +618,7 @@
         z-index: 99999 !important;
 
         display: grid !important;
-        grid-template-columns: 110px 1fr;
+        grid-template-columns: 92px minmax(0, 1fr) 72px;
         gap: 10px;
 
         padding: 10px 12px;
@@ -1424,5 +1424,130 @@
     background: #174A5B !important;
     color: #fff !important;
     border-color: #174A5B !important;
+}
+
+
+
+/* MULATA - COMPARADOR EN BARRA MOVIL */
+
+@media (max-width: 767.98px) {
+    .mulata-mobile-buybar .mulata-mobile-add {
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    .mulata-mobile-buybar .mulata-mobile-compare {
+        flex: 0 0 auto;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3px;
+        padding: 7px 9px;
+        border: 1px solid #174A5B;
+        border-radius: 10px;
+        background: #fff;
+        color: #174A5B;
+        font-size: 11px;
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+    .mulata-mobile-buybar .mulata-mobile-compare i {
+        font-size: 17px;
+    }
+}
+
+
+/* MULATA - COMPARADOR FLOTANTE MOVIL V3 */
+
+@media (max-width: 767.98px) {
+
+    /* Barra de compra propia de Mulata */
+    body:has(.mulata-mobile-buybar)
+    .mulata-mobile-buybar {
+        z-index: 1050 !important;
+    }
+
+    /* Comparador nativo encima de la compra */
+    body:has(.mulata-mobile-buybar)
+    .o_wsale_comparison_bottom_bar {
+        position: fixed !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 95px !important;
+        z-index: 1055 !important;
+    }
+
+    /* Evitar que los controles tapen el contenido */
+    body:has(.mulata-mobile-buybar) {
+        padding-bottom: 180px !important;
+    }
+}
+
+
+/* =====================================================
+   MULATA — COMPARADOR RESPONSIVE
+   Odoo 20 Community
+   ===================================================== */
+
+@media (max-width: 767.98px) {
+
+    .o_wsale_comparison_page {
+        --mulata-compare-width: calc((100vw - 32px) / 2);
+        --o-website-sale-comparison-table-column-padding-x: 4px;
+    }
+
+    .o_wsale_comparison_page
+    .oe_website_sale > .overflow-x-auto {
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .o_wsale_comparison_page
+    #o_comparelist_table {
+        min-width: 0 !important;
+        width: max-content;
+    }
+
+    .o_wsale_comparison_page
+    .o_wsale_compare_table_column {
+        flex: 0 0 var(--mulata-compare-width) !important;
+        width: var(--mulata-compare-width) !important;
+        min-width: 0 !important;
+        max-width: var(--mulata-compare-width) !important;
+        padding-left: 4px;
+        padding-right: 4px;
+        box-sizing: border-box;
+    }
+
+    .o_wsale_comparison_page
+    #o_comparelist_table img {
+        width: 100% !important;
+        height: auto !important;
+        max-height: 180px;
+        object-fit: contain !important;
+    }
+
+    .o_wsale_comparison_page
+    #o_comparelist_product_name h6 {
+        font-size: 12px;
+        line-height: 1.3;
+        overflow-wrap: anywhere;
+    }
+
+    .o_wsale_comparison_page
+    .product_summary .btn {
+        width: 100%;
+        font-size: 11px;
+        padding: 8px 3px;
+        white-space: normal;
+    }
+
+    .o_wsale_comparison_page
+    #o_comparelist_attribute {
+        font-size: 12px;
+        overflow-wrap: anywhere;
+    }
 }
 

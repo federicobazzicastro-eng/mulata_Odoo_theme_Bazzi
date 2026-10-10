@@ -126,7 +126,7 @@
 
                 </button>
 
-            </div>
+            <button type="button" class="mulata-mobile-compare" t-if="product._can_be_added_to_comparison()" aria-label="Agregar a comparación" title="Comparar" onclick="var b=document.querySelector('#product_detail .o_add_compare_dyn');if(b){b.click();}"><i class="fa fa-exchange" aria-hidden="true"/><span>Comparar</span></button></div>
 
         </xpath>
 

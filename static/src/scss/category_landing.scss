@@ -273,3 +273,70 @@
         font-size: 16px !important;
     }
 }
+
+
+/* MULATA — CATEGORÍAS COMPACTAS V2 */
+
+@media (min-width: 768px) {
+    .mulata-category-landing {
+        padding-top: 12px !important;
+        padding-bottom: 12px !important;
+    }
+
+    .mulata-category-hero {
+        min-height: 0 !important;
+        padding: 22px 28px !important;
+        gap: 22px !important;
+    }
+
+    .mulata-category-hero-photo {
+        max-height: 285px !important;
+        min-height: 0 !important;
+    }
+
+    .mulata-category-hero-photo img {
+        max-height: 255px !important;
+        object-fit: contain !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .mulata-category-landing {
+        padding-top: 6px !important;
+        padding-bottom: 8px !important;
+    }
+
+    .mulata-category-hero {
+        min-height: 0 !important;
+        padding: 14px !important;
+        gap: 12px !important;
+    }
+
+    .mulata-category-hero-title {
+        margin-bottom: 8px !important;
+        font-size: 23px !important;
+        line-height: 1.15 !important;
+    }
+
+    .mulata-category-hero-text {
+        margin-bottom: 10px !important;
+    }
+
+    .mulata-category-hero-benefits {
+        margin-top: 10px !important;
+        gap: 5px !important;
+    }
+
+    .mulata-category-hero-photo {
+        height: 175px !important;
+        min-height: 0 !important;
+        max-height: 175px !important;
+        padding: 6px !important;
+    }
+
+    .mulata-category-hero-photo img {
+        height: 100% !important;
+        max-height: 160px !important;
+        object-fit: contain !important;
+    }
+}

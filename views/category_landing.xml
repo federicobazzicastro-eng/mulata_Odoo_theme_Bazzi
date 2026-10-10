@@ -1,20 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <odoo>
 
-    <template id="mulata_category_landing"
-              inherit_id="website_sale.products"
-              name="Mulata category landing">
+    <template id="mulata_category_landing" inherit_id="website_sale.products" name="Mulata category landing">
 
-        <xpath expr="//div[@id='products_grid_before']" position="before">
+        <xpath expr="//div[@id='o_wsale_container']" position="before">
 
             <t t-if="category">
 
-                <t t-set="hero_product"
-                   t-value="request.env['product.template'].sudo().search([
-                        ('is_published', '=', True),
-                        ('sale_ok', '=', True),
-                        ('public_categ_ids', 'child_of', category.id)
-                   ], order='website_sequence asc, id desc', limit=1)"/>
+                <t t-set="hero_product" t-value="request.env['product.template'].sudo().search([                         ('is_published', '=', True),                         ('sale_ok', '=', True),                         ('public_categ_ids', 'child_of', category.id)                    ], order='website_sequence asc, id desc', limit=1)"/>
 
                 <section class="mulata-category-landing">
 
@@ -51,14 +44,11 @@
                             </p>
 
                             <div class="mulata-category-hero-actions">
-                                <a href="#o_wsale_products_grid"
-                                   class="mulata-category-btn mulata-category-btn-primary">
+                                <a href="#o_wsale_products_grid" class="mulata-category-btn mulata-category-btn-primary">
                                     Ver productos
                                 </a>
 
-                                <a t-if="hero_product"
-                                   t-att-href="hero_product.website_url"
-                                   class="mulata-category-btn mulata-category-btn-secondary">
+                                <a t-if="hero_product" t-att-href="hero_product.website_url" class="mulata-category-btn mulata-category-btn-secondary">
                                     Ver destacado
                                 </a>
                             </div>
@@ -80,44 +70,15 @@
 
                         </div>
 
-                        <a t-if="hero_product"
-                           t-att-href="hero_product.website_url"
-                           class="mulata-category-hero-photo">
+                        <a t-if="hero_product" t-att-href="hero_product.website_url" class="mulata-category-hero-photo">
 
-                            <img t-att-src="'/web/image/product.template/%s/image_1024' % hero_product.id"
-                                 t-att-alt="hero_product.name"
-                                 loading="lazy"/>
+                            <img t-att-src="'/web/image/product.template/%s/image_1024' % hero_product.id" t-att-alt="hero_product.name" loading="lazy"/>
 
                         </a>
 
                     </div>
 
-                    <div class="mulata-category-subcats" t-if="category.child_id">
-
-                        <t t-foreach="category.child_id" t-as="subcat">
-                            <t t-if="subcat.website_published">
-                                <a t-att-href="subcat.website_url"
-                                   class="mulata-category-subcat-card">
-
-                                    <span class="mulata-category-subcat-kicker">
-                                        Subcategoría
-                                    </span>
-
-                                    <strong class="mulata-category-subcat-title">
-                                        <t t-out="subcat.name"/>
-                                    </strong>
-
-                                    <span class="mulata-category-subcat-link">
-                                        Ver modelos
-                                    </span>
-
-                                </a>
-                            </t>
-                        </t>
-
-                    </div>
-
-                </section>
+                    </section>
 
             </t>
 

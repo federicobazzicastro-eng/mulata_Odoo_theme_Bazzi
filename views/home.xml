@@ -350,6 +350,95 @@
 
 
 
+
+                <!-- ===================================================
+                     SEGUI EXPLORANDO
+                     =================================================== -->
+
+                <t t-set="discover_products"
+                   t-value="request.env['product.template'].sudo().search([
+                       ('is_published', '=', True),
+                       ('sale_ok', '=', True),
+                       ('id', 'not in', featured_products.ids)
+                   ], order='website_sequence asc, id desc', limit=8)"/>
+
+                <section t-if="discover_products"
+                         class="mulata-home-featured mulata-home-discover">
+
+                    <div class="container">
+
+                        <div class="mulata-home-section-heading">
+                            <div>
+                                <span class="mulata-home-section-kicker">
+                                    Más para tu hogar
+                                </span>
+                                <h2>Seguí explorando</h2>
+                            </div>
+
+                            <a href="/shop">
+                                Ver todos
+                                <i class="fa fa-arrow-right ms-1"/>
+                            </a>
+                        </div>
+
+                        <div class="mulata-home-featured-grid">
+
+                            <t t-foreach="discover_products" t-as="product">
+
+                                <t t-set="combination_info"
+                                   t-value="product._get_combination_info(
+                                       only_template=True,
+                                       add_qty=1
+                                   )"/>
+
+                                <article class="mulata-home-product-card">
+
+                                    <a t-att-href="product.website_url"
+                                       class="mulata-home-product-image">
+
+                                        <img
+                                            t-att-src="'/web/image/product.template/%s/image_1024' % product.id"
+                                            t-att-alt="product.name"
+                                            loading="lazy"/>
+                                    </a>
+
+                                    <div class="mulata-home-product-body">
+
+                                        <a t-att-href="product.website_url"
+                                           class="mulata-home-product-name">
+                                            <t t-out="product.name"/>
+                                        </a>
+
+                                        <div class="mulata-home-product-price">
+                                            <span
+                                                t-out="combination_info.get('price', product.list_price)"
+                                                t-options="{
+                                                    'widget': 'monetary',
+                                                    'display_currency': website.currency_id
+                                                }"/>
+                                        </div>
+
+                                        <div class="mulata-home-product-installments">
+                                            <i class="fa fa-credit-card"/>
+                                            <span>Hasta 12 cuotas</span>
+                                        </div>
+
+                                        <a t-att-href="product.website_url"
+                                           class="mulata-home-product-link">
+                                            Ver producto
+                                            <i class="fa fa-arrow-right ms-1"/>
+                                        </a>
+
+                                    </div>
+                                </article>
+
+                            </t>
+
+                        </div>
+
+                    </div>
+                </section>
+
                 <!-- ===================================================
                      BLOQUE COMERCIAL
                      =================================================== -->

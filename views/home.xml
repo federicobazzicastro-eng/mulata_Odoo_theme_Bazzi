@@ -168,7 +168,7 @@
 
                             <!-- MUEBLES -->
 
-                            <a href="/shop" class="mulata-home-category-card mulata-category-furniture">
+                            <a href="/shop/category/1" class="mulata-home-category-card mulata-category-furniture">
 
                                 <div class="mulata-category-icon">
                                     <i class="fa fa-home"/>

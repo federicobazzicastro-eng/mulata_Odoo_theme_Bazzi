@@ -1,11 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <odoo>
 
-    <template
-        id="mulata_product_page"
-        name="Mulata Product V1"
-        inherit_id="website_sale.product"
-    >
+    <template id="mulata_product_page" name="Mulata Product V1" inherit_id="website_sale.product">
 
         <!-- ==================================================
              ESTRUCTURA VISUAL
@@ -124,10 +119,7 @@
                     </strong>
                 </div>
 
-                <button
-                    type="button"
-                    class="mulata-mobile-add"
-                    onclick="var b=document.querySelector('#product_detail #add_to_cart'); if(b){b.click();}">
+                <button type="button" class="mulata-mobile-add" onclick="var b=document.querySelector('#product_detail #add_to_cart'); if(b){b.click();}">
 
                     <i class="fa fa-shopping-cart me-2"/>
                     Agregar al carrito
@@ -148,21 +140,5 @@
      MULATA — GALERÍA PRODUCTO
      Carrusel manual, sin autoplay
      ========================================================= -->
-
-<template
-    id="mulata_product_carousel_manual"
-    name="Mulata — Product Carousel Manual"
-    inherit_id="website_sale.shop_product_carousel"
-    priority="40"
->
-    <xpath expr="//div[@id='o-carousel-product']" position="attributes">
-        <attribute name="data-bs-ride">carousel</attribute>
-        <attribute name="data-bs-interval">false</attribute>
-        <attribute name="data-bs-pause">hover</attribute>
-        <attribute name="data-bs-wrap">true</attribute>
-        <attribute name="data-bs-touch">true</attribute>
-    </xpath>
-</template>
-
 
 </odoo>

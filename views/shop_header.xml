@@ -65,4 +65,53 @@
 
     </template>
 
+
+    <!-- MULATA — NAVEGACIÓN COMPACTA DEL CATÁLOGO -->
+
+    <template
+        id="mulata_shop_category_navigation"
+        name="Mulata - Navegación horizontal de categorías"
+        inherit_id="website_sale.products"
+        priority="65">
+
+        <xpath expr="//header[@id='o_wsale_products_header']"
+               position="after">
+
+            <t t-set="mulata_chip_categories"
+               t-value="request.env['product.public.category'].sudo().search([
+                   ('parent_id', '=', category.id if category else False),
+                   ('not_in_shop', '=', False)
+               ], order='id asc')"/>
+
+            <nav class="mulata-shop-category-nav"
+                 aria-label="Explorar categorías">
+
+                <a t-att-href="category.website_url if category else '/shop'"
+                   class="mulata-shop-category-chip is-current">
+                    Todos
+                </a>
+
+                <t t-foreach="mulata_chip_categories" t-as="chip">
+
+                    <t t-set="chip_has_products"
+                       t-value="request.env['product.template'].sudo().search_count([
+                           ('is_published', '=', True),
+                           ('sale_ok', '=', True),
+                           ('public_categ_ids', 'child_of', chip.id)
+                       ])"/>
+
+                    <a t-if="chip_has_products"
+                       t-att-href="chip.website_url"
+                       class="mulata-shop-category-chip">
+                        <t t-out="chip.name"/>
+                    </a>
+
+                </t>
+
+            </nav>
+
+        </xpath>
+
+    </template>
+
 </odoo>

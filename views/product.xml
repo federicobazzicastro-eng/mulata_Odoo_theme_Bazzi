@@ -7,11 +7,11 @@
              ================================================== -->
 
         <xpath expr="//section[@id='product_detail']" position="attributes">
-            <attribute name="class" add="mulata-product-page" separator=" "/>
+            <attribute name="t-attf-class" add="mulata-product-page" separator=" "/>
         </xpath>
 
         <xpath expr="//div[@id='product_details']" position="attributes">
-            <attribute name="class" add="mulata-product-info" separator=" "/>
+            <attribute name="t-attf-class" add="mulata-product-info" separator=" "/>
         </xpath>
 
         <!-- Información comercial debajo del precio -->

@@ -686,7 +686,7 @@
 
     .mulata-product-page #product_detail_main {
         display: grid !important;
-        grid-template-columns: minmax(0, 55%) minmax(360px, 45%);
+        grid-template-columns: minmax(0, 1.22fr) minmax(360px, 1fr);
         gap: 38px;
         align-items: start;
     }
@@ -1551,3 +1551,62 @@
     }
 }
 
+
+
+/* MULATA PRODUCT PREMIUM RESPONSIVE V1 */
+
+/* Pantallas intermedias: evitar paneles comprimidos */
+@media (min-width: 992px) and (max-width: 1279.98px) {
+    .mulata-product-page #product_detail_main {
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 24px !important;
+    }
+
+    .mulata-product-page .o_wsale_product_images,
+    .mulata-product-page #product_details {
+        min-width: 0;
+        width: 100% !important;
+    }
+
+    .mulata-product-info #o_wsale_product_details_content {
+        position: static;
+    }
+}
+
+/* Escritorio amplio: galería protagonista */
+@media (min-width: 1280px) {
+    .mulata-product-page #product_detail_main {
+        grid-template-columns:
+            minmax(0, 1.35fr)
+            minmax(360px, 1fr) !important;
+        gap: clamp(28px, 3vw, 48px) !important;
+    }
+}
+
+/* Jerarquía comercial */
+@media (min-width: 992px) {
+    .mulata-product-page h1 {
+        font-size: clamp(1.8rem, 2vw, 2.4rem);
+        line-height: 1.16;
+        letter-spacing: -0.025em;
+    }
+
+    .mulata-product-page .oe_price,
+    .mulata-product-page .product_price {
+        font-size: clamp(2.15rem, 2.65vw, 2.85rem) !important;
+        line-height: 1.12 !important;
+        font-weight: 750;
+        color: #174A5B;
+    }
+
+    .mulata-product-info #o_wsale_product_details_content {
+        border-radius: 20px;
+        box-shadow: 0 12px 35px rgba(23, 74, 91, 0.07);
+    }
+
+    .mulata-product-page #add_to_cart {
+        min-height: 56px;
+        font-weight: 700;
+        border-radius: 10px;
+    }
+}

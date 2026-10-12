@@ -1,24 +1,23 @@
+from decimal import Decimal, ROUND_HALF_UP
+
 from odoo import models
-from odoo.tools.misc import formatLang
 
 
 class WebsiteMulataPrice(models.AbstractModel):
     _name = "mulata.price.format"
     _description = "Formato comercial de precios Mulata"
 
-    def format_price(self, amount):
-        amount = float(amount or 0.0)
+    def format_price(self, amount, currency="UYU"):
+        value = Decimal(str(amount or 0))
 
-        decimals = 0 if abs(amount - round(amount)) < 0.000001 else 2
+        rounded = int(value.quantize(
+            Decimal("1"),
+            rounding=ROUND_HALF_UP,
+        ))
 
-        formatted = formatLang(
-            self.env.with_context(lang="es_UY"),
-            amount,
-            digits=2,
-            grouping=True,
-        )
+        number = f"{rounded:,}".replace(",", ".")
 
-        if decimals == 0:
-            formatted = formatted.rsplit(",", 1)[0]
+        if currency == "USD":
+            return f"US$ {number}"
 
-        return "$ " + formatted
+        return f"$ {number}"

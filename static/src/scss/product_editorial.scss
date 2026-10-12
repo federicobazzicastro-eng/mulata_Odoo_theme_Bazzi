@@ -1,0 +1,155 @@
+/* MULATA — Contenido editorial de productos */
+.mulata-product-editorial {
+    --me-petroleo: #174A5B;
+    --me-acento: #FFB600;
+    --me-fondo: #FAF8F5;
+
+    width: calc(100% - 32px);
+    max-width: 1140px;
+    margin: 44px auto 64px;
+    padding: clamp(20px, 3.5vw, 44px);
+    background: var(--me-fondo);
+    border-radius: 22px;
+    color: #25343B;
+    box-sizing: border-box;
+
+    h2 {
+        color: var(--me-petroleo);
+        font-size: clamp(23px, 2.4vw, 30px);
+        font-weight: 750;
+        line-height: 1.2;
+        margin: 40px 0 18px;
+    }
+
+    > h2:first-child {
+        margin-top: 0;
+    }
+
+    > p {
+        font-size: 16px;
+        line-height: 1.75;
+        max-width: 850px;
+        margin-bottom: 24px;
+    }
+
+    .mulata-product-benefits {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        margin: 20px 0 36px;
+
+        article {
+            background: white;
+            border: 1px solid #E6EAE9;
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 5px 20px rgba(23, 74, 91, .035);
+            border-top: 3px solid var(--me-acento);
+        }
+
+        h3 {
+            font-size: 18px;
+            line-height: 1.35;
+            font-weight: 700;
+            color: var(--me-petroleo);
+            margin: 0 0 10px;
+        }
+
+        p {
+            font-size: 15px;
+            line-height: 1.65;
+            margin: 0;
+        }
+    }
+
+    table {
+        display: table;
+        width: 100%;
+        max-width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        overflow: hidden;
+        border-radius: 14px;
+        background: white;
+        border: 1px solid #E6EAE9;
+        margin-bottom: 36px;
+
+        th, td {
+            padding: 14px 20px;
+            font-size: 15px;
+            line-height: 1.5;
+            border: 0;
+            border-bottom: 1px solid #EDF0EF;
+            vertical-align: top;
+            overflow-wrap: anywhere;
+        }
+
+        th {
+            width: 38%;
+            color: #42545C;
+            background: #F3F6F5;
+            font-weight: 650;
+        }
+
+        tr:last-child th, tr:last-child td {
+            border-bottom: 0;
+        }
+    }
+
+    details {
+        background: white;
+        border: 1px solid #E6EAE9;
+        border-radius: 12px;
+        margin-bottom: 10px;
+        padding: 0 20px;
+
+        summary {
+            cursor: pointer;
+            padding: 18px 2px;
+            font-size: 15px;
+            font-weight: 650;
+            color: var(--me-petroleo);
+        }
+
+        &[open] {
+            border-color: #C5D8DA;
+        }
+
+        p {
+            margin: 0;
+            padding: 0 2px 20px;
+            line-height: 1.65;
+            font-size: 15px;
+        }
+    }
+
+    > p a {
+        color: var(--me-petroleo);
+        font-weight: 650;
+        text-underline-offset: 3px;
+    }
+
+    @media (max-width: 767px) {
+        width: calc(100% - 24px);
+        margin: 28px auto 100px;
+        padding: 20px 16px;
+        border-radius: 16px;
+
+        .mulata-product-benefits {
+            grid-template-columns: 1fr;
+
+            article {
+                padding: 18px;
+            }
+        }
+
+        table th, table td {
+            padding: 12px 10px;
+            font-size: 13px;
+        }
+
+        table th {
+            width: 43%;
+        }
+    }
+}

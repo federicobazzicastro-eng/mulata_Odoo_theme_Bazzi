@@ -176,4 +176,38 @@
     </xpath>
 </template>
 
+
+    <!-- MULATA MONEDA MIXTA CATALOGO -->
+    <template id="mulata_shop_price_mixed"
+              inherit_id="website_sale.products_item"
+              priority="65">
+
+        <xpath expr='//div[hasclass("product_price")]//span[@t-out="template_price_vals[&apos;price_reduce&apos;]"]'
+               position="replace">
+
+            <t t-if="product.mulata_display_currency == 'USD' and product.gelbring_pvp_usd">
+
+                <span class="mb-0 fw-bold mulata-price-usd"
+                      t-out="request.env['mulata.price.format'].format_price(
+                          template_price_vals['price_reduce'] /
+                          (product.mulata_exchange_rate or 42.0),
+                          'USD'
+                      )"/>
+
+
+            </t>
+
+            <t t-else="">
+                <span class="mb-0 fw-bold"
+                      aria-label="Sale price"
+                      t-out="request.env['mulata.price.format'].format_price(
+                          template_price_vals['price_reduce'],
+                          'UYU'
+                      )"/>
+            </t>
+
+        </xpath>
+
+    </template>
+
 </odoo>

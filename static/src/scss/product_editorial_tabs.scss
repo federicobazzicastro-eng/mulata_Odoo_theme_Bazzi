@@ -1,0 +1,603 @@
+/*
+ * Mulata · Editorial en pestañas (piloto Enxuta BCENXS452300N).
+ * CSS plano compatible con Sass usado por Odoo 20. Todas las reglas son scoped.
+ */
+.mulata-product-editorial.me2-ready {
+  --me2-pet: #174a5b;
+  --me2-gold: #ffb600;
+  --me2-muted: #596a72;
+  --me2-border: #e5eaeb;
+  width: calc(100% - 32px);
+  max-width: 1190px;
+  padding: 0;
+  margin: 32px auto 68px;
+  background: transparent;
+  border-radius: 0;
+  font-family: Inter, Arial, sans-serif;
+}
+.mulata-product-editorial.me2-ready .me2-shell { width: 100%; }
+.mulata-product-editorial.me2-ready .me2-benefits {
+  background: #fff;
+  border: 1px solid var(--me2-border);
+  border-radius: 17px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  margin: 0 0 23px;
+  padding: 20px 8px;
+  box-shadow: 0 9px 30px rgba(23,74,91,.04);
+}
+.mulata-product-editorial.me2-ready .me2-benefit {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 13px;
+  border-right: 1px solid var(--me2-border);
+  min-width: 0;
+}
+.mulata-product-editorial.me2-ready .me2-benefit:last-child { border-right: 0; }
+.mulata-product-editorial.me2-ready .me2-benefit-icon {
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+  border-radius: 13px;
+  display: grid;
+  place-items: center;
+  font-size: 23px;
+  background: #fff3cf;
+  color: var(--me2-pet);
+}
+.mulata-product-editorial.me2-ready .me2-benefit-copy strong {
+  display:block;
+  color: var(--me2-pet);
+  font-size: 14px;
+  line-height: 1.3;
+  font-weight: 750;
+}
+.mulata-product-editorial.me2-ready .me2-benefit-copy small {
+  display: block;
+  color: var(--me2-muted);
+  font-size: 12px;
+  line-height: 1.35;
+  padding-top: 5px;
+}
+.mulata-product-editorial.me2-ready .me2-tabbar {
+  display: grid;
+  grid-template-columns: repeat(5,minmax(0,1fr));
+  border: 1px solid var(--me2-border);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  background: #fff;
+}
+.mulata-product-editorial.me2-ready .me2-tab {
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 750;
+  min-height: 55px;
+  border: 0;
+  border-right: 1px solid var(--me2-border);
+  padding: 13px 7px;
+  background: #fff;
+  color: #435d68;
+  cursor: pointer;
+}
+.mulata-product-editorial.me2-ready .me2-tab:last-child { border-right: 0; }
+.mulata-product-editorial.me2-ready .me2-tab:hover:not(.me2-selected) { background: #f1f6f7; }
+.mulata-product-editorial.me2-ready .me2-tab.me2-selected {
+  background: var(--me2-pet);
+  color: #fff;
+}
+.mulata-product-editorial.me2-ready .me2-tab:focus-visible {
+  outline: 3px solid var(--me2-gold);
+  outline-offset: -3px;
+}
+.mulata-product-editorial.me2-ready .me2-panel {
+  background: #fff;
+  border: 1px solid var(--me2-border);
+  border-radius: 16px;
+  padding: 32px;
+  min-height: 300px;
+  box-shadow: 0 7px 28px rgba(23,74,91,.025);
+}
+.mulata-product-editorial.me2-ready .me2-panel[hidden] { display: none !important; }
+.mulata-product-editorial.me2-ready .me2-panel-heading { margin-bottom: 24px; }
+.mulata-product-editorial.me2-ready .me2-kicker {
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  font-weight: 800;
+  font-size: 11px;
+  color: #69818b;
+  display:block;
+  margin-bottom: 10px;
+}
+.mulata-product-editorial.me2-ready .me2-panel h2 {
+  color: var(--me2-pet);
+  font-size: clamp(25px,2.5vw,34px);
+  font-weight: 780;
+  letter-spacing: -.025em;
+  line-height: 1.2;
+  margin: 0 0 10px;
+}
+.mulata-product-editorial.me2-ready .me2-panel-heading p {
+  color: #586b73;
+  max-width: 830px;
+  font-size: 15px;
+  line-height: 1.65;
+  margin:0;
+}
+.mulata-product-editorial.me2-ready .me2-inspo-grid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 16px;
+}
+.mulata-product-editorial.me2-ready .me2-inspo-card {
+  min-width: 0;
+  border: 1px solid var(--me2-border);
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+}
+.mulata-product-editorial.me2-ready .me2-inspo-media {
+  position: relative;
+  height: 210px;
+  background: #f2eeea;
+  overflow: hidden;
+}
+.mulata-product-editorial.me2-ready .me2-inspo-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.mulata-product-editorial.me2-ready .me2-inspo-label {
+  position: absolute;
+  top: 11px;
+  left: 11px;
+  font-size: 11px;
+  font-weight: 700;
+  background: rgba(255,255,255,.94);
+  color: #546870;
+  border-radius: 20px;
+  padding: 6px 11px;
+}
+.mulata-product-editorial.me2-ready .me2-inspo-diagram {
+  background: linear-gradient(135deg,#e6e8e5,#f7efe6);
+  padding: 46px 18px 16px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap: 10px;
+}
+.mulata-product-editorial.me2-ready .me2-inspo-diagram > span:not(.me2-inspo-label) {
+  background: rgba(255,255,255,.80);
+  border-left: 4px solid var(--me2-gold);
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--me2-pet);
+}
+.mulata-product-editorial.me2-ready .me2-inspo-body { padding: 18px 19px 20px; }
+.mulata-product-editorial.me2-ready .me2-inspo-body h3 {
+  color: var(--me2-pet);
+  font-size: 17px;
+  font-weight: 770;
+  line-height: 1.35;
+  margin: 0 0 8px;
+}
+.mulata-product-editorial.me2-ready .me2-inspo-body p {
+  color: #596b73;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+.mulata-product-editorial.me2-ready .me2-editorial-note,
+.mulata-product-editorial.me2-ready .me2-note {
+  font-size: 12px;
+  line-height: 1.6;
+  color: #718088;
+  margin: 16px 0 0;
+}
+.mulata-product-editorial.me2-ready .me2-tech-scroll { overflow-x: auto; }
+.mulata-product-editorial.me2-ready table.me2-tech {
+  display: table;
+  width: 100%;
+  margin: 0;
+  max-width: 100%;
+  border: 1px solid var(--me2-border);
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  background: #fff;
+  overflow: hidden;
+}
+.mulata-product-editorial.me2-ready table.me2-tech th,
+.mulata-product-editorial.me2-ready table.me2-tech td {
+  padding: 14px 17px;
+  font-size: 14px;
+  line-height: 1.5;
+  border: 0;
+  border-bottom: 1px solid var(--me2-border);
+  text-align: left;
+  word-break: normal;
+  overflow-wrap: anywhere;
+}
+.mulata-product-editorial.me2-ready table.me2-tech tr:last-child th,
+.mulata-product-editorial.me2-ready table.me2-tech tr:last-child td { border-bottom: 0; }
+.mulata-product-editorial.me2-ready table.me2-tech tr > :first-child {
+  width: 38%;
+  background: #f3f7f7;
+  color: #415761;
+  font-weight: 720;
+}
+.mulata-product-editorial.me2-ready .me2-measures {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap: 16px;
+}
+.mulata-product-editorial.me2-ready .me2-dimension {
+  border:1px solid var(--me2-border);
+  background:#f5f8f8;
+  border-radius:14px;
+  padding:28px 14px;
+  text-align:center;
+}
+.mulata-product-editorial.me2-ready .me2-dimension strong {
+  display:block;
+  font-size:29px;
+  font-weight:800;
+  line-height:1.2;
+  color:var(--me2-pet);
+  margin-bottom:6px;
+}
+.mulata-product-editorial.me2-ready .me2-dimension span { color:#667780; font-size:13px; }
+.mulata-product-editorial.me2-ready .me2-shipping-grid { display:grid; gap:12px; }
+.mulata-product-editorial.me2-ready .me2-shipping-item {
+  border: 1px solid var(--me2-border);
+  border-radius: 12px;
+  padding: 20px;
+  background: #f8faf9;
+}
+.mulata-product-editorial.me2-ready .me2-shipping-item h3 {
+  color: var(--me2-pet);
+  font-size: 16px;
+  font-weight: 750;
+  margin: 0 0 7px;
+}
+.mulata-product-editorial.me2-ready .me2-shipping-item p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #596b73;
+  margin: 0;
+}
+.mulata-product-editorial.me2-ready details.me2-faq {
+  background: #fff;
+  border: 1px solid var(--me2-border);
+  border-radius: 12px;
+  padding: 0 18px;
+  margin: 0 0 10px;
+}
+.mulata-product-editorial.me2-ready details.me2-faq summary {
+  font-size: 15px;
+  color: var(--me2-pet);
+  font-weight: 730;
+  padding: 18px 2px;
+  cursor: pointer;
+}
+.mulata-product-editorial.me2-ready details.me2-faq p {
+  margin: 0;
+  padding: 0 2px 18px;
+  font-size: 14px;
+  color: #566a72;
+  line-height: 1.6;
+}
+.mulata-product-editorial.me2-ready .me2-manual { margin-top: 22px; }
+.mulata-product-editorial.me2-ready .me2-manual a {
+  display:inline-flex;
+  border-radius:8px;
+  padding:12px 17px;
+  background:var(--me2-gold);
+  color:#1f3038;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:750;
+}
+@media (max-width: 940px) {
+  .mulata-product-editorial.me2-ready .me2-benefits { grid-template-columns: repeat(2,minmax(0,1fr)); gap:15px 0; }
+  .mulata-product-editorial.me2-ready .me2-benefit:nth-child(2) { border-right:0; }
+  .mulata-product-editorial.me2-ready .me2-inspo-media { height: 165px; }
+}
+@media (max-width: 700px) {
+  .mulata-product-editorial.me2-ready { width: calc(100% - 24px); margin:24px auto 95px; }
+  .mulata-product-editorial.me2-ready .me2-benefits { padding:14px 4px; gap: 12px 0; }
+  .mulata-product-editorial.me2-ready .me2-benefit { align-items:flex-start; gap:9px; padding:8px; }
+  .mulata-product-editorial.me2-ready .me2-benefit-icon { width:35px; height:35px; flex-basis:35px; font-size:18px; }
+  .mulata-product-editorial.me2-ready .me2-benefit-copy strong { font-size:12px; }
+  .mulata-product-editorial.me2-ready .me2-benefit-copy small { font-size:11px; }
+  .mulata-product-editorial.me2-ready .me2-tabbar { display:flex; overflow-x:auto; }
+  .mulata-product-editorial.me2-ready .me2-tab { min-width:max-content; padding:14px 18px; }
+  .mulata-product-editorial.me2-ready .me2-panel { padding:23px 15px; }
+  .mulata-product-editorial.me2-ready .me2-inspo-grid { grid-template-columns:1fr; }
+  .mulata-product-editorial.me2-ready .me2-inspo-media { height:205px; }
+  .mulata-product-editorial.me2-ready .me2-measures { grid-template-columns:1fr; }
+  .mulata-product-editorial.me2-ready .me2-dimension { padding:18px; }
+  .mulata-product-editorial.me2-ready table.me2-tech th,
+  .mulata-product-editorial.me2-ready table.me2-tech td { padding:11px 10px; font-size:13px; }
+}
+
+/* MULATA EDITORIAL V3 APROBADO */
+/* Diseño editorial (piloto Enxuta): tipografía, ritmos y fotografía real. */
+.mulata-product-editorial.me2-ready {
+    max-width: 1150px;
+    box-sizing: border-box;
+    background: #fff;
+    margin-top: 32px;
+    margin-bottom: 75px;
+    padding: 0 36px 32px;
+    border: 1px solid #edf0ef;
+    color: #122b36;
+}
+.mulata-product-editorial.me2-ready .me3-intro {
+    display: grid;
+    grid-template-columns: 1.18fr .82fr;
+    column-gap: 35px;
+    align-items: end;
+    padding: 55px 0 38px;
+    border-bottom: 1px solid #dce4e5;
+}
+.mulata-product-editorial.me2-ready .me3-kicker {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #9d7500;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+.mulata-product-editorial.me2-ready .me3-kicker:before {
+    content: "";
+    display: block;
+    flex: 0 0 25px;
+    height: 2px;
+    background: #ffb600;
+}
+.mulata-product-editorial.me2-ready h2.me3-headline {
+    margin: 0;
+    font-size: clamp(42px, 5vw, 68px);
+    line-height: 1.055;
+    font-weight: 800;
+    letter-spacing: -3.5px;
+    color: #103c4d;
+    white-space: pre-line;
+}
+.mulata-product-editorial.me2-ready .me3-headline em {
+    font-style: normal;
+    background: linear-gradient(transparent 70%, #ffcf42 70%, #ffcf42 83%, transparent 83%);
+}
+.mulata-product-editorial.me2-ready .me3-aside {
+    padding-left: 28px;
+    border-left: 1px solid #e8e5de;
+}
+.mulata-product-editorial.me2-ready .me3-aside strong {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: #a37e13;
+}
+.mulata-product-editorial.me2-ready .me3-aside p {
+    margin: 0;
+    color: #394b53;
+    font-size: 18px;
+    line-height: 1.5;
+}
+.mulata-product-editorial.me2-ready .me3-meter {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding: 30px 0 34px;
+    border-bottom: 1px solid #dce4e5;
+}
+.mulata-product-editorial.me2-ready .me3-metric {
+    display: flex;
+    gap: 13px;
+    align-items: baseline;
+    min-width: 0;
+    padding: 4px 20px;
+}
+.mulata-product-editorial.me2-ready .me3-metric:first-child { padding-left: 0; }
+.mulata-product-editorial.me2-ready .me3-metric:not(:last-child) { border-right: 1px solid #e3e9e8; }
+.mulata-product-editorial.me2-ready .me3-metric-number {
+    color: #103c4d;
+    font-size: 62px;
+    line-height: 1;
+    font-weight: 780;
+    letter-spacing: -4px;
+}
+.mulata-product-editorial.me2-ready .me3-metric-air .me3-metric-number {
+    font-size: 25px;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    border-left: 4px solid #ffb600;
+    padding-left: 11px;
+}
+.mulata-product-editorial.me2-ready .me3-metric-copy strong,
+.mulata-product-editorial.me2-ready .me3-metric-copy small { display: block; }
+.mulata-product-editorial.me2-ready .me3-metric-copy strong {
+    color: #2a4652;
+    font-size: 13px;
+    line-height: 1.2;
+    font-weight: 750;
+}
+.mulata-product-editorial.me2-ready .me3-metric-copy small {
+    color: #60747c;
+    font-size: 12px;
+    line-height: 1.4;
+    margin-top: 5px;
+}
+/* La navegación es una línea editorial, no botones de dashboard. */
+.mulata-product-editorial.me2-ready .me2-tabbar {
+    display: flex;
+    gap: 27px;
+    overflow-x: auto;
+    border: 0;
+    border-bottom: 1px solid #dce4e5;
+    border-radius: 0;
+    background: transparent;
+    margin: 0 0 5px;
+    padding: 18px 0 0;
+    -webkit-overflow-scrolling: touch;
+}
+.mulata-product-editorial.me2-ready .me2-tab {
+    flex: 0 0 auto;
+    min-height: 0;
+    border: 0;
+    border-bottom: 3px solid transparent;
+    background: transparent;
+    color: #708088;
+    padding: 11px 0 14px;
+    font-weight: 650;
+    font-size: 13px;
+    white-space: nowrap;
+}
+.mulata-product-editorial.me2-ready .me2-tab:hover:not(.me2-selected) {
+    background: transparent;
+    color: #174a5b;
+}
+.mulata-product-editorial.me2-ready .me2-tab.me2-selected {
+    color: #103c4d;
+    border-bottom-color: #103c4d;
+    background: transparent;
+}
+.mulata-product-editorial.me2-ready .me2-panel {
+    background: transparent;
+    box-shadow: none;
+    border: 0;
+    border-radius: 0;
+    padding: 28px 0 6px;
+    min-height: 220px;
+}
+.mulata-product-editorial.me2-ready .me3-section-heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 22px;
+}
+.mulata-product-editorial.me2-ready .me3-section-heading h2 {
+    color: #103c4d;
+    font-size: 29px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1.22;
+    margin: 0;
+}
+.mulata-product-editorial.me2-ready .me3-section-heading span {
+    font-size: 12px;
+    color: #687c84;
+}
+.mulata-product-editorial.me2-ready .me2-inspo-grid {
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    gap: 14px;
+}
+.mulata-product-editorial.me2-ready .me2-inspo-card {
+    background: #f7f4ef;
+    border: 1px solid #ebe7de;
+    border-radius: 0;
+}
+.mulata-product-editorial.me2-ready .me2-inspo-media { height: 275px; }
+.mulata-product-editorial.me2-ready .me2-inspo-card:nth-child(1) img { object-position: 35% 40%; }
+.mulata-product-editorial.me2-ready .me2-inspo-card:nth-child(2) img { object-position: 45% 40%; }
+.mulata-product-editorial.me2-ready .me2-inspo-label { display: none; }
+.mulata-product-editorial.me2-ready .me2-inspo-body {
+    min-height: 160px;
+    background: #f9f9f6;
+    padding: 23px 25px 27px;
+}
+.mulata-product-editorial.me2-ready .me3-story-kicker {
+    display: block;
+    font-size: 10px;
+    font-weight: 750;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #8e721e;
+    margin-bottom: 9px;
+}
+.mulata-product-editorial.me2-ready .me2-inspo-body h3 {
+    color: #103c4d;
+    font-size: 25px;
+    font-weight: 750;
+    letter-spacing: -.6px;
+    line-height: 1.18;
+    margin-bottom: 10px;
+}
+.mulata-product-editorial.me2-ready .me2-inspo-body p {
+    color: #455961;
+    font-size: 15px;
+    line-height: 1.5;
+}
+@media (max-width: 700px) {
+    .mulata-product-editorial.me2-ready {
+        width: calc(100% - 24px);
+        padding: 0 16px 18px;
+        margin: 22px auto 100px;
+        border: 0;
+    }
+    .mulata-product-editorial.me2-ready .me3-intro {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 28px 0;
+        gap: 24px;
+    }
+    .mulata-product-editorial.me2-ready .me3-kicker {
+        margin-bottom: 16px;
+        font-size: 10px;
+        letter-spacing: 1.7px;
+    }
+    .mulata-product-editorial.me2-ready h2.me3-headline {
+        font-size: clamp(39px, 10.5vw, 53px);
+        letter-spacing: -2px;
+    }
+    .mulata-product-editorial.me2-ready .me3-aside {
+        border-left: 3px solid #ffb600;
+        padding-left: 15px;
+    }
+    .mulata-product-editorial.me2-ready .me3-aside strong { margin-bottom: 6px; font-size: 10px; }
+    .mulata-product-editorial.me2-ready .me3-aside p { font-size: 15px; }
+    .mulata-product-editorial.me2-ready .me3-meter { padding: 23px 0; }
+    .mulata-product-editorial.me2-ready .me3-metric {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+        padding: 1px 8px;
+    }
+    .mulata-product-editorial.me2-ready .me3-metric:first-child { padding-left: 0; }
+    .mulata-product-editorial.me2-ready .me3-metric-number {
+        font-size: 39px;
+        letter-spacing: -2.5px;
+    }
+    .mulata-product-editorial.me2-ready .me3-metric-air .me3-metric-number {
+        border-left: 0;
+        padding-left: 0;
+        font-size: 15px;
+        letter-spacing: -.6px;
+        line-height: 2.15;
+    }
+    .mulata-product-editorial.me2-ready .me3-metric-copy strong { font-size: 10px; }
+    .mulata-product-editorial.me2-ready .me3-metric-copy small { font-size: 10px; }
+    .mulata-product-editorial.me2-ready .me2-tabbar { gap: 24px; padding-top: 17px; }
+    .mulata-product-editorial.me2-ready .me2-tab { font-size: 12px; padding: 11px 0 12px; }
+    .mulata-product-editorial.me2-ready .me2-panel { padding: 22px 0 4px; }
+    .mulata-product-editorial.me2-ready .me3-section-heading { margin-bottom: 15px; }
+    .mulata-product-editorial.me2-ready .me3-section-heading h2 { font-size: 24px; }
+    .mulata-product-editorial.me2-ready .me3-section-heading span { display: none; }
+    .mulata-product-editorial.me2-ready .me2-inspo-grid { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+    .mulata-product-editorial.me2-ready .me2-inspo-media { height: 207px; }
+    .mulata-product-editorial.me2-ready .me2-inspo-body { padding: 18px 19px 23px; min-height: 0; }
+    .mulata-product-editorial.me2-ready .me2-inspo-body h3 { font-size: 22px; }
+    .mulata-product-editorial.me2-ready .me2-inspo-body p { font-size: 13px; }
+}

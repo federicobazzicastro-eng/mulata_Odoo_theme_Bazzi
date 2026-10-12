@@ -39,8 +39,8 @@
                     <div class="mulata-logistics-item">
                         <i class="fa fa-truck"/>
                         <span>
-                            <strong>24–48 hs Mdeo.</strong>
-                            <small>Entrega rápida</small>
+                            <strong t-if="product.mulata_is_gelbring">Entrega desde proveedor</strong><strong t-else="">Entrega coordinada</strong>
+                            <small t-if="product.mulata_is_gelbring">Plazo sujeto a confirmación</small><small t-else="">Plazo según producto y destino</small>
                         </span>
                     </div>
 
@@ -48,7 +48,7 @@
                         <i class="fa fa-cube"/>
                         <span>
                             <strong>Todo el país</strong>
-                            <small>Envíos con DAC</small>
+                            <small t-if="product.mulata_is_gelbring">Condiciones según destino</small><small t-else="">Consultá opciones de envío</small>
                         </span>
                     </div>
 
@@ -64,7 +64,7 @@
 
                 <div class="mulata-stock">
                     <span class="mulata-stock-dot"/>
-                    <span>Stock disponible</span>
+                    <span t-if="product.mulata_is_gelbring">Disponibilidad a confirmar</span><span t-else="">Consultá disponibilidad</span>
                 </div>
 
             </div>
